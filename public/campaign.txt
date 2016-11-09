@@ -1,0 +1,12 @@
+/*This is an example of what a campaign will look like
+*/
+ID:1;
+name:campaign1;
+notes:this is an example;
+picture:pi:1,pi:2;
+
+the javascript will look at each tag and if it needs campaign 1 then it will add each section to the proper place dynamicaly
+this is why this file doesn't need to be of a html file type.
+each line is ended with a ; to denote the end of what is in that section.
+it is also simple to allow it to be easer to add more later with the javascript.
+*/
