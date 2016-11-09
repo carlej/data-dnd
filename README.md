@@ -13,3 +13,5 @@ A node can add any node to it that is at a lower rank.
 So a campaign can add any except for a campaign where as a location can only have NPC nodes added to it.
 
 In each node there will be options to see a list of nodes added to it seporated by node type and if no nodes of that type are attached to it them then there will be no option to see that type of node.
+
+The options and node lists will be displayed like sticky notes to allow for some small information on that option or node to be displayed allong with the option so that the user can get some of the relevent information right off the bat without clicking into the node.
