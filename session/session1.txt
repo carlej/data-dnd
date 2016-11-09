@@ -1,0 +1,15 @@
+this will be the location of the the list that has the id numbers of what is where for the first session
+if a new session is started then a new file called session2.txt will be created to keep track of that session
+
+/*
+example session
+
+ca:1;
+to:1;
+np:1;
+to:2;
+lo:1;
+lo:2;
+np:2;
+np:3;
+*/
