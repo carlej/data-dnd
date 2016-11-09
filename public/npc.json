@@ -1,1 +1,48 @@
-
+/*this is the npc file
+maybe add more or reorder the fields for better analisis of them
+below is a possible list
+can be more or less detailed
+*/
+{
+  "ID:1":{
+    "name":"npc 1",
+    "Description":"what they look like",
+    "Race":"race",
+    "skills":"what they have skills in",
+    "feats":"what feats they have",
+    "hp":"their current hp",
+    "hd":"how many hd they have",
+    "clothing":"what do they have on",
+    "gear":"what gear they have",
+    "platnum":"how much pp they have",
+    "gold":"how many gp they have",
+    "silver":"how many sp they have",
+    "copper":"how much cp they have",
+    "iorn":"how much ip they have",
+    "positive":"what things they react positvly to",
+    "negative":"what they react negativly to",
+    "goal":"what are they trying to do",
+    "language":"what languages do they speak",
+    /*Courteous: Never
+Risk-Taking: Generally
+Ambitious: Never
+Curious: Occasionally
+Self-Controlled: Generally
+Nurturing: Never
+Trusting: Generally
+Honest: Never
+Loyal: Never
+Affectionate: Often
+Romantic: Often
+Flirty: Often
+Sympathetic: Sometimes
+Altruistic: Occasionally
+Optimistic: Typically
+Observant: Occasionally
+Logical: Never
+Social: Usually outgoing
+Emotions: Very stable
+*/
+    "traits":"personality traits"
+  }
+}
