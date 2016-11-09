@@ -6,3 +6,9 @@ notes:this is an example;
 pi:1;
 pi:2;
 */
+{
+  "ID:1":{
+    "name":"location 1",
+    "notes":"these are notes maybe seporate them into different sections?"
+  }
+}
