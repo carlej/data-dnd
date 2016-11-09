@@ -1,4 +1,5 @@
 This will be the location of what campaigns this session has
+new sessions will create new files in this folder
 
 /*
 example session
