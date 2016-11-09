@@ -4,6 +4,13 @@ ID:1;
 name:campaign1;
 notes:this is an example;
 picture:pi:1,pi:2;
+to:1;
+lo:1;
+lo:2;
+np:1;
+np:2;
+to:2;
+to:3;
 
 the javascript will look at each tag and if it needs campaign 1 then it will add each section to the proper place dynamicaly
 this is why this file doesn't need to be of a html file type.
