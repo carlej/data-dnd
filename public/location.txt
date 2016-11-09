@@ -1,0 +1,7 @@
+/*
+example location
+ID:1;
+name:location1;
+notes:this is an example;
+picture:pi:1,pi:2;
+*/
