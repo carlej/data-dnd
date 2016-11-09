@@ -8,6 +8,8 @@ can be more or less detailed
     "name":"npc 1",
     "Description":"what they look like",
     "Race":"race",
+    "ac":"ac...",
+    "attacks":"attacks",
     "skills":"what they have skills in",
     "feats":"what feats they have",
     "hp":"their current hp",
