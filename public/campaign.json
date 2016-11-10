@@ -36,5 +36,8 @@ other nodes will not keep track of what nodes are attached to it
     "name":"campaign 2",
     "notes":"here are notes",
     "content":"content"
-  }
+  },
+  "ID:Nathan's Campaign":{
+    "name":"The death of a code writer",
+    "Main Synapsis":"An inexperienced coder has entered a class about web design, he has found that while entirely useful the class is a real pain in the arse with dealing with a full-time job, and a 1 month old child 
 }
