@@ -25,6 +25,9 @@ can be more or less detailed
     "negative":"what they react negativly to",
     "goal":"what are they trying to do",
     "language":"what languages do they speak",
+    "traits":"personality traits"
+  }
+}
     /*Courteous: Never
 Risk-Taking: Generally
 Ambitious: Never
@@ -45,6 +48,3 @@ Logical: Never
 Social: Usually outgoing
 Emotions: Very stable
 */
-    "traits":"personality traits"
-  }
-}
