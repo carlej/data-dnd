@@ -24,7 +24,7 @@ can be more or less detailed
     "positive":"what things they react positvly to",
     "negative":"what they react negativly to",
     "goal":"what are they trying to do",
-    "language":"what languages do they speak",
+    "language":"what languages do they speak", //<----Always have the comma before and don't put comment blocks between these lines?
     "traits":"personality traits"
   }
 }
