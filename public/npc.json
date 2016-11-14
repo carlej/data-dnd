@@ -26,25 +26,42 @@ can be more or less detailed
     "goal":"what are they trying to do",
     "language":"what languages do they speak", //<----Always have the comma before and don't put comment blocks between these lines?
     "traits":"personality traits"
+  },
+  "ID:2":{
+    "name":"name",
+    "race":"race",
+    "description":"what they look like",
+    "gear":"what they have on them",
+    "language":"what languages do they speak",
+    "primary motivation":"what is their main driving force is",
+    "secondary motivation":"what their secondary driving force is",
+    "recent past":"what has happened recently to them",
+    "traits":"personality traits",
+    "courteous":"how curtious they are",
+    "risk taking":"how open are they to taking risks",
+    "ampitious":"how ambitious are they",
+    "curious": "how curious are they",
+    "self controlled":"how much self control do they have",
+    "nurturing":"how nurturing are they",
+    "trusting":"hot trusting they are",
+    "honest":"how honest are they",
+    "loyal":"how loyal are they",
+    "affectionate":"how affectionate are they",
+    "romantic":"how romantic are they",
+    "flirty":"how flirty are they",
+    "sympathetic":"how much sympathy do they have",
+    "altruistic":"how altruistic are they",
+    "optimistic":"how optomistic are they",
+    "observant":"how observant are they",
+    "logical":"how logical are they",
+    "social":"how social are they",
+    "emotional":"how emotional are they",
+    "positive":"what they react to positvly",
+    "negative":"what they respont to negativly",
+    "skills":"what are their skills",
+    "hit dice":"what are their hit dice",
+    "money":"how much money they have and in what combimation",
+    "armor class":"what their ac is",
+    "feats":"what their feats are"
   }
 }
-    /*Courteous: Never
-Risk-Taking: Generally
-Ambitious: Never
-Curious: Occasionally
-Self-Controlled: Generally
-Nurturing: Never
-Trusting: Generally
-Honest: Never
-Loyal: Never
-Affectionate: Often
-Romantic: Often
-Flirty: Often
-Sympathetic: Sometimes
-Altruistic: Occasionally
-Optimistic: Typically
-Observant: Occasionally
-Logical: Never
-Social: Usually outgoing
-Emotions: Very stable
-*/
