@@ -38,5 +38,22 @@ other nodes will not keep track of what nodes are attached to it
     "current quest":"what the current quest the party is doing",
     "notes":"here are notes",
     "content":"content"
+  },
+  "ID:3":{
+    "name":"name",
+    "theme":"what the theme is ie horror, adventure ect",
+    "goal":"main goal of the campaign",
+    "story hook":"what gets the party to start the campaign",
+    "plot":"general over view of the plot",
+    "climax":"what the main climax of the story is",
+    "current climax":"what the current completion event is",
+    "general setting":"where the campaign takes place",
+    "current setting":"where the party is currently at",
+    "master villain":"who is the main bad guy",
+    "current villain":"the current bag guy the party is facing",
+    "ally":"any allys the party has for this part of the campaign",
+    "planned encounters/events":"any events that are going to happen soon",
+    "handled events":"any events that the party has already done",
+    "notes":"other notes about the campaign"
   }
 }
