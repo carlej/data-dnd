@@ -9,6 +9,8 @@ pi:2;
 {
   "ID:1":{
     "name":"location 1",
+    "location type":"store, inn, ext",
+    "inventory and prices":"what things are at the location and how much they cost if they are avalable to be purchased, or other things the location sells.",
     "notes":"these are notes maybe seporate them into different sections?"
   },
   
