@@ -17,5 +17,15 @@ pi:2;
   "ID:2":{
     "name":"Location 2",
     "notes":"More notes about a location"
+  },
+  "ID:3":{
+    "name":"Name of the location",
+    "Type of location":"ie what type of goods/services do they provide or is it someother type of location",
+    "town size":"how big is the town that it is in",
+    "invintory and prices":"how much do they sell stuff for if they sell anything",
+    "owner":"who is the owner",
+    "description":"what does it look like",
+    "location":"where it is in the town",
+    "notes":"other notes"
   }
 }
