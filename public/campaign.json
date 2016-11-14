@@ -34,6 +34,8 @@ other nodes will not keep track of what nodes are attached to it
   },//<----Comma after squigglies
   "ID:2":{
     "name":"campaign 2",
+    "main synapsis":"what the main story is",
+    "current quest":"what the current quest the party is doing",
     "notes":"here are notes",
     "content":"content"
   }
