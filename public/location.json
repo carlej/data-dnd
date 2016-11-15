@@ -26,6 +26,7 @@ pi:2;
     "owner":"who is the owner",
     "description":"what does it look like",
     "location":"where it is in the town",
+    "terrain":"what is the terrain that this location is in",
     "notes":"other notes"
   }
 }
