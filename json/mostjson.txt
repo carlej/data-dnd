@@ -1,0 +1,3 @@
+place all json files here
+
+exception do not place package.json here it needs to stay where it is for node stuff
