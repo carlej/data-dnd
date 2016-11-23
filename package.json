@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "build"://run the handlebars views that we have that we want to turn into js files ex the files to display the information for last assignment it was todo.handlebars into todo-template.js
+    "prestart":"npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +21,6 @@
   "homepage": "https://github.com/OSU-CS290-F16/final-project-dnd-style-final.git#readme",
   "dependencies": {
   "express": "^4.14.0",
-  "handlebars": "^4.0.5"
+  "express-handlebars": "^3.0.0"
   }
 }
