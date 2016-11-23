@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname,'public')));
 
 app.get('/',function(req,res){
   res.render('index-page',{
-    pageTitle:'Welcome"
+    pageTitle:'Welcome'
   });
 });
 
@@ -35,4 +35,4 @@ app.get('/session/:sess',function(req,res,next){
   var sess = session[req.params.session];
   
   if(sess){
-    res.render('sess-page',
+    res.render('session-page',
