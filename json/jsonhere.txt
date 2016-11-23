@@ -1,3 +1,0 @@
-place all json files in this folder
-
-exception package.json must stay in the filder that it is in for node stuff
