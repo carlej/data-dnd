@@ -38,7 +38,13 @@ app.get('/campaign',function(req,res){
   });
 });
 
-app.get('/campaign/location
+app.get('/campaign/:camp',function(req,res){
+  var camp = campaign[req.params.campaign];
+  res.render('camp-page',{
+    pageTitle: camp,
+    camp:camp
+  });
+});
 
 app.get('/session/:sess',function(req,res,next){
   var sess = session[req.params.session];
