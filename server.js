@@ -35,4 +35,40 @@ app.get('/session/:sess',function(req,res,next){
   var sess = session[req.params.session];
   
   if(sess){
-    res.render('session-page',
+    res.render('session-page',{
+      pageTitle: sess,
+      sess:sess
+    });
+  }
+  else{
+    next();
+  }
+});
+app.post('/session/:sess/add-campaign',function(req,res,next){//this updates the info on the server side still needs to update on client and backend
+  var sess= session[req.params.session];
+  if(sess){
+    if(req.body && req.body.ca){
+      sess.contents=sess.contents || [];
+      sess.contents.push({
+        ca: req.body.ca
+      });
+      res.status(200).send();
+    }
+    else{
+      res.status(400).send("There must be a campaign to add.");
+    }
+  }
+  else{
+    next();
+  }
+});
+
+app.get('*',function(req,res){
+  res.status(404).render('404-page',{
+    pageTitle:'404'
+  });
+});
+
+app.listen(port,function(){
+  console.log("== Listening on port", port);
+});
