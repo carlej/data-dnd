@@ -31,11 +31,20 @@ app.get('/session',function(req,res){
   });
 });
 
+app.get('/campaign',function(req,res){
+  res.render('campaign-page',{
+    pageTitle:'Campaigns',
+    campaign: campaign
+  });
+});
+
+app.get('/campaign/location
+
 app.get('/session/:sess',function(req,res,next){
   var sess = session[req.params.session];
   
   if(sess){
-    res.render('session-page',{
+    res.render('sess-page',{
       pageTitle: sess,
       sess:sess
     });
