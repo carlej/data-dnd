@@ -24,34 +24,126 @@ app.get('/',function(req,res){
   });
 });
 
-app.get('/session',function(req,res){
-  res.render('session-page',{
-    pageTitle:'Session',
-    session:session
-  });
-});
-
-app.get('/campaign',function(req,res){
-  res.render('campaign-page',{
-    pageTitle:'Campaigns',
-    campaign: campaign
-  });
-});
-
-app.get('/campaign/:camp',function(req,res){
+app.get('/:camp/locations',function(req,res){
   var camp = campaign[req.params.campaign];
-  res.render('camp-page',{
-    pageTitle: camp,
-    camp:camp
+  var campcont = camp.contents;
+  var camploca = campcont.locations;
+  res.render('locations-page',{
+    pageTitle:'Locations',
+    locations:location,
+    camp,
+    camploca,
   });
 });
 
-app.get('/session/:sess',function(req,res,next){
+app.get('/:camp/npcs',function(req,res){
+  var camp = campaign[req.params.campaign];
+  var campcont = camp.contents;
+  var campnp = campncont.nps;
+  res.render('npcs-page',{
+    pageTitle:'NPCs',
+    npc:npc,
+    camp,
+    campnp,
+  });
+});
+
+app.get('/:camp/towns',function(req,res){
+  var camp = campaign[req.params.campaign];
+  var campcont = camp.contents;
+  var camptow = campcont.towns;
+  res.render('locations-page',{
+    pageTitle:'Towns',
+    town:town,
+    camptow,
+  });
+});
+
+app.get('/:camp/:loca/towns',function(req,res){
+  var camp = campaign[req.params.campaign];
+  var loca = locations[req.params.location];
+  var campcont = camp.contents;
+  var camplocas = campcont.locations;
+  var camploca = camplocas.loca;
+  var camptow = camploca.towns;
+  res.render('towns-page',{
+    pageTitle:'Towns',
+    town:town,
+    camp,
+    camptow,
+  });
+});
+
+app.get('/:camp/:loca',function(req,res){
+  var camp = campaign[req.params.campaign];
+  var loca = location[req.params.location];
+  var campcont = camp.contents;
+  var camploca = campcont.locations;
+  if(loca){
+    res.render('location-page',{
+      pageTitle:loca.name,
+      camploca,
+      loca,
+    });
+  }
+  else{
+    next();
+  }
+});
+
+app.get('/:camp/:tow',function(req,res){
+  var camp = campaign[req.params.campaign];
+  var tow = town[req.params.town];
+  var campcont = camp.contents;
+  var camptow = campcont.towns;
+  if(loca){
+    res.render('town-page',{
+      pageTitle:tow.name,
+      camptow,
+      tow,
+    });
+  }
+  else{
+    next();
+  }
+});
+
+app.get('/:camp/:np',function(req,res){
+  var camp = campaign[req.params.campaign];
+  var np = npc[req.params.npc];
+  var campcont = camp.contents;
+  var campnp = campcont.npcs;
+  if(loca){
+    res.render('npc-page',{
+      pageTitle:np.name,
+      campnp,
+      np,
+    });
+  }
+  else{
+    next();
+  }
+});
+
+app.get('/:camp',function(req,res){
+  var camp = campaign[req.params.campaign];
+  if(camp){
+    res.render('campaign-page',{
+      pageTitle:'Campaign',
+      campaign: campaign
+    });
+  }
+  else{
+    next();
+  }
+});
+
+app.get('/:sess',function(req,res,next){
   var sess = session[req.params.session];
   
   if(sess){
-    res.render('sess-page',{
-      pageTitle: sess,
+    res.render('campaigns-page',{
+      pageTitle: 'Campaigns',
       sess:sess
     });
   }
