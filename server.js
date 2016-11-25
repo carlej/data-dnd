@@ -24,7 +24,7 @@ app.get('/',function(req,res){
   });
 });
 
-app.get('/:camp/locations',function(req,res){
+app.post('/:camp/locations',function(req,res){
   var camp = campaign[req.params.campaign];
   var campcont = camp.contents;
   var camploca = campcont.locations;
@@ -36,7 +36,7 @@ app.get('/:camp/locations',function(req,res){
   });
 });
 
-app.get('/:camp/npcs',function(req,res){
+app.post('/:camp/npcs',function(req,res){
   var camp = campaign[req.params.campaign];
   var campcont = camp.contents;
   var campnp = campncont.nps;
@@ -48,7 +48,7 @@ app.get('/:camp/npcs',function(req,res){
   });
 });
 
-app.get('/:camp/towns',function(req,res){
+app.post('/:camp/towns',function(req,res){
   var camp = campaign[req.params.campaign];
   var campcont = camp.contents;
   var camptow = campcont.towns;
@@ -59,22 +59,22 @@ app.get('/:camp/towns',function(req,res){
   });
 });
 
-app.get('/:camp/:loca/towns',function(req,res){
+app.post('/:camp/:tow/locations',function(req,res){
   var camp = campaign[req.params.campaign];
-  var loca = locations[req.params.location];
+  var tow = towns[req.params.town];
   var campcont = camp.contents;
-  var camplocas = campcont.locations;
-  var camploca = camplocas.loca;
-  var camptow = camploca.towns;
-  res.render('towns-page',{
-    pageTitle:'Towns',
-    town:town,
+  var camptows = campcont.towns;
+  var camptow = camptows.tow;
+  var camplocas = camptow.locations;
+  res.render('locations-page',{
+    pageTitle:'Locations',
+    location:location,
     camp,
-    camptow,
+    camplocas,
   });
 });
 
-app.get('/:camp/:loca',function(req,res){
+app.post('/:camp/:loca',function(req,res){
   var camp = campaign[req.params.campaign];
   var loca = location[req.params.location];
   var campcont = camp.contents;
@@ -91,7 +91,7 @@ app.get('/:camp/:loca',function(req,res){
   }
 });
 
-app.get('/:camp/:tow',function(req,res){
+app.post('/:camp/:tow',function(req,res){
   var camp = campaign[req.params.campaign];
   var tow = town[req.params.town];
   var campcont = camp.contents;
@@ -108,7 +108,7 @@ app.get('/:camp/:tow',function(req,res){
   }
 });
 
-app.get('/:camp/:np',function(req,res){
+app.post('/:camp/:np',function(req,res){
   var camp = campaign[req.params.campaign];
   var np = npc[req.params.npc];
   var campcont = camp.contents;
@@ -125,7 +125,7 @@ app.get('/:camp/:np',function(req,res){
   }
 });
 
-app.get('/:camp',function(req,res){
+app.post('/:camp',function(req,res){
   var camp = campaign[req.params.campaign];
   if(camp){
     res.render('campaign-page',{
@@ -138,7 +138,7 @@ app.get('/:camp',function(req,res){
   }
 });
 
-app.get('/:sess',function(req,res,next){
+app.post('/:sess',function(req,res,next){
   var sess = session[req.params.session];
   
   if(sess){
