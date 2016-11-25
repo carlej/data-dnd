@@ -27,7 +27,7 @@ other nodes will not keep track of what nodes are attached to it
 */
 
 {
-  "ID:1":{
+  "ca:1":{
     "name":"campaign 1",
     "notes":"here are notes",
     "content":"pi:1,pi:2,to:1,pi:3,lo:1,pi:4,lo:2,np:1,np:2,pi:5,to:2,to:3;"
