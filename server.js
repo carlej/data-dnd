@@ -24,7 +24,7 @@ app.get('/',function(req,res){
   });
 });
 
-app.post('/:camp/locations',function(req,res){
+app.post('/session/:sess/:camp/locations',function(req,res){
   var camp = campaign[req.params.campaign];
   var campcont = camp.contents;
   var camploca = campcont.locations;
@@ -36,7 +36,7 @@ app.post('/:camp/locations',function(req,res){
   });
 });
 
-app.post('/:camp/npcs',function(req,res){
+app.post('/session/:sess/:camp/npcs',function(req,res){
   var camp = campaign[req.params.campaign];
   var campcont = camp.contents;
   var campnp = campncont.nps;
@@ -48,7 +48,7 @@ app.post('/:camp/npcs',function(req,res){
   });
 });
 
-app.post('/:camp/towns',function(req,res){
+app.post('/session/:sess/:camp/towns',function(req,res){
   var camp = campaign[req.params.campaign];
   var campcont = camp.contents;
   var camptow = campcont.towns;
@@ -59,22 +59,48 @@ app.post('/:camp/towns',function(req,res){
   });
 });
 
-app.post('/:camp/:tow/locations',function(req,res){
+app.get('/session/:sess/:camp/towns/:tow/npcs',function(req,res){
   var camp = campaign[req.params.campaign];
-  var tow = towns[req.params.town];
   var campcont = camp.contents;
   var camptows = campcont.towns;
-  var camptow = camptows.tow;
+  var camptow = camptows[req.params.towns];
+  var campnps = camptow.npcs;
+  res.render('npcs-page',{
+    pageTitle:'NPCs',
+    npc:npc,
+    campnps,
+  });
+});
+
+app.post('/session/:sess/:camp/towns/:tow/locations',function(req,res){
+  var camp = campaign[req.params.campaign];
+  var campcont = camp.contents;
+  var camptows = campcont.towns;
+  var camptow = camptows[req.params.towns];
   var camplocas = camptow.locations;
   res.render('locations-page',{
     pageTitle:'Locations',
     location:location,
-    camp,
     camplocas,
   });
 });
 
-app.post('/:camp/:loca',function(req,res){
+app.post('/session/:sess/:camp/towns/:tow/locations/:loca/npcs',function(req,res){
+  var camp = campaign[req.params.campaign];
+  var campcont = camp.contents;
+  var camptows = campcont.towns;
+  var camptow = camptows[req.params.towns];
+  var camplocas = camptow.locations;
+  var camploca = camplocas.[req.params.locations];
+  var campnps = camploca.npcs;
+  res.render('npcs-page',{
+    pageTitle:'NPCs',
+    npc:npc,
+    campnps,
+  });
+});
+
+app.post('/session/:sess/:camp/locations/:loca',function(req,res){
   var camp = campaign[req.params.campaign];
   var loca = location[req.params.location];
   var campcont = camp.contents;
@@ -91,7 +117,7 @@ app.post('/:camp/:loca',function(req,res){
   }
 });
 
-app.post('/:camp/:tow',function(req,res){
+app.post('/session/:sess/:camp/towns/:tow',function(req,res){
   var camp = campaign[req.params.campaign];
   var tow = town[req.params.town];
   var campcont = camp.contents;
@@ -108,7 +134,7 @@ app.post('/:camp/:tow',function(req,res){
   }
 });
 
-app.post('/:camp/:np',function(req,res){
+app.post('/session/:sess/:camp/npcs/:np',function(req,res){
   var camp = campaign[req.params.campaign];
   var np = npc[req.params.npc];
   var campcont = camp.contents;
@@ -125,7 +151,7 @@ app.post('/:camp/:np',function(req,res){
   }
 });
 
-app.post('/:camp',function(req,res){
+app.post('/session/:sess/:camp',function(req,res){
   var camp = campaign[req.params.campaign];
   if(camp){
     res.render('campaign-page',{
@@ -138,7 +164,7 @@ app.post('/:camp',function(req,res){
   }
 });
 
-app.post('/:sess',function(req,res,next){
+app.post('/session/:sess',function(req,res,next){
   var sess = session[req.params.session];
   
   if(sess){
