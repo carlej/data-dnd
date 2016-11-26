@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build"://run the handlebars views that we have that we want to turn into js files ex the files to display the information for last assignment it was todo.handlebars into todo-template.js
+    "build": "handlebars views/partials/campaign-page.handlebars -f public/campaign-template.js +handlebars views/partials/campaign-page.handlebars -f public/campaign-template.js +handlebars views/partials/npc-page.handlebars -f public/npc-template.js +handlebars views/partials/location-page.handlebars -f public/location-template.js +handlebars views/partials/town-page.handlebars -f public/town-template.js",
     "prestart":"npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
