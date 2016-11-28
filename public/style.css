@@ -1,5 +1,5 @@
 body{
-  font-family:"Times Roman";
+  font-family:"Times Roman",sans-serif;
   font-size:24px;
   font-weight:100;
   background-color:#b0b0b0;
@@ -10,6 +10,51 @@ header{
   padding:20px;
   background-color: #0c3d0c;
 }
+
+.info {
+  background-color: #915225;
+  position: relative;
+  width: 300px;
+  min-height: 300px;
+  margin: 20px;
+  font-family: "Times Roman",sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  word-wrap: break-word;
+}
+
+.info h2 {
+  margin: 20px;
+  text-align: center;
+}
+
+.info-body {
+  padding: 0 20px
+}
+
+.info p {
+  margin: 15px 0;
+}
+
+.info p.indent-wrapped {
+  padding-left: 50px;
+  text-indent: -50px;
+}
+
+.info .dismiss-button {
+  font-family: sans-serif;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+.info:hover .dismiss-button {
+  display: initial;
+}
+
 
 .add-campaign-button-container {
   position: fixed;
