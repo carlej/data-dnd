@@ -11,6 +11,110 @@ header{
   background-color: #0c3d0c;
 }
 
+.add-campaign-button-container {
+  position: fixed;
+  bottom: 35px;
+  right: 140px;
+  z-index: 10;
+}
+
+#add-campaign-button {
+  width: 64px;
+  height: 64px;
+  background-color: #0c3d0c;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 40px;
+  font-weight: 200;
+  padding: 0 0 8px 0;
+  cursor: pointer;
+  outline: none;
+}
+
+#add-campaign-button:hover {
+  box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.33);
+}
+
+.add-town-button-container {
+  position: fixed;
+  bottom: 35px;
+  right: 105px;
+  z-index: 10;
+}
+
+#add-town-button {
+  width: 64px;
+  height: 64px;
+  background-color: #0c3d0c;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 40px;
+  font-weight: 200;
+  padding: 0 0 8px 0;
+  cursor: pointer;
+  outline: none;
+}
+
+#add-town-button:hover {
+  box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.33);
+}
+
+.add-location-button-container {
+  position: fixed;
+  bottom: 35px;
+  right: 70px;
+  z-index: 10;
+}
+
+#add-location-button {
+  width: 64px;
+  height: 64px;
+  background-color: #0c3d0c;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 40px;
+  font-weight: 200;
+  padding: 0 0 8px 0;
+  cursor: pointer;
+  outline: none;
+}
+
+#add-location-button:hover {
+  box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.33);
+}
+
+.add-npc-button-container {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  z-index: 10;
+}
+
+#add-npc-button {
+  width: 64px;
+  height: 64px;
+  background-color: #0c3d0c;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 40px;
+  font-weight: 200;
+  padding: 0 0 8px 0;
+  cursor: pointer;
+  outline: none;
+}
+
+#add-npc-button:hover {
+  box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.33);
+}
+
 .add-photo-button-container {
   position: fixed;
   bottom: 35px;
@@ -21,7 +125,7 @@ header{
 #add-photo-button {
   width: 64px;
   height: 64px;
-  background-color: red;
+  background-color: #0c3d0c;
   border: none;
   border-radius: 32px;
   box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.25);
