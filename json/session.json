@@ -11,7 +11,7 @@ ca:3;
 {
   "sessid:1": {
     "id": "1",
-    "id#":"sessid:1",
+    "idi":"sessid:1",
     "name":"name",
     "campaign": [
       {
