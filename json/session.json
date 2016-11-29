@@ -9,8 +9,8 @@ ca:2;
 ca:3;
 */
 {
-  "session1": {
-    "id": "sesid:1",
+  "sessid:1": {
+    "id": "1",
     "campaign": [
       {
         "id": "campid:1"
