@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "handlebars views/partials/campaign-page.handlebars -f public/campaign-template.js views/partials/campaign-page.handlebars -f public/campaign-template.js views/partials/npc-page.handlebars -f public/npc-template.js views/partials/location-page.handlebars -f public/location-template.js views/partials/town-page.handlebars -f public/town-template.js",
+    "build": "handlebars views/partials/campaign-page.handlebars -f public/campaign-template.js views/partials/npc-page.handlebars -f public/npc-template.js views/partials/location-page.handlebars -f public/location-template.js views/partials/town-page.handlebars -f public/town-template.js",
     "prestart":"npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
