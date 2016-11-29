@@ -906,6 +906,27 @@ app.post('/session/:sess/add-campaign',function(req,res,next){//this updates the
   }
 });
 
+app.post('/session/add-session',function(req,res,next){//this updates the info on the server side still needs to update on client and backend
+    if(req.body && req.body.sess){
+      session.(req.body.idi) = session.(req.body.idi) || [];
+      session.(req.body.idi).push({
+        id: req.body.id,
+        idi: req.body.idi
+      });
+);
+    fs.writeFile(path.join(infoJSON,'session.json'),JSON.stringify(session));
+      res.status(200).send();
+    }
+    else{
+      res.status(400).send("There must be a campaign to add.");
+    }
+  }
+  else{
+    next();
+  }
+});
+
+
 app.get('*',function(req,res){
   res.status(404).render('404-page',{
     pageTitle:'404'
