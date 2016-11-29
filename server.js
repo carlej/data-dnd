@@ -911,7 +911,8 @@ app.post('/session/add-session',function(req,res,next){//this updates the info o
       session.(req.body.idi) = session.(req.body.idi) || [];
       session.(req.body.idi).push({
         id: req.body.id,
-        idi: req.body.idi
+        idi: req.body.idi,
+        contents.push({});
       });
 );
     fs.writeFile(path.join(infoJSON,'session.json'),JSON.stringify(session));
