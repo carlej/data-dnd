@@ -5,6 +5,7 @@ this is where towns will be
 {
   "towid:1":{
     "id":"1",
+    "id#":"towid:1",
     "name":"town 1",
     "notes":"notes"
   }
