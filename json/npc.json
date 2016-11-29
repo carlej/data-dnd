@@ -6,6 +6,7 @@ can be more or less detailed
 {
   "npid:1": {
     "id": "1",
+    "id#":"npid:1",
     "name": "Bob Sagget",
     "class": "Sorcerer",
     "str": "8",
@@ -38,6 +39,7 @@ can be more or less detailed
   },
   "npid:2": {
     "id": "2",
+    "id#":"npid:2",
     "name": "Billy Bob",
     "class": "Barbarian",
     "str": "20",
@@ -70,6 +72,7 @@ can be more or less detailed
   },
   "npid:3": {
     "id": "3",
+    "id#":"npid:3",
     "name": "Willian Marquess",
     "class": "Rogue",
     "str": "10",
@@ -102,6 +105,7 @@ can be more or less detailed
   },
   "npid:4": {
     "id": "4",
+    "id#":"npid:4",
     "name": "Cucumber Bandersnatch",
     "class": "Cleric",
     "str": "10",
@@ -134,6 +138,7 @@ can be more or less detailed
   },
   "npid:5": {
     "id": "5",
+    "id#":"npid:5",
     "name": "Prantha Basi",
     "class": "Monk",
     "str": "16",
@@ -166,6 +171,7 @@ can be more or less detailed
   },
   "npid:6": {
     "id": "6",
+    "id#":"npid:6",
     "name": "Zora",
     "class": "Alchemist",
     "str": "8",
@@ -198,6 +204,7 @@ can be more or less detailed
   },
   "npid:7": {
     "id": "7",
+    "id#":"npid:7",
     "name": "Marteph Lemoor",
     "class": "Wizard",
     "str": "",
@@ -230,6 +237,7 @@ can be more or less detailed
   },
   "npid:8": {
     "id": "8",
+    "id#":"npid:8",
     "name": "Bori",
     "class": "Commoner (slave)",
     "str": "",
