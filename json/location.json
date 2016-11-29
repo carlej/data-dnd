@@ -1,0 +1,24 @@
+/*
+example location
+ID:1;
+name:location1;
+notes:this is an example;
+pi:1;
+pi:2;
+*/
+{
+  "locid:1": {
+    "id": "1",
+    "name": "Magicia City streets",
+    "terrainType": "Urban",
+    "alignment": "Chaotic Neutral"
+  },
+
+  "locid:2": {
+    "id": "2",
+    "name": "Weapons and Potions shop",
+    "terrainType": "Building (interior)",
+    "alignment": "Chaotic Money (they'll do ANYTHING for your money except kill/rob you, you hope)",
+    "inventory": "All manner of weaponry, along with literally hundreds of varieties of potions for your likeing."
+  }
+}

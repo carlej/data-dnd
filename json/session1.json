@@ -1,0 +1,20 @@
+/*This will be the location of what campaigns this session has
+new sessions will create new files in this folder
+*/
+/*
+example session
+
+ca:1;
+ca:2;
+ca:3;
+*/
+{
+  "session1": {
+    "id": "sesid:1",
+    "campaign": [
+      {
+        "id": "campid:1"
+      }
+    ]
+  }
+}
