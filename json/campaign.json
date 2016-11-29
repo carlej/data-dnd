@@ -1,7 +1,7 @@
 {//Campaign 1
   "campid:1": {
     "id": "1",
-    "id#":"campid:1",
+    "idi":"campid:1",
     "name": "The Scurge of the Programmers",
     "notes": "There are ",
     "contents": [
