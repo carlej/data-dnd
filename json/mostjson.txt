@@ -1,4 +1,0 @@
-place all json files here
-even place the session.json here
-
-exception do not place package.json here it needs to stay where it is for node stuff
