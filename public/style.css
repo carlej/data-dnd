@@ -55,6 +55,9 @@ header{
   display: initial;
 }
 
+.info .lable{
+  font-weight: bold;
+}
 
 .add-campaign-button-container {
   position: fixed;
