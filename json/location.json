@@ -9,7 +9,7 @@ pi:2;
 {
   "locid:1": {
     "id": "1",
-    "id#":"locaid:1",
+    "idi":"locaid:1",
     "name": "Magicia City streets",
     "terrainType": "Urban",
     "alignment": "Chaotic Neutral"
@@ -17,7 +17,7 @@ pi:2;
 
   "locid:2": {
     "id": "2",
-    "id#":"locaid:2",
+    "idi":"locaid:2",
     "name": "Weapons and Potions shop",
     "terrainType": "Building (interior)",
     "alignment": "Chaotic Money (they'll do ANYTHING for your money except kill/rob you, you hope)",
