@@ -12,7 +12,8 @@ pi:2;
     "idi":"locaid:1",
     "name": "Magicia City streets",
     "terrainType": "Urban",
-    "alignment": "Chaotic Neutral"
+    "alignment": "Chaotic Neutral",
+    "notes":"notes"
   },
 
   "locid:2": {
@@ -21,6 +22,7 @@ pi:2;
     "name": "Weapons and Potions shop",
     "terrainType": "Building (interior)",
     "alignment": "Chaotic Money (they'll do ANYTHING for your money except kill/rob you, you hope)",
-    "inventory": "All manner of weaponry, along with literally hundreds of varieties of potions for your likeing."
+    "inventory": "All manner of weaponry, along with literally hundreds of varieties of potions for your likeing.",
+    "notes":"notes"
   }
 }
