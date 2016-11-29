@@ -5,6 +5,13 @@
     "notes": "There are ",
     "contents": [
       {
+        "pictures":[
+          {
+            "pic":"picid:1"
+          },
+            "pic":"picid:2"
+          }
+        ],
         "npcs": [
           { //npc 1
             "np": [
