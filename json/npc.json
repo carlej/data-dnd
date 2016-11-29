@@ -35,7 +35,8 @@ can be more or less detailed
     "negative": "They hate persuasion attempts, losing money and anyone that disperages magic!",
     "goal": "Bob Sagget has no goals in life, he just carries on.",
     "language": "Gnomish, Common and Draconic",
-    "traits": "Courteous, Ambitious, Flirty, Emotional and Loyal"
+    "traits": "Courteous, Ambitious, Flirty, Emotional and Loyal",
+    "notes":"notes"
   },
   "npid:2": {
     "id": "2",
@@ -68,7 +69,8 @@ can be more or less detailed
     "negative": "They hate persuasion attempts, losing money and anyone that is stronger than them!",
     "goal": "Billy Bob will be the hugest!",
     "language": "Common",
-    "traits": "Self-Controlled, Illogical, Emotional and Ambitious"
+    "traits": "Self-Controlled, Illogical, Emotional and Ambitious",
+    "notes":"notes"
   },
   "npid:3": {
     "id": "3",
@@ -101,7 +103,8 @@ can be more or less detailed
     "negative": "Brutishness, idiots and common folk",
     "goal": "Being the fanciest of men and the roguish of rogues",
     "language": "Common, Elven, Gnomish, Draconic, Abyssal, Celestial",
-    "traits": "Quick-witted, ambitious and lustfull"
+    "traits": "Quick-witted, ambitious and lustfull",
+    "notes":"notes"
   },
   "npid:4": {
     "id": "4",
@@ -135,6 +138,7 @@ can be more or less detailed
     "goal": "To save as many as he can by harming as few as possible.",
     "language": "Common and Elvish",
     "traits": "Self-less, helpful and adventurous",
+    "notes":"notes"
   },
   "npid:5": {
     "id": "5",
@@ -167,7 +171,8 @@ can be more or less detailed
     "negative": "??",
     "goal": "??",
     "language": "??",
-    "traits": "??"
+    "traits": "??",
+    "notes":"notes"
   },
   "npid:6": {
     "id": "6",
@@ -200,7 +205,8 @@ can be more or less detailed
     "negative": "",
     "goal": "",
     "language": "",
-    "traits": ""
+    "traits": "",
+    "notes":"notes"
   },
   "npid:7": {
     "id": "7",
@@ -233,7 +239,8 @@ can be more or less detailed
     "negative": "",
     "goal": "",
     "language": "",
-    "traits": ""
+    "traits": "",
+    "notes":"notes"
   },
   "npid:8": {
     "id": "8",
@@ -266,6 +273,7 @@ can be more or less detailed
     "negative": "",
     "goal": "",
     "language": "",
-    "traits": ""
+    "traits": "",
+    "notes":"notes"
   }
 }
