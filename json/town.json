@@ -3,7 +3,8 @@ this is where towns will be
 */
 
 {
-  "ID:1":{
+  "towid:1":{
+    "id":"1",
     "name":"town 1",
     "notes":"notes"
   }
