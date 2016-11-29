@@ -1,33 +1,49 @@
 {
-  "picid1": {
+  "picid:1": {
+    "id":"1",
+    "idi":"picid:1",
     "caption": "",
     "url": { }
   },
-  "picid2": {
+  "picid:2": {
+    "id":"2",
+    "idi":"picid:2",
     "caption": "",
     "url": { }
   },
-  "picid3": {
+  "picid:3": {
+    "id":"3",
+    "idi":"picid:3",
     "caption": "",
     "url": { }
   },
-  "picid4": {
+  "picid:4": {
+    "id":"4",
+    "idi":"picid:4",
     "caption": "",
     "url": { }
   },
-  "picid5": {
+  "picid:5": {
+    "id":"5",
+    "idi":"picid:5",
     "caption": "",
     "url": { }
   },
-  "picid6": {
+  "picid:6": {
+    "id":"6",
+    "idi":"picid:6",
     "caption": "",
     "url": { }
   },
-  "picid7": {
+  "picid:7": {
+    "id":"7",
+    "idi":"picid:7",
     "caption": "",
     "url": { }
   },
-  "picid8": {
+  "picid:8": {
+    "id":"8",
+    "idi":"picid:8",
     "caption": "",
     "url": { }
   }
