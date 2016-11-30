@@ -1,1 +1,18 @@
-pictures page
+{{>header}}
+<main>
+<div class="info">
+	{{#each camppics.pic.id}}
+		{{#each picture}}
+			{{#if camppics.pic.id==picture.idi}}
+				<div class="photo-container">
+				<img class="photo" src ="{{url}}">
+				<p class="photo-caption">{{caption}}</p>
+				</div>
+			{{/if}}
+		{{/each}}
+	{{/each}}
+</div>
+</main>
+{{>footer}}
+
+{{>add-picture}}
