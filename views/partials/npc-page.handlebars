@@ -1,1 +1,23 @@
-single npc page
+<section class="info">
+   <h2>{{loca.name}}</h2>
+   <div class="info-body">
+   {{#if terrainType}}
+   <p><span class="lable">Terrain Type: </span>{{loca.terrainType}}</p>
+   {{/if}}
+   {{#if alignment}}
+   <p><span class="lable">Alignment: </span>{{loca.alignment}}</p>
+   {{/if}}
+   {{#if inventory}}
+   <p><span class="lable">Inventory: </span>{{loca.inventory}}</p>
+   {{/if}}
+   {{#if notes}}
+   <p><span class="lable">Notes: </span>{{loca.notes}}</p>
+   {{/if}}
+   </div>
+</section>
+<section class="info">
+   <h2>Picturess</h2>
+   <div class="info-body">
+   <p><span class="select-picture">Click for Pictures</span></p>
+   </div>
+</section>
