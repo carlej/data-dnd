@@ -124,7 +124,7 @@
         ],
         "locations": [
           {//loc 1
-            "loc": [
+            "loca": [
               {
                 "id": "locid:1",
                 "pictures": [
@@ -164,7 +164,7 @@
                 ]
               }
             ],//loc 2
-            "loc": [
+            "loca": [
               {
                 "id": "locid:2",
                 "pictures": [
@@ -204,7 +204,7 @@
                 ]
               }
             ],//loc 3
-            "loc": [
+            "loca": [
               {
                 "id": "locid:3",
                 "pictures": [
@@ -244,7 +244,7 @@
                 ]
               }
             ],//loc 4
-            "loc": [
+            "loca": [
               {
                 "id": "locid:4",
                 "pictures": [
@@ -298,7 +298,7 @@
                 ],
                 "locations": [
                   {
-                    "loc": [
+                    "loca": [
                       {
                         "id": "locid:1",
                         "pictures": [
@@ -338,7 +338,7 @@
                         ]
                       }
                     ],
-                    "loc": [
+                    "loca": [
                       {
                         "id": "locid:2",
                         "pictures": [
@@ -392,7 +392,7 @@
                 ],
                 "locations": [
                   {
-                    "loc": [
+                    "loca": [
                       {
                         "id": "locid:3",
                         "pictures": [
@@ -432,7 +432,7 @@
                         ]
                       }
                     ],
-                    "loc": [
+                    "loca": [
                       {
                         "id": "locid:4",
                         "pictures": [
