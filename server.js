@@ -33,11 +33,12 @@ SPECIFIC SESSION
 */
 app.post('/session/:sess',function(req,res,next){
     var sess = session[req.params.sess];
-  
+    var sesscont= sess.contents;
     if(sess){
         res.render('campaigns-page',{
             pageTitle: 'Campaigns',
-            sess,
+            sesscont,
+            campaign:campaign
         });
     }
     else{
@@ -88,12 +89,12 @@ app.post('/session/:sess/:camp/npcs',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
-    var campnp = campncont.nps;
+    var campnps = campcont.npcs;
     res.render('npcs-page',{
         pageTitle:'NPCs',
         npc:npc,
         camp,
-        campnp,
+        campnps,
     });
 });
 /*
