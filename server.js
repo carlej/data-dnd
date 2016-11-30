@@ -31,13 +31,11 @@ app.post('/session/:sess/:camp/locations',function(req,res){
   var camp = campaign[req.params.camp];
   var campcont = camp.contents;
   var camploca = campcont.locations;
-  var loca = 1;
   res.render('locations-page',{
     pageTitle:'Locations',
     locations:location,
     camp,
     camploca,
-    loca,
   });
 });
 
@@ -58,13 +56,11 @@ app.post('/session/:sess/:camp/npcs',function(req,res){
   var camp = campaign[req.params.camp];
   var campcont = camp.contents;
   var campnp = campncont.nps;
-  var np = 1;
   res.render('npcs-page',{
     pageTitle:'NPCs',
     npc:npc,
     camp,
     campnp,
-    np,
   });
 });
 
@@ -73,12 +69,10 @@ app.post('/session/:sess/:camp/towns',function(req,res){
   var camp = campaign[req.params.camp];
   var campcont = camp.contents;
   var camptow = campcont.towns;
-  var tow = 1;
   res.render('locations-page',{
     pageTitle:'Towns',
     town:town,
     camptow,
-    tow,
   });
 });
 
@@ -89,12 +83,10 @@ app.post('/session/:sess/:camp/towns/:tow/npcs',function(req,res){
   var camptows = campcont.towns;
   var camptow = camptows[req.params.tow];
   var campnps = camptow.npcs;
-  var np = 1;
   res.render('npcs-page',{
     pageTitle:'NPCs',
     npc:npc,
     campnps,
-    np,
   });
 });
 
@@ -119,12 +111,10 @@ app.post('/session/:sess/:camp/towns/:tow/locations',function(req,res){
   var camptows = campcont.towns;
   var camptow = camptows[req.params.tow];
   var camplocas = camptow.locations;
-  var loca = 1;
   res.render('locations-page',{
     pageTitle:'Locations',
     location:location,
     camplocas,
-    loca,
   });
 });
 
@@ -137,12 +127,10 @@ app.post('/session/:sess/:camp/towns/:tow/locations/:loca/npcs',function(req,res
   var camplocas = camptow.locations;
   var camploca = camplocas.[req.params.loca];
   var campnps = camploca.npcs;
-  var np = 1;
   res.render('npcs-page',{
     pageTitle:'NPCs',
     npc:npc,
     campnps,
-    np,
   });
 });
 
@@ -156,7 +144,7 @@ app.post('/session/:sess/:camp/towns/:tow/locations/:loca/npcs/:np/pictures',fun
   var camploca = camplocas[req.params.loca];
   var campnps = camploca.npcs;
   var carmnp = campnps[req.params.np];
-  var camppics = campnp.
+  var camppics = campnp.pictures;
   res.render('pictures-page',{
     pageTitle:'Pictures',
     picture:picture,
