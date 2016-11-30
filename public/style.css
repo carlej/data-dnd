@@ -11,6 +11,34 @@ header{
   background-color: #0c3d0c;
 }
 
+nav {
+  background-color: #0c3d0c;
+  color: white;
+  margin: 0 -20px;  /* negative margin here makes up for header padding */
+  font-size: 28px;
+  font-weight: 200;
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 20px;
+}
+
+.navbar-item {
+  display: inline;
+}
+
+.navbar-item a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar-item:hover a {
+  background-color: #b0b0b0;
+}
+
 .info {
   background-color: #915225;
   position: relative;
@@ -82,6 +110,20 @@ header{
 }
 
 .info:hover .select-npc {
+  display: initial;
+}
+
+.todo .dismiss-button {
+  font-family: sans-serif;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+.todo:hover .dismiss-button {
   display: initial;
 }
 
