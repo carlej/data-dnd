@@ -320,29 +320,34 @@ nav {
   padding: 20px;
 }
 
-.photo-input-element {
+.info-input-element {
   display: flex;
   align-items: center;
   font-size: 20px;
   margin: 10px 0;
 }
 
-.photo-input-element label {
+.info-input-element label {
   font-weight: 600;
   flex: 1 75px;
   margin-right: 10px;
 }
 
-.photo-input-element input,
-.photo-input-element textarea {
+.info-input-element input,
+.info-input-element textarea {
   flex: 6 200px;
   padding: 8px;
   font-size: 20px;
   border: 1px solid #aaa;
 }
 
-.photo-input-element textarea {
+.info-input-element textarea {
   min-height: 64px;
+}
+
+.info-input-element.required label::after {
+  content: ' *';
+  color: red;
 }
 
 .modal-footer {
