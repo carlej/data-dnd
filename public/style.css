@@ -69,47 +69,47 @@ nav {
   text-indent: -50px;
 }
 
-.info .select-picture {
+.info .picture-select {
   font-family: sans-serif;
   font-size: 30px;
   display: none;
   cursor: pointer;
 }
 
-.info:hover .select-picture {
+.info:hover .picture-select {
   display: initial;
 }
 
-.info .select-location {
+.info .location-select {
   font-family: sans-serif;
   font-size: 30px;
   display: none;
   cursor: pointer;
 }
 
-.info:hover .select-location {
+.info:hover .location-select {
   display: initial;
 }
 
-.info .select-town {
+.info .town-select {
   font-family: sans-serif;
   font-size: 30px;
   display: none;
   cursor: pointer;
 }
 
-.info:hover .select-town {
+.info:hover .town-select {
   display: initial;
 }
 
-.info .select-npc {
+.info .npc-select {
   font-family: sans-serif;
   font-size: 30px;
   display: none;
   cursor: pointer;
 }
 
-.info:hover .select-npc {
+.info:hover .npc-select {
   display: initial;
 }
 
