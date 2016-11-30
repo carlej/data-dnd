@@ -41,17 +41,47 @@ header{
   text-indent: -50px;
 }
 
-.info .dismiss-button {
+.info .select-picture {
   font-family: sans-serif;
-  position: absolute;
-  top: 0;
-  right: 10px;
   font-size: 30px;
   display: none;
   cursor: pointer;
 }
 
-.info:hover .dismiss-button {
+.info:hover .select-picture {
+  display: initial;
+}
+
+.info .select-location {
+  font-family: sans-serif;
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+.info:hover .select-location {
+  display: initial;
+}
+
+.info .select-town {
+  font-family: sans-serif;
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+.info:hover .select-town {
+  display: initial;
+}
+
+.info .select-npc {
+  font-family: sans-serif;
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+.info:hover .select-npc {
   display: initial;
 }
 
