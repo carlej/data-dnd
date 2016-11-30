@@ -1,26 +1,22 @@
 function removeOnDismiss(event){
   var clickedElem = event.target;
   var clickedElemParent = event.target.parentNode;
-  
   var ElemParent= clickedElemParent.parentNode;
   ElemParent.removeChild(clickedElemParent);
 }
 
 function displayAddModal(){
   var backdrop = document.getElementById('modal-backdrop');
-  var addNpcModal = document.getElementById('add-info-modal');
-  
+  var addNpcModal = document.getElementById('add-info-modal');  
   backdrop.classList.remove('hidden');
   addNpcModal.classList.remove('hidden');
 }
 
 function closeAddModal(){
   var backdrop = document.getElementById('modal-backdrop');
-  var addNpcModal = document.getElementById('add-info-modal');
-  
+  var addNpcModal = document.getElementById('add-info-modal');  
   backdrop.classList.add('hidden');
-  addNpcModal.classList.add('hidden');
-  
+  addNpcModal.classList.add('hidden');  
   clearInput();
 }
 
@@ -68,7 +64,6 @@ function insertNewNpc() {
   var todoInputNotes = document.getElementById('input-notes').value || '';
 
   if (todoInputName.trim()) {
-
     var newNPCHTML = generateNPCHTML(
       todoInputId.trim(),
       todoInputIdi.trim(),
@@ -105,13 +100,120 @@ function insertNewNpc() {
     );
     var mainElement = document.querySelector('main');
     mainElement.insertAdjacentHTML('beforeend', newNPCHTML);
-
     closeAddModal();
-
   } else {
-
     alert('You must specify a value for the "name" field.');
-
   }
+}
 
+function insertNewCampaign() {
+
+  var todoInputId = document.getElementById('todo-input-id').value || '';
+  var todoInputIdi = document.getElementById('todo-input-idi').value || '';
+  var todoInputName = document.getElementById('todo-input-name').value || '';
+  var todoInputNotes = document.getElementById('input-notes').value || '';
+
+  if (todoInputName.trim()) {
+    var newCampaignHTML = generateCampaignHTML(
+      todoInputId.trim(),
+      todoInputIdi.trim(),
+      todoInputName.trim(),
+      todoInputNotes.trim(),
+    );
+    var mainElement = document.querySelector('main');
+    mainElement.insertAdjacentHTML('beforeend', newCampaignHTML);
+    closeAddModal();
+  } else {
+    alert('You must specify a value for the "name" field.');
+  }
+}
+
+function insertNewLocation() {
+
+  var todoInputId = document.getElementById('todo-input-id').value || '';
+  var todoInputIdi = document.getElementById('todo-input-idi').value || '';
+  var todoInputName = document.getElementById('todo-input-name').value || '';
+  var todoInputTerrainType = document.getElementById('input-terraintype').value || '';
+  var todoInputAlignmnet = document.getElementById('input-alignment').value || '';
+  var todoInputNotes = document.getElementById('input-notes').value || '';
+
+  if (todoInputName.trim()) {
+    var newLocationHTML = generateLocationHTML(
+      todoInputId.trim(),
+      todoInputIdi.trim(),
+      todoInputName.trim(),
+      todoInputTerrainType.trim(),
+      todoInputAlignmnet.trim(),
+      todoInputNotes.trim(),
+    );
+    var mainElement = document.querySelector('main');
+    mainElement.insertAdjacentHTML('beforeend', newLocationHTML);
+    closeAddModal();
+  } else {
+    alert('You must specify a value for the "name" field.');
+  }
+}
+
+function insertNewTown() {
+
+  var todoInputId = document.getElementById('todo-input-id').value || '';
+  var todoInputIdi = document.getElementById('todo-input-idi').value || '';
+  var todoInputName = document.getElementById('todo-input-name').value || '';
+  var todoInputNotes = document.getElementById('input-notes').value || '';
+
+  if (todoInputName.trim()) {
+    var newTownHTML = generateTownHTML(
+      todoInputId.trim(),
+      todoInputIdi.trim(),
+      todoInputName.trim(),
+      todoInputNotes.trim(),
+    );
+    var mainElement = document.querySelector('main');
+    mainElement.insertAdjacentHTML('beforeend', newTownHTML);
+    closeAddModal();
+  } else {
+    alert('You must specify a value for the "name" field.');
+  }
+}
+
+function insertNewSession() {
+
+  var todoInputId = document.getElementById('todo-input-id').value || '';
+  var todoInputIdi = document.getElementById('todo-input-idi').value || '';
+  var todoInputName = document.getElementById('todo-input-name').value || '';
+
+  if (todoInputName.trim()) {
+    var newSessionHTML = generateSessionHTML(
+      todoInputId.trim(),
+      todoInputIdi.trim(),
+      todoInputName.trim(),
+    );
+    var mainElement = document.querySelector('main');
+    mainElement.insertAdjacentHTML('beforeend', newSessionHTML);
+    closeAddModal();
+  } else {
+    alert('You must specify a value for the "name" field.');
+  }
+}
+
+function insertNewPicture() {
+
+  var todoInputId = document.getElementById('todo-input-id').value || '';
+  var todoInputIdi = document.getElementById('todo-input-idi').value || '';
+  var todoInputCaption = document.getElementById('todo-input-caption').value || '';
+  var todoInputUrl = document.getElementById('input-url').value || '';
+
+  if (todoInputUrl.trim()) {
+    var newPictureHTML = generatePictureHTML(
+      todoInputId.trim(),
+      todoInputIdi.trim(),
+      todoInputCaption.trim(),
+      todoInputUrl.trim(),
+    );
+    var mainElement = document.querySelector('main');
+    mainElement.insertAdjacentHTML('beforeend', newPictureHTML);
+    closeAddModal();
+  } else {
+    alert('You must specify a value for the "URL" field.');
+  }
 }
