@@ -3,15 +3,12 @@
     "id": "1",
     "idi":"campid:1",
     "name": "The Scurge of the Programmers",
-    "notes": "There are ",
+    "notes": "There are 2 programmers, stuff happened and now they're here.... weird.",
     "contents": [
       {
         "pictures":[
           {
-            "pic":"picid:1"
-          },
-          {
-            "pic":"picid:2"
+            "pic":"picid:23"
           }
         ],
         "npcs": [
@@ -293,7 +290,7 @@
                 "id": "towid:1",
                 "pictures": [
                   {
-                    "pic": "picid:7"
+                    "pic": "picid:21"
                   }
                 ],
                 "locations": [
@@ -387,7 +384,7 @@
                 "id": "towid:2",
                 "pictures": [
                   {
-                    "pic": "picid:8"
+                    "pic": "picid:22"
                   }
                 ],
                 "locations": [
