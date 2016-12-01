@@ -310,7 +310,7 @@ app.post('/session/:sess/:camp/towns/:tow/locations/:loca/pictures',function(req
     var camptows = campcont.towns;
     var camptow = camptows[req.params.tow];
     var camplocas = camptow.locations;
-    var camploca = camplocas.[req.params.loca];
+    var camploca = camplocas[req.params.loca];
     var camppics = camploca.pictures;
     res.render('pictures-page',{
         pageTitle:'Pictures',
@@ -330,7 +330,7 @@ app.post('/session/:sess/:camp/towns/:tow/locations/:loca/npcs',function(req,res
     var camptows = campcont.towns;
     var camptow = camptows[req.params.tow];
     var camplocas = camptow.locations;
-    var camploca = camplocas.[req.params.loca];
+    var camploca = camplocas[req.params.loca];
     var campnps = camploca.npcs;
     res.render('npcs-page',{
         pageTitle:'NPCs',
@@ -393,24 +393,17 @@ ADD SESSION
 */
 app.post('/session/add-session',function(req,res,next){//this updates the info on the server side still needs to update on client and backend
     if(req.body && req.body.sess){
-        session.(req.body.idi) = session.(req.body.idi) || [];
-        session.(req.body.idi).push({
+        session[req.body.idi] = session[req.body.idi] || [];
+        session[req.body.idi].push({
             id: req.body.id,
             idi: req.body.idi,
-            contents.push({});
+	    contents:contents.push({})
     });
-);
     fs.writeFile(path.join(infoJSON,'session.json'),JSON.stringify(session));
     res.status(200).send();
-}
-else{
-      res.status(400).send("There must be a campaign to add.");
-}
-}
-else{
-    next();
-}
-});
+}else{
+      res.status(400).send("There must be a session to add.");
+}});
 /*
 ************************************************************
 ADD CAMPAIGN TO SPECIFIC SESSION
@@ -424,12 +417,12 @@ app.post('/session/:sess/add-campaign',function(req,res,next){//this updates the
             sess.campaign.push({
                 id: req.body.idi
             });
-            campaign.(req.body.idi).push({
+            campaign[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 name:req.body.name,
                 notes:req.body.notes,
-                //contents.push({}); ??
+                contents:contents.push({})
         });
         fs.writeFile(path.join(infoJSON,'campaign.json'),JSON.stringify(campaign));
         fs.writeFile(path.join(infoJSON,'session.json'),JSON.stringify(session));
@@ -438,7 +431,7 @@ app.post('/session/:sess/add-campaign',function(req,res,next){//this updates the
     else{
         res.status(400).send("There must be a campaign to add.");
     }
-    else{
+    }else{
         next();
     }
 });
@@ -457,7 +450,7 @@ app.post('/session/:sess/:camp/pictures/add-picture',function(req,res,next){//th
             campcont.pictures.push({
                 pic: req.body.idi
             });
-            picture.(req.body.idi).push({
+            picture[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 caption:req.body.caption,
@@ -490,7 +483,7 @@ app.post('/session/:sess/:camp/npcs/add-npc',function(req,res,next){//this updat
             campcont.npcs.np.push({
                 id: req.body.idi
             });
-            npc.(req.body.idi).push({
+            npc[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 name:req.body.name,
@@ -553,7 +546,7 @@ app.post('/session/:sess/:camp/npcs/:np/pictures/add-picture',function(req,res,n
             campnp.pictures.push({
                 pic: req.body.idi
             });
-            picture.(req.body.idi).push({
+            picture[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 caption:req.body.caption,
@@ -586,7 +579,7 @@ app.post('/session/:sess/:camp/locations/add-location',function(req,res,next){//
             campcont.locations.loca.push({
                 id: req.body.idi
             });
-            location.(req.body.idi).push({
+            location[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 name:req.body.name,
@@ -624,7 +617,7 @@ app.post('/session/:sess/:camp/locations/:loca/pictures/add-picture',function(re
             camploca.pictures.push({
                 pic: req.body.idi
             });
-            picture.(req.body.idi).push({
+            picture[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 caption:req.body.caption,
@@ -659,7 +652,7 @@ app.post('/session/:sess/:camp/locations/:loca/npcs/add-npc',function(req,res,ne
             camploca.npcs.np.push({
                 id: req.body.idi
             });
-            npc.(req.body.idi).push({
+            npc[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 name:req.body.name,
@@ -724,7 +717,7 @@ app.post('/session/:sess/:camp/locations/:loca/npcs/:np/pictures/add-picture',fu
             campnp.pictures.push({
                 pic: req.body.idi
             });
-            picture.(req.body.idi).push({
+            picture[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 caption:req.body.caption,
@@ -757,7 +750,7 @@ app.post('/session/:sess/:camp/towns/add-town',function(req,res,next){//this upd
             campcont.towns.tow.push({
                 id: req.body.idi
             });
-            town.(req.body.idi).push({
+            town[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 name:req.body.name,
@@ -792,7 +785,7 @@ app.post('/session/:sess/:camp/towns/:tow/pictures/add-picture',function(req,res
             camptow.pictures.push({
                 pic: req.body.idi
             });
-            picture.(req.body.idi).push({
+            picture[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 caption:req.body.caption,
@@ -827,7 +820,7 @@ app.post('/session/:sess/:camp/towns/:tow/npcs/add-npc',function(req,res,next){/
             camptow.npcs.np.push({
                 id: req.body.idi
             });
-            npc.(req.body.idi).push({
+            npc[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 name:req.body.name,
@@ -890,7 +883,7 @@ app.post('/session/:sess/:camp/towns/:tow/locations/add-location',function(req,r
             camptow.locations.loca.push({
                 id:req.body.id
             });
-            location.(req.body.idi).push({
+            location[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 name:req.body.name,
@@ -930,7 +923,7 @@ app.post('/session/:sess/:camp/towns/:tow/locations/:loca/pictures/add-picture',
             camploca.pictures.push({
                 pic: req.body.idi
             });
-            picture.(req.body.idi).push({
+            picture[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 caption:req.body.caption,
@@ -967,7 +960,7 @@ app.post('/session/:sess/:camp/towns/:tow/locations/:loca/npcs/add-npc',function
             camploca.npcs.np.push({
                 id: req.body.idi
             });
-            npc.(req.body.idi).push({
+            npc[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 name:req.body.name,
@@ -1034,7 +1027,7 @@ app.post('/session/:sess/:camp/towns/:tow/locations/:loca/npcs/:np/pictures/add-
             campnp.pictures.push({
                 pic: req.body.idi
             });
-            picture.(req.body.idi).push({
+            picture[req.body.idi].push({
                 id:req.body.id,
                 idi:req.body.idi,
                 caption:req.body.caption,
