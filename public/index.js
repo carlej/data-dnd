@@ -28,7 +28,55 @@ function clearInput(){
   }
 }
 
+function getSession(){
+  var pathComp = window.location.pathname.split('/');
+  for(var x=0; x<pathComp.length; x++)
+  {
+    if(pathComp[x]=="sessions")
+    {return pathComp[(x+1)];}
+  }
+}
+
+function getCampaign(){
+  var pathComp = window.location.pathname.split('/');
+  for(var x=0; x<pathComp.length; x++)
+  {
+    if(pathComp[x]=="sessions")
+    {return pathComp[(x+2)];}
+  }
+}
+
+function getTown(){
+  var pathComp = window.location.pathname.split('/');
+  for(var x=0; x<pathComp.length; x++)
+  {
+    if(pathComp[x]=="towns")
+    {return pathComp[(x+1)];}
+  }
+}
+
+function getLocation(){
+  var pathComp = window.location.pathname.split('/');
+  for(var x=0; x<pathComp.length; x++)
+  {
+    if(pathComp[x]=="locations")
+    {return pathComp[(x+1)];}
+  }
+}
+
+function getNpc(){
+  var pathComp = window.location.pathname.split('/');
+  for(var x=0; x<pathComp.length; x++)
+  {
+    if(pathComp[x]=="npcs")
+    {return pathComp[(x+1)];}
+  }
+}
+
 function insertNewNpc() {
+  var pagecamp = getCampaign();
+  var pagetow = getTown();
+  var pageloca = getLocation();
 
   var todoInputId = document.getElementById('todo-input-id').value || '';
   var todoInputIdi = document.getElementById('todo-input-idi').value || '';
@@ -64,6 +112,39 @@ function insertNewNpc() {
   var todoInputNotes = document.getElementById('input-notes').value || '';
 
   if (todoInputName.trim()) {
+    storeNewNPC(pagecamp,pagetow,pageloca,
+      todoInputId,
+      todoInputIdi,
+      todoInputName,
+      todoInputClass,
+      todoInputStr,
+      todoInputDex,
+      todoInputCon,
+      todoInputInt,
+      todoInputWis,
+      todoInputCha,
+      todoInputDescription,
+      todoInputRace,
+      todoInputAlignment,
+      todoInputAc,
+      todoInputAttacks,
+      todoInputSkills,
+      todoInputFeats,
+      todoInputHp,
+      todoInputHd,
+      todoInputClothing,
+      todoInputGear,
+      todoInputPlatinum,
+      todoInputGold,
+      todoInputSilver,
+      todoInputCopper,
+      todoInputIron,
+      todoInputPositive,
+      todoInputNegative,
+      todoInputGoal,
+      todoInputLanguage,
+      todoInputTraits,
+      todoInputNotes,)
     var newNPCHTML = generateNPCHTML(
       todoInputId.trim(),
       todoInputIdi.trim(),
