@@ -5,18 +5,88 @@ function removeOnDismiss(event){
   ElemParent.removeChild(clickedElemParent);
 }
 
-function displayAddModal(){
-  var backdrop = document.getElementById('modal-backdrop');
-  var addNpcModal = document.getElementById('add-info-modal');  
-  backdrop.classList.remove('hidden');
+
+
+function displayAddSession(){
+  var addSessionModal = documnet.getElementById('add-session-modal');
+  addSessionModal.classList.remove('hidden');
+  displayAddModal();
+}
+
+function closeAddSession(){
+  var addSessionModal = document.getElementById('add-session-modal');
+  addSessionModal.classList.add('hidden');
+  closeAddModal();
+}
+
+function displayAddCampaign(){
+  var addCampaignModal = documnet.getElementById('add-campaign-modal');
+  addCampaignModal.classList.remove('hidden');
+  displayAddModal();
+}
+
+function closeAddCampaign(){
+  var addCampaignModal = document.getElementById('add-campaign-modal');
+  addCampaignModal.classList.add('hidden');
+  closeAddModal();
+}
+
+function displayAddTown(){
+  var addTownModal = documnet.getElementById('add-Town-modal');
   addNpcModal.classList.remove('hidden');
+  displayAddModal();
+}
+
+function closeAddTown(){
+  var addTownModal = document.getElementById('add-town-modal');
+  addTownModal.classList.add('hidden');
+  closeAddModal();
+}
+
+function displayAddLocation(){
+  var addLocationModal = documnet.getElementById('add-location-modal');
+  addLocationModal.classList.remove('hidden');
+  displayAddModal();
+}
+
+function closeAddLocation(){
+  var addLocationModal = document.getElementById('add-location-modal');
+  addLocationModal.classList.add('hidden');
+  closeAddModal();
+}
+
+function displayAddNpc(){
+  var addNpcModal = documnet.getElementById('add-npc-modal');
+  addNpcModal.classList.remove('hidden');
+  displayAddModal();
+}
+
+function closeAddNpc(){
+  var addNpcModal = document.getElementById('add-npc-modal');
+  addNpcModal.classList.add('hidden');
+  closeAddModal();
+}
+
+function displayAddPicture(){
+  var addPictureModal = documnet.getElementById('add-picture-modal');
+  addPictureModal.classList.remove('hidden');
+  displayAddModal();
+}
+
+function closeAddPicture(){
+  var addPictureModal = document.getElementById('add-picture-modal');
+  addPictureModal.classList.add('hidden');
+  closeAddModal();
+}
+
+function displayAddModal(){
+  var backdrop = document.getElementById('modal-backdrop');  
+  backdrop.classList.remove('hidden');
 }
 
 function closeAddModal(){
   var backdrop = document.getElementById('modal-backdrop');
-  var addNpcModal = document.getElementById('add-info-modal');  
-  backdrop.classList.add('hidden');
-  addNpcModal.classList.add('hidden');  
+  backdrop.classList.add('hidden'); 
   clearInput();
 }
 
@@ -53,6 +123,7 @@ function getTown(){
     if(pathComp[x]=="towns")
     {return pathComp[(x+1)];}
   }
+  return 0;
 }
 
 function getLocation(){
@@ -62,6 +133,7 @@ function getLocation(){
     if(pathComp[x]=="locations")
     {return pathComp[(x+1)];}
   }
+  return 0;
 }
 
 function getNpc(){
@@ -71,9 +143,11 @@ function getNpc(){
     if(pathComp[x]=="npcs")
     {return pathComp[(x+1)];}
   }
+  return 0;
 }
 
 function insertNewNpc() {
+  var pagesess = getSession();
   var pagecamp = getCampaign();
   var pagetow = getTown();
   var pageloca = getLocation();
@@ -112,7 +186,7 @@ function insertNewNpc() {
   var todoInputNotes = document.getElementById('input-notes').value || '';
 
   if (todoInputName.trim()) {
-    storeNewNPC(pagecamp,pagetow,pageloca,
+    storeNewNPC(pagesess,pagecamp,pagetow,pageloca,
       todoInputId,
       todoInputIdi,
       todoInputName,
@@ -144,7 +218,8 @@ function insertNewNpc() {
       todoInputGoal,
       todoInputLanguage,
       todoInputTraits,
-      todoInputNotes,)
+      todoInputNotes)
+    
     var newNPCHTML = generateNPCHTML(
       todoInputId.trim(),
       todoInputIdi.trim(),
@@ -188,6 +263,7 @@ function insertNewNpc() {
 }
 
 function insertNewCampaign() {
+  var pagesess = getSession();
 
   var todoInputId = document.getElementById('todo-input-id').value || '';
   var todoInputIdi = document.getElementById('todo-input-idi').value || '';
@@ -195,6 +271,12 @@ function insertNewCampaign() {
   var todoInputNotes = document.getElementById('input-notes').value || '';
 
   if (todoInputName.trim()) {
+    storeNewCampaign(pagesess,
+      todoInputId.trim(),
+      todoInputIdi,
+      todoInputName,
+      todoInputNotes)
+    
     var newCampaignHTML = generateCampaignHTML(
       todoInputId.trim(),
       todoInputIdi.trim(),
@@ -210,6 +292,9 @@ function insertNewCampaign() {
 }
 
 function insertNewLocation() {
+  var pagesess = getSession();
+  var pagecamp = getCampaign();
+  var pagetow = getTown();
 
   var todoInputId = document.getElementById('todo-input-id').value || '';
   var todoInputIdi = document.getElementById('todo-input-idi').value || '';
@@ -219,6 +304,14 @@ function insertNewLocation() {
   var todoInputNotes = document.getElementById('input-notes').value || '';
 
   if (todoInputName.trim()) {
+    storeNewLocation(pagesess,pagecamp,pagetow,
+      todoInputId,
+      todoInputIdi,
+      todoInputName,
+      todoInputTerrainType,
+      todoInputAlignmnet,
+      todoInputNotes)
+    
     var newLocationHTML = generateLocationHTML(
       todoInputId.trim(),
       todoInputIdi.trim(),
@@ -236,6 +329,8 @@ function insertNewLocation() {
 }
 
 function insertNewTown() {
+  var pagesess = getSession();
+  var pagecamp = getCampaign();
 
   var todoInputId = document.getElementById('todo-input-id').value || '';
   var todoInputIdi = document.getElementById('todo-input-idi').value || '';
@@ -243,6 +338,12 @@ function insertNewTown() {
   var todoInputNotes = document.getElementById('input-notes').value || '';
 
   if (todoInputName.trim()) {
+    storeNewTown(pagesess,pagecamp,
+      todoInputId,
+      todoInputIdi,
+      todoInputName,
+      todoInputNotes)
+    
     var newTownHTML = generateTownHTML(
       todoInputId.trim(),
       todoInputIdi.trim(),
@@ -264,6 +365,10 @@ function insertNewSession() {
   var todoInputName = document.getElementById('todo-input-name').value || '';
 
   if (todoInputName.trim()) {
+    storeNewSession(
+      todoInputId,
+      todoInputIdi,
+      todoInputName)
     var newSessionHTML = generateSessionHTML(
       todoInputId.trim(),
       todoInputIdi.trim(),
@@ -278,6 +383,10 @@ function insertNewSession() {
 }
 
 function insertNewPicture() {
+  var pagesess = getSession();
+  var pagecamp = getCampaign();
+  var pagetow = getTown();
+  var pagenp = getNpc();
 
   var todoInputId = document.getElementById('todo-input-id').value || '';
   var todoInputIdi = document.getElementById('todo-input-idi').value || '';
@@ -285,6 +394,12 @@ function insertNewPicture() {
   var todoInputUrl = document.getElementById('input-url').value || '';
 
   if (todoInputUrl.trim()) {
+    storeNewNpc(pagesess,pagecamp,pagetow,pagenp,
+      todoInputId,
+      todoInputIdi,
+      todoInputCaption,
+      todoInputUrl)
+    
     var newPictureHTML = generatePictureHTML(
       todoInputId.trim(),
       todoInputIdi.trim(),
@@ -298,3 +413,10 @@ function insertNewPicture() {
     alert('You must specify a value for the "URL" field.');
   }
 }
+
+window.addEventListener('DomContentLoaded',function(event){
+  var addCampaign = document.getElementById('add-campaign-button');
+  if (addCampaign){
+    addCampaign.addEventListener('click',displayAddCampaign);
+  }
+});
