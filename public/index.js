@@ -1,11 +1,81 @@
+function handleSessionSelect(event){
+  var sessionSelect = event.target.value;
+  if(sessionSelect)
+  {
+    window.location.href = '/session/' + sessionSelect;
+  }
+}
+
+function handleCampaignSelect(event){
+  var pagesess = getSession();
+  var campaignSelect = event.target.value;
+  if(campaignSelect)
+  {
+    window.location.href = '/session/'+pagesess+campaignSelect;
+  }
+}
+
+function handleTownSelect(event){
+  var pagesess = getSession();
+  var pagecamp = getCampaign();
+  var townSelect = event.target.value;
+  if(townSelect)
+  {
+    window.location.href = '/session/'+pagesess+pagecamp+'/towns/'+townSelect;
+  }
+}
+
+function handleLocationSelect(event){
+  var pagesess = getSession();
+  var pagecamp = getCampaign();
+  var pagetow = getTown();
+  var locationSelect = event.target.value;
+  if(pagetow)
+  {
+    if(locationSelect)
+    {
+      window.location.href = '/session/'+pagesess+pagecamp+'/towns/'+pagetow+'/locations/'+locationSelect;
+    }
+  }
+  else if(locationSelect)
+  {
+    window.location.href = '/session/'+pagesess+pagecamp+'/locations/'+locationSelect;
+  }
+}
+
+function handleNpcSelect(event){
+  var pagesess = getSession();
+  var pagecamp = getCampaign();
+  var pagetow = getTown();
+  var pageloca = getLocation();
+  var npcSelect = event.target.value;
+  if(pagetow)
+  {
+    if(pageloca)
+    {
+      window.location.href = '/session/'+pagesess+pagecamp+'/towns/'+pagetow+'/locations/'+locationSelect+'/npcs/'+npcSelect;
+    }
+    else
+    {
+      window.location.href = '/session/'+pagesess+pagecamp+'/towns/'+townSelect+'/npcs/'+npcSelect;
+    }
+  }
+  else if(pageloca)
+  {
+    window.location.href = '/session/'+pagesess+pagecamp+'/locations/'+locationSelect+'/npcs/'+npcSelect;
+  }
+  else if(npcSelect)
+  {
+    window.location.href = '/session/'+pagesess+pagecamp+'/npcs/'+npcSelect;
+  }
+}
+
 function removeOnDismiss(event){
   var clickedElem = event.target;
   var clickedElemParent = event.target.parentNode;
   var ElemParent= clickedElemParent.parentNode;
   ElemParent.removeChild(clickedElemParent);
 }
-
-
 
 function displayAddSession(){
   var addSessionModal = documnet.getElementById('add-session-modal');
@@ -105,6 +175,7 @@ function getSession(){
     if(pathComp[x]=="sessions")
     {return pathComp[(x+1)];}
   }
+  return 0;
 }
 
 function getCampaign(){
@@ -114,6 +185,7 @@ function getCampaign(){
     if(pathComp[x]=="sessions")
     {return pathComp[(x+2)];}
   }
+  return 0;
 }
 
 function getTown(){
