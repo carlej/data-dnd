@@ -31,7 +31,7 @@ app.get('/',function(req,res){
 SPECIFIC SESSION
 ************************************************************
 */
-app.post('/session/:sess',function(req,res,next){
+app.get('/session/:sess',function(req,res,next){
     var sess = session[req.params.sess];
     var sesscont= sess.contents;
     if(sess){
@@ -50,7 +50,7 @@ app.post('/session/:sess',function(req,res,next){
 SPECIFIC CAMPAIGN IN THE SPECIFIC SESSION
 ************************************************************
 */
-app.post('/session/:sess/:camp',function(req,res){
+app.get('/session/:sess/:camp',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     if(camp){
@@ -69,7 +69,7 @@ app.post('/session/:sess/:camp',function(req,res){
 ALL PICTURES OF CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/pictures',function(req,res){
+app.get('/session/:sess/:camp/pictures',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -85,7 +85,7 @@ app.post('/session/:sess/:camp/pictures',function(req,res){
 ALL NPCS IN CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/npcs',function(req,res){
+app.get('/session/:sess/:camp/npcs',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -102,7 +102,7 @@ app.post('/session/:sess/:camp/npcs',function(req,res){
 SPECIFIC NPC IN SPECIFIC CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/npcs/:np',function(req,res){
+app.get('/session/:sess/:camp/npcs/:np',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -124,7 +124,7 @@ app.post('/session/:sess/:camp/npcs/:np',function(req,res){
 ALL LOCATIONS IN CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/locations',function(req,res){
+app.get('/session/:sess/:camp/locations',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -141,7 +141,7 @@ app.post('/session/:sess/:camp/locations',function(req,res){
 SPECIFIC LOCATION IN SPECIFIC CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/locations/:loca',function(req,res){
+app.get('/session/:sess/:camp/locations/:loca',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -163,7 +163,7 @@ app.post('/session/:sess/:camp/locations/:loca',function(req,res){
 SPECIFIC NPC IN SPECIFIC LOCATION IN SPECIFIC CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/locations/:loca/npcs/:np',function(req,res){
+app.get('/session/:sess/:camp/locations/:loca/npcs/:np',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -187,7 +187,7 @@ app.post('/session/:sess/:camp/locations/:loca/npcs/:np',function(req,res){
 ALL TOWNS IN CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/towns',function(req,res){
+app.get('/session/:sess/:camp/towns',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -203,7 +203,7 @@ app.post('/session/:sess/:camp/towns',function(req,res){
 SPECIFIC TOWN IN SPECIFIC CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/towns/:tow',function(req,res){
+app.get('/session/:sess/:camp/towns/:tow',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -225,7 +225,7 @@ app.post('/session/:sess/:camp/towns/:tow',function(req,res){
 ALL PICTURES OF TOWN IN CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/towns/:tow/pictures',function(req,res){
+app.get('/session/:sess/:camp/towns/:tow/pictures',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -243,7 +243,7 @@ app.post('/session/:sess/:camp/towns/:tow/pictures',function(req,res){
 ALL NPCS IN TOWN IN CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/towns/:tow/npcs',function(req,res){
+app.get('/session/:sess/:camp/towns/:tow/npcs',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -261,7 +261,7 @@ app.post('/session/:sess/:camp/towns/:tow/npcs',function(req,res){
 ALL LOCATIONS IN TOWN IN CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/towns/:tow/locations',function(req,res){
+app.get('/session/:sess/:camp/towns/:tow/locations',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -279,7 +279,7 @@ app.post('/session/:sess/:camp/towns/:tow/locations',function(req,res){
 SPECIFIC LOCATION IN SPECIFIC TOWN IN SPECIFIC CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/towns/:tow/locations/:loca',function(req,res){
+app.get('/session/:sess/:camp/towns/:tow/locations/:loca',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -303,7 +303,7 @@ app.post('/session/:sess/:camp/towns/:tow/locations/:loca',function(req,res){
 PICTURES OF LOCATION IN TOWN IN CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/towns/:tow/locations/:loca/pictures',function(req,res){
+app.get('/session/:sess/:camp/towns/:tow/locations/:loca/pictures',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -323,7 +323,7 @@ app.post('/session/:sess/:camp/towns/:tow/locations/:loca/pictures',function(req
 ALL NPCS IN LOCATION IN TOWN IN CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/towns/:tow/locations/:loca/npcs',function(req,res){
+app.get('/session/:sess/:camp/towns/:tow/locations/:loca/npcs',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -343,7 +343,7 @@ app.post('/session/:sess/:camp/towns/:tow/locations/:loca/npcs',function(req,res
 SPECIFIC NPC IN SPECIFIC LOCATION IN SPECIFIC TOWN IN SPECIFIC CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/towns/:tow/locations/:loca/npcs/:np',function(req,res){
+app.get('/session/:sess/:camp/towns/:tow/locations/:loca/npcs/:np',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
@@ -369,7 +369,7 @@ app.post('/session/:sess/:camp/towns/:tow/locations/:loca/npcs/:np',function(req
 PICTURES OF NPC IN LOCATION IN TOWN IN CAMPAIGN
 ************************************************************
 */
-app.post('/session/:sess/:camp/towns/:tow/locations/:loca/npcs/:np/pictures',function(req,res){
+app.get('/session/:sess/:camp/towns/:tow/locations/:loca/npcs/:np/pictures',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
