@@ -335,6 +335,14 @@ function insertNewTown() {
   var todoInputId = document.getElementById('todo-input-id').value || '';
   var todoInputIdi = document.getElementById('todo-input-idi').value || '';
   var todoInputName = document.getElementById('todo-input-name').value || '';
+  var todoInputAlignment = document.getElementById('todo-input-alignment').value || '';
+  var todoInputDanger = document.getElementById('todo-input-danger').value || '';
+  var todoInputGovernment = document.getElementById('todo-input-government').value || '';
+  var todoInputPopulation = document.getElementById('todo-input-population').value || '';
+  var todoInputEconomy = document.getElementById('todo-input-economy').value || '';
+  var todoInputLaw = document.getElementById('todo-input-law').value || '';
+  var todoInputCrime = document.getElementById('todo-input-crime').value || '';
+  var todoInputQualities = document.getElementById('todo-input-qualties').value || '';
   var todoInputNotes = document.getElementById('input-notes').value || '';
 
   if (todoInputName.trim()) {
@@ -342,12 +350,28 @@ function insertNewTown() {
       todoInputId,
       todoInputIdi,
       todoInputName,
+      todoInputAlignment,
+      todoInputDanger,
+      todoInputGovernment,
+      todoInputPopulation,
+      todoInputEconomy,
+      todoInputLaw,
+      todoInputCrime,
+      todoInputQualities,
       todoInputNotes)
     
     var newTownHTML = generateTownHTML(
       todoInputId.trim(),
       todoInputIdi.trim(),
       todoInputName.trim(),
+      todoInputAlignment.trim(),
+      todoInputDanger.trim(),
+      todoInputGovernment.trim(),
+      todoInputPopulation.trim(),
+      todoInputEconomy.trim(),
+      todoInputLaw.trim(),
+      todoInputCrime.trim(),
+      todoInputQualities.trim(),
       todoInputNotes.trim(),
     );
     var mainElement = document.querySelector('main');
