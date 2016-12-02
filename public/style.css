@@ -271,7 +271,12 @@ nav {
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-#add-info-modal {
+#add-session-modal,
+#add-campaign-modal,
+#add-town-modal,
+#add-location-modal,
+#add-npc-modal,
+#add-picture-modal {
   position: fixed;
   top: 0;
   bottom: 0;
