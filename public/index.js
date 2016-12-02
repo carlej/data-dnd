@@ -1,3 +1,98 @@
+function handleTowns(event){
+  var pagesess = getSession();
+  var pagecamp = getCampaign();
+  window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns';
+}
+
+function handleLocations(event){
+  var pagesess = getSession();
+  var pagecamp = getCampaign();
+  var pagetow = getTown();
+  if(pagetow)
+  {
+    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations';
+  }
+  else
+  {
+    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations';
+  }
+}
+
+function handleNpcs(event){
+  var pagesess = getSession();
+  var pagecamp = getCampaign();
+  var pagetow = getTown();
+  var pageloca = getLocation();
+  if(pagetow)
+  {
+    if(pageloca)
+    {
+      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/npcs';
+    }
+    else
+    {
+      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/npcs';
+    }
+  }
+  else
+  {
+    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/npcs';
+  }
+}
+
+function handlePictures(event){
+  var pagesess = getSession();
+  var pagecamp = getCampaign();
+  var pagetow = getTown();
+  var pageloca = getLocation();
+  var pagenpc = getNpc();
+  
+  if(pagecamp)
+  {
+    if(pagetow)
+    {
+      if(pageloca)
+      {
+        if(pagenpc)
+        {
+          window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/npcs/+pagenpc+'/pictures';
+        }
+        else
+        {
+          window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/pictures';
+        }
+      }
+      else if(pagenpc)
+      {
+        window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/npcs/'+pagenpc+'/pictures';
+      }
+      else
+      {
+        window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/pictures';
+      }
+    }
+    else if(pageloca)
+    {
+      if(pagenpc)
+      {
+        window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations/'+pageloca+'/npcs/'+pagenpc+'/pictures';
+      }
+      else
+      {
+        window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations/'+pageloca+'/pictures';
+      }
+    }
+    else if(pagenpc)
+    {
+      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/npcs/'+pagenpc+'/pictures';
+    }
+    else
+    {
+      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/pictures';
+    }
+  }
+}
+
 function handleSessionSelect(event){
   var sessionSelect = event.target.value;
   if(sessionSelect)
@@ -11,7 +106,7 @@ function handleCampaignSelect(event){
   var campaignSelect = event.target.value;
   if(campaignSelect)
   {
-    window.location.href = '/session/'+pagesess+campaignSelect;
+    window.location.href = '/session/'+pagesess+'/'+campaignSelect;
   }
 }
 
@@ -21,7 +116,7 @@ function handleTownSelect(event){
   var townSelect = event.target.value;
   if(townSelect)
   {
-    window.location.href = '/session/'+pagesess+pagecamp+'/towns/'+townSelect;
+    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+townSelect;
   }
 }
 
@@ -34,12 +129,12 @@ function handleLocationSelect(event){
   {
     if(locationSelect)
     {
-      window.location.href = '/session/'+pagesess+pagecamp+'/towns/'+pagetow+'/locations/'+locationSelect;
+      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+locationSelect;
     }
   }
   else if(locationSelect)
   {
-    window.location.href = '/session/'+pagesess+pagecamp+'/locations/'+locationSelect;
+    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations/'+locationSelect;
   }
 }
 
@@ -53,20 +148,20 @@ function handleNpcSelect(event){
   {
     if(pageloca)
     {
-      window.location.href = '/session/'+pagesess+pagecamp+'/towns/'+pagetow+'/locations/'+locationSelect+'/npcs/'+npcSelect;
+      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+locationSelect+'/npcs/'+npcSelect;
     }
     else
     {
-      window.location.href = '/session/'+pagesess+pagecamp+'/towns/'+townSelect+'/npcs/'+npcSelect;
+      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+townSelect+'/npcs/'+npcSelect;
     }
   }
   else if(pageloca)
   {
-    window.location.href = '/session/'+pagesess+pagecamp+'/locations/'+locationSelect+'/npcs/'+npcSelect;
+    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations/'+locationSelect+'/npcs/'+npcSelect;
   }
   else if(npcSelect)
   {
-    window.location.href = '/session/'+pagesess+pagecamp+'/npcs/'+npcSelect;
+    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/npcs/'+npcSelect;
   }
 }
 
@@ -514,5 +609,43 @@ window.addEventListener('DomContentLoaded',function(event){
   var addCampaign = document.getElementById('add-campaign-button');
   if (addCampaign){
     addCampaign.addEventListener('click',displayAddCampaign);
+  }
+  
+  var addTown = document.getElemetById('add-town-button');
+  if (addTown){
+    addTown.addEventListener('click',displayAddTown);
+  }
+  
+  var addLocation = document.getElemetById('add-location-button');
+  if (addLocation){
+    addLocation.addEventListener('click',displayAddLocation);
+  }
+  
+  var addNpc = document.getElemetById('add-npc-button');
+  if (addNpc){
+    addNpc.addEventListener('click',displayAddNpc);
+  }
+  
+  var showSession = document.getElenentById('session-select');
+  if (showSession){
+    showSession.addEventListener('change',handleSessionSelect);
+  }
+  
+  var showCampaign = document.getElenentById('campaign-select');
+  if (showCampaign){
+    showCampaign.addEventListener('change',handleCampaignSelect);
+  }
+  var showTown = document.getElenentById('town-select');
+  if (showTown){
+    showTown.addEventListener('change',handleTownSelect);
+  }
+  
+  var showLocation = document.getElenentById('location-select');
+  if (showLocation){
+    showLocation.addEventListener('change',handleLocationSelect);
+  }
+  var showNpc = document.getElenentById('npc-select');
+  if (showNpc){
+    showNpc.addEventListener('change',handleNpcSelect);
   }
 });
