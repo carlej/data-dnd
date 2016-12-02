@@ -55,7 +55,7 @@ function handlePictures(event){
       {
         if(pagenpc)
         {
-          window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/npcs/+pagenpc+'/pictures';
+          window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/npcs/'+pagenpc+'/pictures';
         }
         else
         {
