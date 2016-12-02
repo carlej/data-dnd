@@ -69,6 +69,11 @@ nav {
   text-indent: -50px;
 }
 
+.info .session-select,
+.info .campaign-select,
+.info .town-select,
+.info .location-select,
+.info .npc-select,
 .info .picture-select {
   font-family: sans-serif;
   font-size: 30px;
@@ -76,40 +81,12 @@ nav {
   cursor: pointer;
 }
 
+.info:hover .session-select,
+.info:hover .campaign-select,
+.info:hover .town-select,
+.info:hover .location-select,
+.info:hover .npc-select,
 .info:hover .picture-select {
-  display: initial;
-}
-
-.info .location-select {
-  font-family: sans-serif;
-  font-size: 30px;
-  display: none;
-  cursor: pointer;
-}
-
-.info:hover .location-select {
-  display: initial;
-}
-
-.info .town-select {
-  font-family: sans-serif;
-  font-size: 30px;
-  display: none;
-  cursor: pointer;
-}
-
-.info:hover .town-select {
-  display: initial;
-}
-
-.info .npc-select {
-  font-family: sans-serif;
-  font-size: 30px;
-  display: none;
-  cursor: pointer;
-}
-
-.info:hover .npc-select {
   display: initial;
 }
 
@@ -131,14 +108,24 @@ nav {
   font-weight: bold;
 }
 
-.add-campaign-button-container {
+.add-session-button-container,
+.add-campaign-button-container,
+.add-town-button-container,
+.add-location-button-container,
+.add-npc-button-container,
+.add-picture-button-container{
   position: fixed;
   bottom: 35px;
   right: 140px;
   z-index: 10;
 }
 
-#add-campaign-button {
+#add-session-button,
+#add-campaign-button,
+#add-town-button,
+#add-location-button,
+#add-npc-button,
+#add-picture-button {
   width: 64px;
   height: 64px;
   background-color: #0c3d0c;
@@ -153,111 +140,12 @@ nav {
   outline: none;
 }
 
-#add-campaign-button:hover {
-  box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.33);
-}
-
-.add-town-button-container {
-  position: fixed;
-  bottom: 35px;
-  right: 105px;
-  z-index: 10;
-}
-
-#add-town-button {
-  width: 64px;
-  height: 64px;
-  background-color: #0c3d0c;
-  border: none;
-  border-radius: 32px;
-  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.25);
-  color: white;
-  font-size: 40px;
-  font-weight: 200;
-  padding: 0 0 8px 0;
-  cursor: pointer;
-  outline: none;
-}
-
-#add-town-button:hover {
-  box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.33);
-}
-
-.add-location-button-container {
-  position: fixed;
-  bottom: 35px;
-  right: 70px;
-  z-index: 10;
-}
-
-#add-location-button {
-  width: 64px;
-  height: 64px;
-  background-color: #0c3d0c;
-  border: none;
-  border-radius: 32px;
-  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.25);
-  color: white;
-  font-size: 40px;
-  font-weight: 200;
-  padding: 0 0 8px 0;
-  cursor: pointer;
-  outline: none;
-}
-
-#add-location-button:hover {
-  box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.33);
-}
-
-.add-npc-button-container {
-  position: fixed;
-  bottom: 35px;
-  right: 35px;
-  z-index: 10;
-}
-
-#add-npc-button {
-  width: 64px;
-  height: 64px;
-  background-color: #0c3d0c;
-  border: none;
-  border-radius: 32px;
-  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.25);
-  color: white;
-  font-size: 40px;
-  font-weight: 200;
-  padding: 0 0 8px 0;
-  cursor: pointer;
-  outline: none;
-}
-
-#add-npc-button:hover {
-  box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.33);
-}
-
-.add-photo-button-container {
-  position: fixed;
-  bottom: 35px;
-  right: 35px;
-  z-index: 10;
-}
-
-#add-photo-button {
-  width: 64px;
-  height: 64px;
-  background-color: #0c3d0c;
-  border: none;
-  border-radius: 32px;
-  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.25);
-  color: white;
-  font-size: 40px;
-  font-weight: 200;
-  padding: 0 0 8px 0;
-  cursor: pointer;
-  outline: none;
-}
-
-#add-photo-button:hover {
+#add-session-button:hover,
+#add-campaign-button:hover,
+#add-town-button:hover,
+#add-location-button:hover,
+#add-npc-button:hover,
+#add-picture-button:hover {
   box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.33);
 }
 
@@ -389,47 +277,12 @@ nav {
   margin-top: 30px;
 }
 
-#session-select {
-  min-width: 300px;
-  height: 40px;
-  border: 1px solid #333;
-  background-color: #fff;
-  font-size: 20px;
-}
-
+#session-select,
+#campaign-select,
+#town-select,
+#location-select,
+#npc-select,
 #picture-select {
-  min-width: 300px;
-  height: 40px;
-  border: 1px solid #333;
-  background-color: #fff;
-  font-size: 20px;
-}
-
-#npc-select {
-  min-width: 300px;
-  height: 40px;
-  border: 1px solid #333;
-  background-color: #fff;
-  font-size: 20px;
-}
-
-#town-select {
-  min-width: 300px;
-  height: 40px;
-  border: 1px solid #333;
-  background-color: #fff;
-  font-size: 20px;
-}
-
-#location-select {
-  min-width: 300px;
-  height: 40px;
-  border: 1px solid #333;
-  background-color: #fff;
-  font-size: 20px;
-}
-
-#campaign-select {
   min-width: 300px;
   height: 40px;
   border: 1px solid #333;
