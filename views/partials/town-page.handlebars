@@ -1,6 +1,30 @@
 <section class="info">
    <h2>{{tow.name}}</h2>
    <div class="info-body">
+   {{#if alignment}}
+   <p><span class="lable">Alignment: </span>{{tow.alignment}}</p>
+   {{/if}}
+   {{#if danger}}
+   <p><span class="lable">Danger: </span>{{tow.danger}}</p>
+   {{/if}}
+   {{#if government}}
+   <p><span class="lable">Government: </span>{{tow.government}}</p>
+   {{/if}}
+   {{#if population}}
+   <p><span class="lable">Population: </span>{{tow.population}}</p>
+   {{/if}}
+   {{#if economy}}
+   <p><span class="lable">Economy: </span>{{tow.economy}}</p>
+   {{/if}}
+   {{#if law}}
+   <p><span class="lable">Law: </span>{{tow.law}}</p>
+   {{/if}}
+   {{#if crime}}
+   <p><span class="lable">Crime: </span>{{tow.crime}}</p>
+   {{/if}}
+   {{#if qualities}}
+   <p><span class="lable">Qualities: </span>{{tow.qualties}}</p>
+   {{/if}}
    {{#if notes}}
    <p><span class="lable">Notes: </span>{{tow.notes}}</p>
    {{/if}}
