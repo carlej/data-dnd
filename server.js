@@ -754,6 +754,13 @@ app.post('/session/:sess/:camp/towns/add-town',function(req,res,next){//this upd
                 id:req.body.id,
                 idi:req.body.idi,
                 name:req.body.name,
+		alignment:req.body.alignment,
+		danger:req.body.danger,
+		population:req.body.population,
+		economy:req.body.economy,
+		law:req.body.law,
+		crime:req.body.crime,
+		qualities:req.body.qualities,
                 notes:req.body.notes
             });
             fs.writeFile(path.join(infoJSON,'campaign.json'),JSON.stringify(campaign));
