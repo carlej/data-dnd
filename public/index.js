@@ -606,6 +606,11 @@ function insertNewPicture() {
 }
 
 window.addEventListener('DomContentLoaded',function(event){
+  var addSession = document.getElementById('add-session-button');
+  if (addSession){
+    addSession.addEventListener('click',displayAddSession);
+  }
+  
   var addCampaign = document.getElementById('add-campaign-button');
   if (addCampaign){
     addCampaign.addEventListener('click',displayAddCampaign);
@@ -624,6 +629,11 @@ window.addEventListener('DomContentLoaded',function(event){
   var addNpc = document.getElemetById('add-npc-button');
   if (addNpc){
     addNpc.addEventListener('click',displayAddNpc);
+  }
+  
+  var addPicture = document.getElementById('add-picture-button');
+  if (addPicture){
+    addPicture.addEventListener('click',displayAddPicture);
   }
   
   var showSession = document.getElenentById('session-select');
