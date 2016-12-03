@@ -644,8 +644,33 @@ window.addEventListener('DomContentLoaded',function(event){
   if (showLocation){
     showLocation.addEventListener('change',handleLocationSelect);
   }
+  
   var showNpc = document.getElenentById('npc-select');
   if (showNpc){
     showNpc.addEventListener('change',handleNpcSelect);
+  }
+  
+  var showTowns = document.getElementById('select-town');
+  if (showTowns)
+  {
+    showTowns.addEventListener('click',handleTowns);
+  }
+  
+  var showLocations = document.getElementById('select-location');
+  if (showLocations)
+  {
+    showLocations.addEventListener('click',handleLocations);
+  }
+  
+  var showNpcs = document.getElementById('select-npc');
+  if (showNpcs)
+  {
+    showNpcs.addEventListener('click',handleNpcs);
+  }
+  
+  var showPictures = document.getElementById('select-picture');
+  if (showPictures)
+  {
+    showPictures.addEventListener('click',handlePictures);
   }
 });
