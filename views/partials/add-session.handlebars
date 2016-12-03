@@ -1,1 +1,36 @@
 
+<div class="add-session-button-container">
+	<button id="add-session-button">+</button>
+</div>
+
+<div id="modal-backdrop" class="hidden></div>
+<div id="add-session-modal" class="hidden">
+	<div class="modal-dialog">
+
+		<div class="modal-header">
+			<h3>Add a Session</h3>
+			<button type="button" class="modal-close-button">&times;</button>
+		</div>
+
+		<div class="modal-body">
+			<div class="hidden">
+				<div class="info-input-element">
+					<label for="input-id">ID</label>
+					<input type="text" id="input-id">
+				</div>
+				<div class="info-input-element">
+					<label for="input-id">IDI</label>
+					<input type="text" id="input-idi">
+				</div>
+			</div>
+			<div class="info-input-element">
+				<label for="input-name">Session Name</label>
+				<input type="text" id="input-name">
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="modal-cancel-button">Cancel</button>
+			<button type="button" class="modal-accept-button">Add Session</button>
+		</div>
+	</div>
+</div>
