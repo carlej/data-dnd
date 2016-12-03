@@ -4,19 +4,15 @@
 	<h2>Story Select</h2>
 	<h3>Please choose or create a campaign:</h3>
 		<div class="select-container">
-		        <select id="campaign-select">
+			<select id="campaign-select">
 			<option value="" disabled selected>Select a Campaign</option>
-			{{#each sesscont.id}}
 				{{#each campaign}}
-				{{#if sesscont.id == campaign.idi}}
 					<option value={{idi}}>{{name}}</option>
-				{{/if}}
 				{{/each}}
-			{{/each}}
 			</select>
 		</div>
 </div>
 </main>
 {{>footer}}
 
-{{add-campaign}}
+{{>add-campaign}}

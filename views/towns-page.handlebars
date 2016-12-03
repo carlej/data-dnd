@@ -6,10 +6,14 @@
 		<div class="select-container">
 			<select id="town-select">
 			<option value="" disabled selected>Select a town</option>
-			{{#each town}}
-			<option value={{idi}}>{{name}}</option>
+			{{#each camptows.id}}
+				{{#if camptows.id==town.idi}}
+					{{#each town}}
+					<option value={{idi}}>{{name}}</option>
+					{{/each}}
+				{{/if}}
+				</select>
 			{{/each}}
-			</select>
 		</div>
 </div>
 
