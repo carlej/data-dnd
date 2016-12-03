@@ -703,4 +703,63 @@ window.addEventListener('DomContentLoaded',function(event){
   if(modalAcceptLocation){
     modalAcceptLocation.addEventListener('click',insertNewLocation);
   }
+  
+  var modalCancelSession = document.querySelector('#add-session-modal .modal-cancle-button');
+  if(modalCancelSession){
+    modalCancelSession.addEventListener('click',closeAddSession);
+  }
+  
+  var modalCancelCampaign = document.querySelector('#add-campaign-modal .modal-cancle-button');
+  if(modalCancelCampaign){
+    modalCancelCampaign.addEventListener('click',closeAddCampaign);
+  }
+  
+  var modalCancelTown = document.querySelector('#add-town-modal .modal-cancle-button');
+  if(modalCancelTown){
+    modalCancelTown.addEventListener('click',closeAddTown);
+  }
+  
+  var modalCancelLocation = document.querySelector('#add-location-modal .modal-cancle-button');
+  if(modalCancelLocation){
+    modalCancelLocation.addEventListener('click',closeAddLocation);
+  }
+  
+  var modalCancelNpc = document.querySelector('#add-npc-modal .modal-cancle-button');
+  if(modalCancelNpc){
+    modalCancelNpc.addEventListener('click',closeAddNpc);
+  }
+  
+  var modalCancelPicture = document.querySelector('#add-picture-modal .modal-cancle-button');
+  if(modalCancelPicture){
+    modalCancelPicture.addEventListener('click',closeAddPicture);
+  }
+  
+  var modalCloseSession = document.querySelector('#add-session-modal .modal-close-button');
+  if(modalCloseSession){
+    modalCloseSession.addEventListener('click',closeAddSession);
+  }
+  var modalCloseCampaign = document.querySelector('#add-campaign-modal .modal-close-button');
+  if(modalCloseCampaign){
+    modalCloseCampaign.addEventListener('click',closeAddCampaign);
+  }
+  
+  var modalCloseTown = document.querySelector('#add-town-modal .modal-close-button');
+  if(modalCloseTown){
+    modalCloseTown.addEventListener('click',closeAddTown);
+  }
+  
+  var modalCloseLocation = document.querySelector('#add-location-modal .modal-close-button');
+  if(modalCloseLocation){
+    modalCloseLocation.addEventListener('click',closeAddLocation);
+  }
+  
+  var modalCloseNpc = document.querySelector('#add-npc-modal .modal-close-button');
+  if(modalCloseNpc){
+    modalCloseNpc.addEventListener('click',closeAddNpc);
+  }
+  
+  var modalClosePicture = document.querySelector('#add-picture-modal .modal-close-button');
+  if(modalClosePicture){
+    modalClosePicture.addEventListener('click',closeAddPicture);
+  }
 });
