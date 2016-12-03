@@ -319,107 +319,107 @@ function insertNewNpc() {
   var pagetow = getTown();
   var pageloca = getLocation();
 
-  var todoInputId = document.getElementById('todo-input-id').value || '';
-  var todoInputIdi = document.getElementById('todo-input-idi').value || '';
-  var todoInputName = document.getElementById('todo-input-name').value || '';
-  var todoInputClass = document.getElementById('todo-input-class').value || '';
-  var todoInputStr = document.getElementById('input-str').value || '';
-  var todoInputDex = document.getElementById('input-dex').value || '';
-  var todoInputCon = document.getElementById('input-con').value || '';
-  var todoInputInt = document.getElementById('input-int').value || '';
-  var todoInputWis = document.getElementById('input-wis').value || '';
-  var todoInputCha = document.getElementById('input-cha').value || '';
-  var todoInputDescription = document.getElementById('input-description').value || '';
-  var todoInputRace = document.getElementById('input-race').value || '';
-  var todoInputAlignment = document.getElementById('input-alignment').value || '';
-  var todoInputAc = document.getElementById('input-ac').value || '';
-  var todoInputAttacks = document.getElementById('input-attacks').value || '';
-  var todoInputSkills = document.getElementById('input-skills').value || '';
-  var todoInputFeats = document.getElementById('input-feats').value || '';
-  var todoInputHp = document.getElementById('input-hp').value || '';
-  var todoInputHd = document.getElementById('input-hd').value || '';
-  var todoInputClothing = document.getElementById('input-clothing').value || '';
-  var todoInputGear = document.getElementById('input-gear').value || '';
-  var todoInputPlatinum = document.getElementById('input-platinum').value || '';
-  var todoInputGold = document.getElementById('input-gold').value || '';
-  var todoInputSilver = document.getElementById('input-silver').value || '';
-  var todoInputCopper = document.getElementById('input-copper').value || '';
-  var todoInputIron = document.getElementById('input-iron').value || '';
-  var todoInputPositive = document.getElementById('input-positive').value || '';
-  var todoInputNegative = document.getElementById('input-negative').value || '';
-  var todoInputGoal = document.getElementById('input-goal').value || '';
-  var todoInputLanguage = document.getElementById('input-language').value || '';
-  var todoInputTraits = document.getElementById('input-traits').value || '';
-  var todoInputNotes = document.getElementById('input-notes').value || '';
+  var infoInputId = document.getElementById('input-id').value || '';
+  var infoInputIdi = document.getElementById('input-idi').value || '';
+  var infoInputName = document.getElementById('input-name').value || '';
+  var infoInputClass = document.getElementById('input-class').value || '';
+  var infoInputStr = document.getElementById('input-str').value || '';
+  var infoInputDex = document.getElementById('input-dex').value || '';
+  var infoInputCon = document.getElementById('input-con').value || '';
+  var infoInputInt = document.getElementById('input-int').value || '';
+  var infoInputWis = document.getElementById('input-wis').value || '';
+  var infoInputCha = document.getElementById('input-cha').value || '';
+  var infoInputDescription = document.getElementById('input-description').value || '';
+  var infoInputRace = document.getElementById('input-race').value || '';
+  var infoInputAlignment = document.getElementById('input-alignment').value || '';
+  var infoInputAc = document.getElementById('input-ac').value || '';
+  var infoInputAttacks = document.getElementById('input-attacks').value || '';
+  var infoInputSkills = document.getElementById('input-skills').value || '';
+  var infoInputFeats = document.getElementById('input-feats').value || '';
+  var infoInputHp = document.getElementById('input-hp').value || '';
+  var infoInputHd = document.getElementById('input-hd').value || '';
+  var infoInputClothing = document.getElementById('input-clothing').value || '';
+  var infoInputGear = document.getElementById('input-gear').value || '';
+  var infoInputPlatinum = document.getElementById('input-platinum').value || '';
+  var infoInputGold = document.getElementById('input-gold').value || '';
+  var infoInputSilver = document.getElementById('input-silver').value || '';
+  var infoInputCopper = document.getElementById('input-copper').value || '';
+  var infoInputIron = document.getElementById('input-iron').value || '';
+  var infoInputPositive = document.getElementById('input-positive').value || '';
+  var infoInputNegative = document.getElementById('input-negative').value || '';
+  var infoInputGoal = document.getElementById('input-goal').value || '';
+  var infoInputLanguage = document.getElementById('input-language').value || '';
+  var infoInputTraits = document.getElementById('input-traits').value || '';
+  var infoInputNotes = document.getElementById('input-notes').value || '';
 
-  if (todoInputName.trim()) {
+  if (infoInputName.trim()) {
     storeNewNPC(pagesess,pagecamp,pagetow,pageloca,
-      todoInputId,
-      todoInputIdi,
-      todoInputName,
-      todoInputClass,
-      todoInputStr,
-      todoInputDex,
-      todoInputCon,
-      todoInputInt,
-      todoInputWis,
-      todoInputCha,
-      todoInputDescription,
-      todoInputRace,
-      todoInputAlignment,
-      todoInputAc,
-      todoInputAttacks,
-      todoInputSkills,
-      todoInputFeats,
-      todoInputHp,
-      todoInputHd,
-      todoInputClothing,
-      todoInputGear,
-      todoInputPlatinum,
-      todoInputGold,
-      todoInputSilver,
-      todoInputCopper,
-      todoInputIron,
-      todoInputPositive,
-      todoInputNegative,
-      todoInputGoal,
-      todoInputLanguage,
-      todoInputTraits,
-      todoInputNotes)
+      infoInputId,
+      infoInputIdi,
+      infoInputName,
+      infoInputClass,
+      infoInputStr,
+      infoInputDex,
+      infoInputCon,
+      infoInputInt,
+      infoInputWis,
+      infoInputCha,
+      infoInputDescription,
+      infoInputRace,
+      infoInputAlignment,
+      infoInputAc,
+      infoInputAttacks,
+      infoInputSkills,
+      infoInputFeats,
+      infoInputHp,
+      infoInputHd,
+      infoInputClothing,
+      infoInputGear,
+      infoInputPlatinum,
+      infoInputGold,
+      infoInputSilver,
+      infoInputCopper,
+      infoInputIron,
+      infoInputPositive,
+      infoInputNegative,
+      infoInputGoal,
+      infoInputLanguage,
+      infoInputTraits,
+      infoInputNotes)
     
     var newNPCHTML = generateNPCHTML(
-      todoInputId.trim(),
-      todoInputIdi.trim(),
-      todoInputName.trim(),
-      todoInputClass.trim(),
-      todoInputStr.trim(),
-      todoInputDex.trim(),
-      todoInputCon.trim(),
-      todoInputInt.trim(),
-      todoInputWis.trim(),
-      todoInputCha.trim(),
-      todoInputDescription.trim(),
-      todoInputRace.trim(),
-      todoInputAlignment.trim(),
-      todoInputAc.trim(),
-      todoInputAttacks.trim(),
-      todoInputSkills.trim(),
-      todoInputFeats.trim(),
-      todoInputHp.trim(),
-      todoInputHd.trim(),
-      todoInputClothing.trim(),
-      todoInputGear.trim(),
-      todoInputPlatinum.trim(),
-      todoInputGold.trim(),
-      todoInputSilver.trim(),
-      todoInputCopper.trim(),
-      todoInputIron.trim(),
-      todoInputPositive.trim(),
-      todoInputNegative.trim(),
-      todoInputGoal.trim(),
-      todoInputLanguage.trim(),
-      todoInputTraits.trim(),
-      todoInputNotes.trim(),
+      infoInputId.trim(),
+      infoInputIdi.trim(),
+      infoInputName.trim(),
+      infoInputClass.trim(),
+      infoInputStr.trim(),
+      infoInputDex.trim(),
+      infoInputCon.trim(),
+      infoInputInt.trim(),
+      infoInputWis.trim(),
+      infoInputCha.trim(),
+      infoInputDescription.trim(),
+      infoInputRace.trim(),
+      infoInputAlignment.trim(),
+      infoInputAc.trim(),
+      infoInputAttacks.trim(),
+      infoInputSkills.trim(),
+      infoInputFeats.trim(),
+      infoInputHp.trim(),
+      infoInputHd.trim(),
+      infoInputClothing.trim(),
+      infoInputGear.trim(),
+      infoInputPlatinum.trim(),
+      infoInputGold.trim(),
+      infoInputSilver.trim(),
+      infoInputCopper.trim(),
+      infoInputIron.trim(),
+      infoInputPositive.trim(),
+      infoInputNegative.trim(),
+      infoInputGoal.trim(),
+      infoInputLanguage.trim(),
+      infoInputTraits.trim(),
+      infoInputNotes.trim(),
     );
     var mainElement = document.querySelector('main');
     mainElement.insertAdjacentHTML('beforeend', newNPCHTML);
@@ -432,23 +432,23 @@ function insertNewNpc() {
 function insertNewCampaign() {
   var pagesess = getSession();
 
-  var todoInputId = document.getElementById('todo-input-id').value || '';
-  var todoInputIdi = document.getElementById('todo-input-idi').value || '';
-  var todoInputName = document.getElementById('todo-input-name').value || '';
-  var todoInputNotes = document.getElementById('input-notes').value || '';
+  var infoInputId = document.getElementById('input-id').value || '';
+  var infoInputIdi = document.getElementById('input-idi').value || '';
+  var infoInputName = document.getElementById('input-name').value || '';
+  var infoInputNotes = document.getElementById('input-notes').value || '';
 
-  if (todoInputName.trim()) {
+  if (infoInputName.trim()) {
     storeNewCampaign(pagesess,
-      todoInputId.trim(),
-      todoInputIdi,
-      todoInputName,
-      todoInputNotes)
+      infoInputId,
+      infoInputIdi,
+      infoInputName,
+      infoInputNotes)
     
     var newCampaignHTML = generateCampaignHTML(
-      todoInputId.trim(),
-      todoInputIdi.trim(),
-      todoInputName.trim(),
-      todoInputNotes.trim(),
+      infoInputId.trim(),
+      infoInputIdi.trim(),
+      infoInputName.trim(),
+      infoInputNotes.trim(),
     );
     var mainElement = document.querySelector('main');
     mainElement.insertAdjacentHTML('beforeend', newCampaignHTML);
@@ -463,29 +463,29 @@ function insertNewLocation() {
   var pagecamp = getCampaign();
   var pagetow = getTown();
 
-  var todoInputId = document.getElementById('todo-input-id').value || '';
-  var todoInputIdi = document.getElementById('todo-input-idi').value || '';
-  var todoInputName = document.getElementById('todo-input-name').value || '';
-  var todoInputTerrainType = document.getElementById('input-terraintype').value || '';
-  var todoInputAlignmnet = document.getElementById('input-alignment').value || '';
-  var todoInputNotes = document.getElementById('input-notes').value || '';
+  var infoInputId = document.getElementById('input-id').value || '';
+  var infoInputIdi = document.getElementById('input-idi').value || '';
+  var infoInputName = document.getElementById('input-name').value || '';
+  var infoInputTerrainType = document.getElementById('input-terraintype').value || '';
+  var infoInputAlignmnet = document.getElementById('input-alignment').value || '';
+  var infoInputNotes = document.getElementById('input-notes').value || '';
 
-  if (todoInputName.trim()) {
+  if (infoInputName.trim()) {
     storeNewLocation(pagesess,pagecamp,pagetow,
-      todoInputId,
-      todoInputIdi,
-      todoInputName,
-      todoInputTerrainType,
-      todoInputAlignmnet,
-      todoInputNotes)
+      infoInputId,
+      infoInputIdi,
+      infoInputName,
+      infoInputTerrainType,
+      infoInputAlignmnet,
+      infoInputNotes)
     
     var newLocationHTML = generateLocationHTML(
-      todoInputId.trim(),
-      todoInputIdi.trim(),
-      todoInputName.trim(),
-      todoInputTerrainType.trim(),
-      todoInputAlignmnet.trim(),
-      todoInputNotes.trim(),
+      infoInputId.trim(),
+      infoInputIdi.trim(),
+      infoInputName.trim(),
+      infoInputTerrainType.trim(),
+      infoInputAlignmnet.trim(),
+      infoInputNotes.trim(),
     );
     var mainElement = document.querySelector('main');
     mainElement.insertAdjacentHTML('beforeend', newLocationHTML);
@@ -499,47 +499,47 @@ function insertNewTown() {
   var pagesess = getSession();
   var pagecamp = getCampaign();
 
-  var todoInputId = document.getElementById('todo-input-id').value || '';
-  var todoInputIdi = document.getElementById('todo-input-idi').value || '';
-  var todoInputName = document.getElementById('todo-input-name').value || '';
-  var todoInputAlignment = document.getElementById('todo-input-alignment').value || '';
-  var todoInputDanger = document.getElementById('todo-input-danger').value || '';
-  var todoInputGovernment = document.getElementById('todo-input-government').value || '';
-  var todoInputPopulation = document.getElementById('todo-input-population').value || '';
-  var todoInputEconomy = document.getElementById('todo-input-economy').value || '';
-  var todoInputLaw = document.getElementById('todo-input-law').value || '';
-  var todoInputCrime = document.getElementById('todo-input-crime').value || '';
-  var todoInputQualities = document.getElementById('todo-input-qualties').value || '';
-  var todoInputNotes = document.getElementById('input-notes').value || '';
+  var infoInputId = document.getElementById('input-id').value || '';
+  var infoInputIdi = document.getElementById('input-idi').value || '';
+  var infoInputName = document.getElementById('input-name').value || '';
+  var infoInputAlignment = document.getElementById('input-alignment').value || '';
+  var infoInputDanger = document.getElementById('input-danger').value || '';
+  var infoInputGovernment = document.getElementById('input-government').value || '';
+  var infoInputPopulation = document.getElementById('input-population').value || '';
+  var infoInputEconomy = document.getElementById('input-economy').value || '';
+  var infoInputLaw = document.getElementById('input-law').value || '';
+  var infoInputCrime = document.getElementById('input-crime').value || '';
+  var infoInputQualities = document.getElementById('input-qualties').value || '';
+  var infoInputNotes = document.getElementById('input-notes').value || '';
 
-  if (todoInputName.trim()) {
+  if (infoInputName.trim()) {
     storeNewTown(pagesess,pagecamp,
-      todoInputId,
-      todoInputIdi,
-      todoInputName,
-      todoInputAlignment,
-      todoInputDanger,
-      todoInputGovernment,
-      todoInputPopulation,
-      todoInputEconomy,
-      todoInputLaw,
-      todoInputCrime,
-      todoInputQualities,
-      todoInputNotes)
+      infoInputId,
+      infoInputIdi,
+      infoInputName,
+      infoInputAlignment,
+      infoInputDanger,
+      infoInputGovernment,
+      infoInputPopulation,
+      infoInputEconomy,
+      infoInputLaw,
+      infoInputCrime,
+      infoInputQualities,
+      infoInputNotes)
     
     var newTownHTML = generateTownHTML(
-      todoInputId.trim(),
-      todoInputIdi.trim(),
-      todoInputName.trim(),
-      todoInputAlignment.trim(),
-      todoInputDanger.trim(),
-      todoInputGovernment.trim(),
-      todoInputPopulation.trim(),
-      todoInputEconomy.trim(),
-      todoInputLaw.trim(),
-      todoInputCrime.trim(),
-      todoInputQualities.trim(),
-      todoInputNotes.trim(),
+      infoInputId.trim(),
+      infoInputIdi.trim(),
+      infoInputName.trim(),
+      infoInputAlignment.trim(),
+      infoInputDanger.trim(),
+      infoInputGovernment.trim(),
+      infoInputPopulation.trim(),
+      infoInputEconomy.trim(),
+      infoInputLaw.trim(),
+      infoInputCrime.trim(),
+      infoInputQualities.trim(),
+      infoInputNotes.trim(),
     );
     var mainElement = document.querySelector('main');
     mainElement.insertAdjacentHTML('beforeend', newTownHTML);
@@ -551,19 +551,19 @@ function insertNewTown() {
 
 function insertNewSession() {
 
-  var todoInputId = document.getElementById('todo-input-id').value || '';
-  var todoInputIdi = document.getElementById('todo-input-idi').value || '';
-  var todoInputName = document.getElementById('todo-input-name').value || '';
+  var infoInputId = document.getElementById('input-id').value || '';
+  var infoInputIdi = document.getElementById('input-idi').value || '';
+  var infoInputName = document.getElementById('input-name').value || '';
 
-  if (todoInputName.trim()) {
+  if (infoInputName.trim()) {
     storeNewSession(
-      todoInputId,
-      todoInputIdi,
-      todoInputName)
+      infoInputId,
+      infoInputIdi,
+      infoInputName)
     var newSessionHTML = generateSessionHTML(
-      todoInputId.trim(),
-      todoInputIdi.trim(),
-      todoInputName.trim(),
+      infoInputId.trim(),
+      infoInputIdi.trim(),
+      infoInputName.trim(),
     );
     var mainElement = document.querySelector('main');
     mainElement.insertAdjacentHTML('beforeend', newSessionHTML);
@@ -579,23 +579,23 @@ function insertNewPicture() {
   var pagetow = getTown();
   var pagenp = getNpc();
 
-  var todoInputId = document.getElementById('todo-input-id').value || '';
-  var todoInputIdi = document.getElementById('todo-input-idi').value || '';
-  var todoInputCaption = document.getElementById('todo-input-caption').value || '';
-  var todoInputUrl = document.getElementById('input-url').value || '';
+  var infoInputId = document.getElementById('input-id').value || '';
+  var infoInputIdi = document.getElementById('input-idi').value || '';
+  var infoInputCaption = document.getElementById('input-caption').value || '';
+  var infoInputUrl = document.getElementById('input-url').value || '';
 
-  if (todoInputUrl.trim()) {
+  if (infoInputUrl.trim()) {
     storeNewNpc(pagesess,pagecamp,pagetow,pagenp,
-      todoInputId,
-      todoInputIdi,
-      todoInputCaption,
-      todoInputUrl)
+      infoInputId,
+      infoInputIdi,
+      infoInputCaption,
+      infoInputUrl)
     
     var newPictureHTML = generatePictureHTML(
-      todoInputId.trim(),
-      todoInputIdi.trim(),
-      todoInputCaption.trim(),
-      todoInputUrl.trim(),
+      infoInputId.trim(),
+      infoInputIdi.trim(),
+      infoInputCaption.trim(),
+      infoInputUrl.trim(),
     );
     var mainElement = document.querySelector('main');
     mainElement.insertAdjacentHTML('beforeend', newPictureHTML);
