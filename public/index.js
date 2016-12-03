@@ -683,4 +683,24 @@ window.addEventListener('DomContentLoaded',function(event){
   {
     showPictures.addEventListener('click',handlePictures);
   }
+  
+  var modalAcceptSession = document.querySelector('#add-session-modal .modal-accept-button');
+  if(modalAcceptSession){
+    modalAcceptSession.addEventListener('click',insertNewSession);
+  }
+  
+  var modalAcceptCampaign = document.querySelector('#add-campaign-modal .modal-accept-button');
+  if(modalAcceptCampaign){
+    modalAcceptCampaign.addEventListener('click',insertNewCampaign);
+  }
+  
+  var modalAcceptTown = document.querySelector('#add-town-modal .modal-accept-button');
+  if(modalAcceptTown){
+    modalAcceptTown.addEventListener('click',insertNewTown);
+  }
+  
+  var modalAcceptLocation = document.querySelector('#add-location-modal .modal-accept-button');
+  if(modalAcceptLocation){
+    modalAcceptLocation.addEventListener('click',insertNewLocation);
+  }
 });
