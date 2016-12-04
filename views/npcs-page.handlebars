@@ -6,12 +6,8 @@
 		<div class="select-container">
 			<select id="npc-select">
 			<option value="" disabled selected>Select a character</option>
-			{{#each campnps.np}}
-				{{#each npc}}
-				{{#if campnps.np.id==npc.idi}}
-					<option value={{idi}}>{{name}}</option>
-				{{/if}}
-				{{/each}}
+			{{#each campnps}}
+				<option value = {{idi}}>{{name}}</option>
 			{{/each}}
 			</select>
 		</div>

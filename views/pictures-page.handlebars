@@ -1,15 +1,11 @@
 {{>header}}
 <main>
 <div class="info">
-	{{#each camppics.pic.id}}
-		{{#each picture}}
-			{{#if camppics.pic.id==picture.idi}}
-				<div class="photo-container">
-				<img class="photo" src ="{{url}}">
-				<p class="info">{{caption}}</p>
-				</div>
-			{{/if}}
-		{{/each}}
+	{{#each camppics}}
+		<div class="photo-container">
+			<img class="photo" src ="{{url}}">
+			<p class="info">{{caption}}</p>
+		</div>
 	{{/each}}
 </div>
 </main>

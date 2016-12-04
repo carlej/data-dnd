@@ -6,11 +6,9 @@
 		<div class="select-container">
 			<select id="campaign-select">
 			<option value="" disabled selected>Select a Campaign</option>
-			{{#if sesscont.id = campid.idi}}
-				{{#each campaign}}
-					<option value={{idi}}>{{name}}</option>
-				{{/each}}
-			{{/if}}
+			{{#each sesscont}}
+				<option value={{idi}}>{{name}}</option>
+			{{/each}}
 			</select>
 		</div>
 </div>
