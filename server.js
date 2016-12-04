@@ -14,6 +14,7 @@ var location = require(path.join(infoJSON,'location'));
 var npc = require(path.join(infoJSON,'npc'));
 var town = require(path.join(infoJSON,'town'));
 var picture = require(path.join(infoJSON,'picture'));
+var handlebars = require('handlebars');
 
 app.engine('handlebars',exphbs({ defaultLayout: 'main'}))
 app.set('view engine', 'handlebars');
@@ -26,6 +27,46 @@ app.get('/',function(req,res){
     pageTitle:'Welcome',
     session:session
   });
+});
+
+
+handlebars.registerHelper('compare', function (lvalue, operator, rvalue, options) {
+    var operators, result;
+
+    if (arguments.length < 3) {
+        throw new Error("Handlerbars Helper 'compare' needs 2 parameters");
+    }
+
+    if (options === undefined) {
+        options = rvalue;
+        rvalue = operator;
+        operator = "===";
+    }
+
+    operators = {
+        '==': function (l, r) { return l == r; },
+        '===': function (l, r) { return l === r; },
+        '!=': function (l, r) { return l != r; },
+        '!==': function (l, r) { return l !== r; },
+        '<': function (l, r) { return l < r; },
+        '>': function (l, r) { return l > r; },
+        '<=': function (l, r) { return l <= r; },
+        '>=': function (l, r) { return l >= r; },
+        'typeof': function (l, r) { return typeof l == r; }
+    };
+
+    if (!operators[operator]) {
+        throw new Error("Handlerbars Helper 'compare' doesn't know the operator " + operator);
+    }
+
+    result = operators[operator](lvalue, rvalue);
+
+    if (result) {
+        return options.fn(this);
+    } else {
+        return options.inverse(this);
+    }
+
 });
 
 /*
