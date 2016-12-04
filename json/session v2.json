@@ -1,0 +1,929 @@
+{
+  "sessid:1": {
+    "id": "1",
+    "idi": "sessid:1",
+    "name": "name",
+    "contents": [
+      {
+        "campid:1": {
+          "id": "1",
+          "idi": "campid:1",
+          "name": "The Scurge of the Programmers",
+          "notes": "There are 2 programmers, stuff happened and now they're here.... weird.",
+          "contents": [
+            {
+              "pictures": [
+                {
+                  "picid:21": {
+                    "id": "21",
+                    "idi": "picid:21",
+                    "caption": "The Scurge of the Programmers",
+                    "url": "http://www.thestory.org/sites/default/themes/siteskin/inc/images/podcast-600.png"
+                  }
+                }
+              ],
+              "npcs": [
+                {
+                  "np": [
+                    {
+                      "id": "npid:1",
+                      "pictures": [
+                        {
+                          "picid:1": {
+                            "id": "1",
+                            "idi": "picid:1",
+                            "caption": "Sorcerer",
+                            "url": "https://s-media-cache-ak0.pinimg.com/564x/46/41/59/464159c0fdb099af85b6d41949b30bf2.jpg"
+                          }
+                        },
+                        {
+                          "picid:2": {
+                            "id": "2",
+                            "idi": "picid:2",
+                            "caption": "Sorcerer Symbol",
+                            "url": "http://walkingmind.evilhat.com/wp-content/uploads/2014/03/Sorceress.png"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "np": [
+                    {
+                      "id": "npid:2",
+                      "pictures": [
+                        {
+                          "picid:3": {
+                            "id": "3",
+                            "idi": "picid:3",
+                            "caption": "Barbarian",
+                            "url": "https://s-media-cache-ak0.pinimg.com/originals/75/b1/6c/75b16c439f21eda5d68516505e056c96.jpg"
+                          }
+                        },
+                        {
+                          "picid:4": {
+                            "id": "4",
+                            "idi": "picid:4",
+                            "caption": "Barbarian Symbol",
+                            "url": "https://s-media-cache-ak0.pinimg.com/564x/c7/fe/25/c7fe251cd11a2ecb590d7d9efa596a49.jpg"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "np": [
+                    {
+                      "id": "npid:3",
+                      "pictures": [
+                        {
+                          "picid:5": {
+                            "id": "5",
+                            "idi": "picid:5",
+                            "caption": "Rogue",
+                            "url": "https://s-media-cache-ak0.pinimg.com/564x/ca/73/06/ca730686664a743b68440339b9619316.jpg"
+                          }
+                        },
+                        {
+                          "picid:6": {
+                            "id": "6",
+                            "idi": "picid:6",
+                            "caption": "Rogue Symbol",
+                            "url": "https://s-media-cache-ak0.pinimg.com/564x/bb/70/66/bb70661930e5533fcf2fb396855b0aa5.jpg"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "np": [
+                    {
+                      "id": "npid:4",
+                      "pictures": [
+                        {
+                          "picid:7": {
+                            "id": "7",
+                            "idi": "picid:7",
+                            "caption": "Cleric",
+                            "url": "https://i.redd.it/q6i6jbrw0hwx.jpg"
+                          }
+                        },
+                        {
+                          "picid:8": {
+                            "id": "8",
+                            "idi": "picid:8",
+                            "caption": "Cleric Symbol",
+                            "url": "http://www.medicalnewstoday.com/content/images/articles/283/283006/sliced-cucumber.jpg"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "np": [
+                    {
+                      "id": "npid:5",
+                      "pictures": [
+                        {
+                          "picid:9": {
+                            "id": "9",
+                            "idi": "picid:9",
+                            "caption": "Monk",
+                            "url": "https://s-media-cache-ak0.pinimg.com/564x/d0/bc/62/d0bc6283604e563422cfdbdb5464622d.jpg"
+                          }
+                        },
+                        {
+                          "picid:10": {
+                            "id": "10",
+                            "idi": "picid:10",
+                            "caption": "Monk Symbol",
+                            "url": "https://s-media-cache-ak0.pinimg.com/564x/f5/9a/ee/f59aee806df75cdce2fd591d96423270.jpg"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "np": [
+                    {
+                      "id": "npid:6",
+                      "pictures": [
+                        {
+                          "picid:11": {
+                            "id": "11",
+                            "idi": "picid:11",
+                            "caption": "Alchemist",
+                            "url": "http://www.paperspencils.com/wp-content/uploads/2013/04/101029044332704240.jpg"
+                          }
+                        },
+                        {
+                          "picid:12": {
+                            "id": "12",
+                            "idi": "picid:12",
+                            "caption": "Alchemist Symbol",
+                            "url": "http://www.thelostworlds.net/Nosgoth/Images/Community_Day-05-Screenshots-Symbols-04-Nosgoth-Symbols-Human-Alchemist.JPG"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "np": [
+                    {
+                      "id": "npid:7",
+                      "pictures": [
+                        {
+                          "picid:13": {
+                            "id": "13",
+                            "idi": "picid:13",
+                            "caption": "Wizard",
+                            "url": "http://p.laozu.com/laozutu/dwy/20161108/0%20(39).jpg"
+                          }
+                        },
+                        {
+                          "picid:14": {
+                            "id": "14",
+                            "idi": "picid:14",
+                            "caption": "Wizard Symbol",
+                            "url": "https://s-media-cache-ak0.pinimg.com/736x/52/2a/9e/522a9e630c6c0a25d8f921ed5b688f7f.jpg"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "np": [
+                    {
+                      "id": "npid:8",
+                      "pictures": [
+                        {
+                          "picid:15": {
+                            "id": "15",
+                            "idi": "picid:15",
+                            "caption": "Slave",
+                            "url": "http://orig07.deviantart.net/febb/f/2011/173/b/f/bf9725e745c9fe536404154c909d754d-d3joz6b.jpg"
+                          }
+                        },
+                        {
+                          "picid:16": {
+                            "id": "16",
+                            "idi": "picid:16",
+                            "caption": "Slave Symbol",
+                            "url": "https://s-media-cache-ak0.pinimg.com/564x/59/51/96/5951968b432a8d1a7fcc05c00881a354.jpg"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "locations": [
+                {
+                  "loca": [
+                    {
+                      "id": "locid:1",
+                      "pictures": [
+                        {
+                          "picid:17": {
+                            "id": "17",
+                            "idi": "picid:17",
+                            "caption": "Magicia City streets",
+                            "url": "https://s-media-cache-ak0.pinimg.com/originals/45/14/38/45143835f57467dc67fdbe262a122722.jpg"
+                          }
+                        }
+                      ],
+                      "npcs": [
+                        {
+                          "np": [
+                            {
+                              "id": "npid:1",
+                              "pictures": [
+                                {
+                                  "pic": "picid:1"
+                                },
+                                {
+                                  "pic": "picid:2"
+                                }
+                              ]
+                            }
+                          ],
+                          "np": [
+                            {
+                              "id": "npid:2",
+                              "pictures": [
+                                {
+                                  "pic": "picid:3"
+                                },
+                                {
+                                  "pic": "picid:4"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "loca": [
+                    {
+                      "id": "locid:2",
+                      "pictures": [
+                        {
+                          "picid:18": {
+                            "id": "18",
+                            "idi": "picid:18",
+                            "caption": "Weapons and Potions shop",
+                            "url": "http://orig14.deviantart.net/43fa/f/2013/107/f/2/the_armor_shop_by_sweetmoon-d622tbg.jpg"
+                          }
+                        }
+                      ],
+                      "npcs": [
+                        {
+                          "np": [
+                            {
+                              "id": "npid:3",
+                              "pictures": [
+                                {
+                                  "pic": "picid:5"
+                                },
+                                {
+                                  "pic": "picid:6"
+                                }
+                              ]
+                            }
+                          ],
+                          "np": [
+                            {
+                              "id": "npid:4",
+                              "pictures": [
+                                {
+                                  "pic": "picid:7"
+                                },
+                                {
+                                  "pic": "picid:8"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "loca": [
+                    {
+                      "id": "locid:3",
+                      "pictures": [
+                        {
+                          "picid:19": {
+                            "id": "19",
+                            "idi": "picid:19",
+                            "caption": "The Forest",
+                            "url": "https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg"
+                          }
+                        }
+                      ],
+                      "npcs": [
+                        {
+                          "np": [
+                            {
+                              "id": "npid:5",
+                              "pictures": [
+                                {
+                                  "pic": "picid:9"
+                                },
+                                {
+                                  "pic": "picid:10"
+                                }
+                              ]
+                            }
+                          ],
+                          "np": [
+                            {
+                              "id": "npid:6",
+                              "pictures": [
+                                {
+                                  "pic": "picid:11"
+                                },
+                                {
+                                  "pic": "picid:12"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "loca": [
+                    {
+                      "id": "locid:4",
+                      "pictures": [
+                        {
+                          "picid:20": {
+                            "id": "20",
+                            "idi": "picid:20",
+                            "caption": "Forest's Respite Lower Levels",
+                            "url": "http://weknowyourdreams.com/images/forest/forest-01.jpg"
+                          }
+                        }
+                      ],
+                      "npcs": [
+                        {
+                          "np": [
+                            {
+                              "id": "npid:7",
+                              "pictures": [
+                                {
+                                  "pic": "picid:13"
+                                },
+                                {
+                                  "pic": "picid:14"
+                                }
+                              ]
+                            }
+                          ],
+                          "np": [
+                            {
+                              "id": "npid:8",
+                              "pictures": [
+                                {
+                                  "pic": "picid:15"
+                                },
+                                {
+                                  "pic": "picid:16"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "towns": [
+                {
+                  "tow": [
+                    {
+                      "towid:1": {
+                        "id": "1",
+                        "idi": "towid:1",
+                        "name": "Magicia City",
+                        "alignment": "Lawful Neutral",
+                        "danger": "Small-league rogues, minor pickpockets, some ruffians",
+                        "government": "Heavy handed and authoritarian",
+                        "population": "10,000",
+                        "economy": "Moderate",
+                        "law": "Heavily enforced and strict",
+                        "crime": "Very minimal and stomped out quickly",
+                        "qualities": "Abundant, Academic, Cruel Watch, Darkvision, Defensible",
+                        "notes": "Magicia city is a place filled to the brim with sorcerers, wizards, witches and magical beings in general. Be wary of the laws and follow them or the town guard, which can be classified as a military force, will strike you down hard and fast."
+                      },
+                      "pictures": [
+                        {
+                          "picid:22": {
+                            "id": "22",
+                            "idi": "picid:22",
+                            "caption": "Magicia City",
+                            "url": "http://www.hdwallpaper.nu/wp-content/uploads/2015/02/great-fantasy-city.jpg"
+                          }
+                        }
+                      ],
+                      "locations": [
+                        {
+                          "loca": [
+                            {
+                              "locid:1": {
+                                "id": "1",
+                                "idi": "locaid:1",
+                                "name": "Magicia City streets",
+                                "terrainType": "Urban",
+                                "alignment": "Chaotic Neutral",
+                                "notes": "A guard at every corner and a sorcerer every five feet. The stores are all about potions and magic, the library is huge and your coin purse is sure to be lighter by the end of the day."
+                              },
+                              "pictures": [
+                                {
+                                  "pic": "picid:17"
+                                }
+                              ],
+                              "npcs": [
+                                {
+                                  "np": [
+                                    {
+                                      "npid:1": {
+                                        "id": "1",
+                                        "idi": "npid:1",
+                                        "name": "Bob Sagget",
+                                        "class": "Sorcerer",
+                                        "str": "8",
+                                        "dex": "16",
+                                        "con": "10",
+                                        "int": "13",
+                                        "wis": "10",
+                                        "cha": "16",
+                                        "description": "Shaggy old man, with an air of magic about him. Long gray beard, blue eyes and standing at a confident 3 feet and 4 inches!",
+                                        "race": "Gnome",
+                                        "alignment": "Chaotic Neutral",
+                                        "ac": "14 :: 10+3(DEX)+0(No armor, +4 if Mage Armor Cast)+1(dodge)+(4 more dodge if on an attack of opportunity due to movement)",
+                                        "attacks": "No physical attacks, prioritizes escaping via magic.",
+                                        "skills": "Acrobatics :: 5 ranks, Spellcraft :: 5 ranks, Knowledge(Arcana) :: 5 ranks",
+                                        "feats": "Dodge, Mobility, Intensified Spell",
+                                        "hp": "21",
+                                        "hd": "5 Hit Dice",
+                                        "clothing": "Robes with a hood",
+                                        "gear": "Just a few wands and a staff of the magus",
+                                        "platinum": "69pp",
+                                        "gold": "15gp",
+                                        "silver": "30sp",
+                                        "copper": "10sp",
+                                        "iron": "0ip",
+                                        "positive": "They love magic, money and intelligence.",
+                                        "negative": "They hate persuasion attempts, losing money and anyone that disperages magic!",
+                                        "goal": "Bob Sagget has no goals in life, he just carries on.",
+                                        "language": "Gnomish, Common and Draconic",
+                                        "traits": "Courteous, Ambitious, Flirty, Emotional and Loyal",
+                                        "notes": "notes"
+                                      },
+                                      "pictures": [
+                                        {
+                                          "pic": "picid:1"
+                                        },
+                                        {
+                                          "pic": "picid:2"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "np": [
+                                    {
+                                      "npid:2": {
+                                        "id": "2",
+                                        "idi": "npid:2",
+                                        "name": "Billy Bob",
+                                        "class": "Barbarian",
+                                        "str": "20",
+                                        "dex": "13",
+                                        "con": "14",
+                                        "int": "7",
+                                        "wis": "10",
+                                        "cha": "7",
+                                        "description": "7ft behemoth of muscle, he will likely punch you in the face... Avoid him.",
+                                        "race": "Orc",
+                                        "alignment": "Neutral Evil",
+                                        "ac": "18 :: 10+1(DEX)+7(Piece-Mail Armor)",
+                                        "attacks": "Perfers to use his large sized greatsword on anything that annoys him.",
+                                        "skills": "Climb :: 5 ranks, Survival :: 5 ranks",
+                                        "feats": "Power Attack, Improved-Trip, Cleave, Great-Cleave",
+                                        "hp": "55",
+                                        "hd": "5 Hit Dice",
+                                        "clothing": "Tattered Pants and boots",
+                                        "gear": "A large great sword",
+                                        "platinum": "00pp",
+                                        "gold": "15gp",
+                                        "silver": "30sp",
+                                        "copper": "10sp",
+                                        "iron": "30ip",
+                                        "positive": "They love being the strongest around",
+                                        "negative": "They hate persuasion attempts, losing money and anyone that is stronger than them!",
+                                        "goal": "Billy Bob will be the hugest!",
+                                        "language": "Common",
+                                        "traits": "Self-Controlled, Illogical, Emotional and Ambitious",
+                                        "notes": "notes"
+                                      },
+                                      "pictures": [
+                                        {
+                                          "pic": "picid:3"
+                                        },
+                                        {
+                                          "pic": "picid:4"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "loca": [
+                            {
+                              "locid:2": {
+                                "id": "2",
+                                "idi": "locaid:2",
+                                "name": "Weapons and Potions shop",
+                                "terrainType": "Building (interior)",
+                                "alignment": "Chaotic Money (they'll do ANYTHING for your money except kill/rob you, you hope)",
+                                "inventory": "All manner of weaponry, along with literally hundreds of varieties of potions for your likeing.",
+                                "notes": "notes"
+                              },
+                              "pictures": [
+                                {
+                                  "pic": "picid:18"
+                                }
+                              ],
+                              "npcs": [
+                                {
+                                  "np": [
+                                    {
+                                      "npid:3": {
+                                        "id": "3",
+                                        "idi": "npid:3",
+                                        "name": "Willian Marquess",
+                                        "class": "Rogue",
+                                        "str": "10",
+                                        "dex": "16",
+                                        "con": "10",
+                                        "int": "18",
+                                        "wis": "12",
+                                        "cha": "14",
+                                        "description": "A fancy human, with an epic mustache (handlebarred 2 feet from each side), standing tall at a 6ft 2 and sporting a dashing trench-coat with embroidery!",
+                                        "race": "Human",
+                                        "alignment": "Neutral Good",
+                                        "ac": "18 :: 10 + 3(DEX) + 4(Chain Shirt) + 1(dodge)",
+                                        "attacks": "T-W-Fighting with 2 daggers",
+                                        "skills": "Acrobatics :: 3 ranks, Disable Device :: 3, Disguise :: 3, Knowledge(Dungeoneering) :: 3, Knowledge(Engineering) :: 3, Knowledge(Local) :: 3, Knowledge(Arcana) :: 3, Sleight of Hand :: 3, Stealth :: 3, Perception :: 3, Survival :: 3, Use Magic Device :: 3",
+                                        "feats": "Dodge, Two-Weapon-Fighting, Weapon Finesse",
+                                        "hp": "20",
+                                        "hd": "3 Hit Dice",
+                                        "clothing": "Fancy embroidered coat, pirate's blouse and boots.",
+                                        "gear": "Two identical Silver daggers",
+                                        "platinum": "??",
+                                        "gold": "??",
+                                        "silver": "??",
+                                        "copper": "??",
+                                        "iron": "??",
+                                        "positive": "Flirtatious behavior, money and outwitting others",
+                                        "negative": "Brutishness, idiots and common folk",
+                                        "goal": "Being the fanciest of men and the roguish of rogues",
+                                        "language": "Common, Elven, Gnomish, Draconic, Abyssal, Celestial",
+                                        "traits": "Quick-witted, ambitious and lustfull",
+                                        "notes": "notes"
+                                      },
+                                      "pictures": [
+                                        {
+                                          "pic": "picid:5"
+                                        },
+                                        {
+                                          "pic": "picid:6"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "np": [
+                                    {
+                                      "npid:4": {
+                                        "id": "4",
+                                        "idi": "npid:4",
+                                        "name": "Cucumber Bandersnatch",
+                                        "class": "Cleric",
+                                        "str": "10",
+                                        "dex": "10",
+                                        "con": "12",
+                                        "int": "13",
+                                        "wis": "16",
+                                        "cha": "18",
+                                        "description": "A tall lanky man with curly black hair and a goatee that can only be described as handsome.",
+                                        "race": "Elf",
+                                        "alignment": "Chaotic Good",
+                                        "ac": "16 :: 10 + 6(Chainmail)",
+                                        "attacks": "Specializes as a combat healer, doesn't truly fight but instead supports allies",
+                                        "skills": "Heal :: 8 ranks, Perception :: 8 ranks",
+                                        "feats": "Combat Expertise, Extra Channel, Extra Channel, Extra Channel",
+                                        "hp": "63",
+                                        "hd": "8 Hit Dice",
+                                        "clothing": "Cucumber Cumberband under a cleric's robes.",
+                                        "gear": "Two large shields, one for self protection another to place in front of friends",
+                                        "platinum": "0pp",
+                                        "gold": "0gp",
+                                        "silver": "0sp",
+                                        "copper": "0cp",
+                                        "iron": "0ip",
+                                        "positive": "Helping others, unselfish behaviour and being diplomatic.",
+                                        "negative": "People that treat others like garbage, those that would wish harm upon others and greedy aristocrats.",
+                                        "goal": "To save as many as he can by harming as few as possible.",
+                                        "language": "Common and Elvish",
+                                        "traits": "Self-less, helpful and adventurous",
+                                        "notes": "notes"
+                                      },
+                                      "pictures": [
+                                        {
+                                          "pic": "picid:7"
+                                        },
+                                        {
+                                          "pic": "picid:8"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "tow": [
+                    {
+                      "towid:2": {
+                        "id": "2",
+                        "idi": "towid:2",
+                        "name": "The Forest's Respite",
+                        "alignment": "Chaotic Neutral",
+                        "danger": "Forest beasts, bandits and other adventurers who may deem you an enemy",
+                        "government": "No true governmental rule, just don't cross the wrong people and you won't disappear",
+                        "population": "About 100, but no one is sure on the exact amount",
+                        "economy": "Rich",
+                        "law": "Heavily enforced and strict",
+                        "crime": "Abundant, but remember if you rob someone you're likely to be robbed, the same is for every other possible crime",
+                        "qualities": "Abundant, Academic, Darkvision, Defensible",
+                        "notes": "Forest's respite is a small village hidden in a large forest where the outcasts of Magicia City appear to plot, kill or live free. Many organize crimes against the city, while others plot against each-other. Watch your back here."
+                      },
+                      "pictures": [
+                        {
+                          "picid:23": {
+                            "id": "23",
+                            "idi": "picid:23",
+                            "caption": "The Forest's Respite",
+                            "url": "https://cdna2.artstation.com/p/assets/images/images/000/277/126/large/ForestVillage_VeliNystrom.jpg?1414674708"
+                          }
+                        }
+                      ],
+                      "locations": [
+                        {
+                          "loca": [
+                            {
+                              "locid:3": {
+                                "id": "3",
+                                "idi": "locaid:3",
+                                "name": "The Forest",
+                                "terrainType": "Forest",
+                                "alignment": "Chaotic Neutral",
+                                "notes": "notes"
+                              },
+                              "pictures": [
+                                {
+                                  "pic": "picid:19"
+                                }
+                              ],
+                              "npcs": [
+                                {
+                                  "np": [
+                                    {
+                                      "npid:5": {
+                                        "id": "5",
+                                        "idi": "npid:5",
+                                        "name": "Prantha Basi",
+                                        "class": "Monk",
+                                        "str": "16",
+                                        "dex": "16",
+                                        "con": "12",
+                                        "int": "13",
+                                        "wis": "16",
+                                        "cha": "10",
+                                        "description": "She's a short, bald human that is blind. Not much else is known about her.",
+                                        "race": "Human",
+                                        "alignment": "True Neutral",
+                                        "ac": "20 :: 10 + 3(DEX) + 3(WIS) + 2(Bracers of Armor) + 2(Monk bonus)",
+                                        "attacks": "Flurry of Blows unarmed",
+                                        "skills": "Acrobatics :: 5, Survival :: 5, Perception :: 5",
+                                        "feats": "Improved Unarmed Strike, Bleeding Strike, Dodge, Mobility",
+                                        "hp": "40",
+                                        "hd": "5 Hit Dice",
+                                        "clothing": "Hooded Robe with a blindfold",
+                                        "gear": "No discernable gear",
+                                        "platinum": "0pp",
+                                        "gold": "0gp",
+                                        "silver": "10sp",
+                                        "copper": "30cp",
+                                        "iron": "0ip",
+                                        "positive": "??",
+                                        "negative": "??",
+                                        "goal": "??",
+                                        "language": "??",
+                                        "traits": "??",
+                                        "notes": "notes"
+                                      },
+                                      "pictures": [
+                                        {
+                                          "pic": "picid:9"
+                                        },
+                                        {
+                                          "pic": "picid:10"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "np": [
+                                    {
+                                      "npid:6": {
+                                        "id": "6",
+                                        "idi": "npid:6",
+                                        "name": "Zora",
+                                        "class": "Alchemist",
+                                        "str": "8",
+                                        "dex": "14",
+                                        "con": "12",
+                                        "int": "18",
+                                        "wis": "12",
+                                        "cha": "8",
+                                        "description": "?? (No one's ever seen her)",
+                                        "race": "??",
+                                        "alignment": "??",
+                                        "ac": "12 :: 10 + 2(DEX)",
+                                        "attacks": "Alchemist Bombs",
+                                        "skills": "Craft (Alchemy)",
+                                        "feats": "n/a",
+                                        "hp": "n/a",
+                                        "hd": "n/a",
+                                        "clothing": "n/a",
+                                        "gear": "n/a",
+                                        "platinum": "n/a",
+                                        "gold": "n/a",
+                                        "silver": "n/a",
+                                        "copper": "n/a",
+                                        "iron": "n/a",
+                                        "positive": "n/a",
+                                        "negative": "n/a",
+                                        "goal": "n/a",
+                                        "language": "n/a",
+                                        "traits": "n/a",
+                                        "notes": "notes"
+                                      },
+                                      "pictures": [
+                                        {
+                                          "pic": "picid:11"
+                                        },
+                                        {
+                                          "pic": "picid:12"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "loca": [
+                            {
+                              "locid:4": {
+                                "id": "4",
+                                "idi": "locaid:4",
+                                "name": "Forest's Respite Lower Levels",
+                                "terrainType": "Tree Village",
+                                "alignment": "Chaotic Neutral",
+                                "notes": "The trees tower around you, and the bandits brandish their weapons along with their smiles. You should probably keep your weapon ready, it looks like it will be a fight before you can enter the Respite!"
+                              },
+                              "pictures": [
+                                {
+                                  "picid:20": {
+                                    "id": "20",
+                                    "idi": "picid:20",
+                                    "caption": "Forest's Respite Lower Levels",
+                                    "url": "http://weknowyourdreams.com/images/forest/forest-01.jpg"
+                                  }
+                                }
+                              ],
+                              "npcs": [
+                                {
+                                  "np": [
+                                    {
+                                      "npid:7": {
+                                        "id": "7",
+                                        "idi": "npid:7",
+                                        "name": "Marteph Lemoor",
+                                        "class": "Wizard",
+                                        "str": "8",
+                                        "dex": "14",
+                                        "con": "10",
+                                        "int": "24",
+                                        "wis": "13",
+                                        "cha": "10",
+                                        "description": "n/a",
+                                        "race": "n/a",
+                                        "alignment": "n/a",
+                                        "ac": "n/a",
+                                        "attacks": "n/a",
+                                        "skills": "n/a",
+                                        "feats": "n/a",
+                                        "hp": "n/a",
+                                        "hd": "n/a",
+                                        "clothing": "n/a",
+                                        "gear": "n/a",
+                                        "platinum": "n/a",
+                                        "gold": "n/a",
+                                        "silver": "n/a",
+                                        "copper": "n/a",
+                                        "iron": "n/a",
+                                        "positive": "n/a",
+                                        "negative": "n/a",
+                                        "goal": "n/a",
+                                        "language": "n/a",
+                                        "traits": "n/a",
+                                        "notes": "notes"
+                                      },
+                                      "pictures": [
+                                        {
+                                          "pic": "picid:13"
+                                        },
+                                        {
+                                          "pic": "picid:14"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "np": [
+                                    {
+                                      "npid:8": {
+                                        "id": "8",
+                                        "idi": "npid:8",
+                                        "name": "Bori",
+                                        "class": "Commoner (slave)",
+                                        "str": "12",
+                                        "dex": "10",
+                                        "con": "10",
+                                        "int": "8",
+                                        "wis": "8",
+                                        "cha": "8",
+                                        "description": "n/a",
+                                        "race": "n/a",
+                                        "alignment": "n/a",
+                                        "ac": "n/a",
+                                        "attacks": "n/a",
+                                        "skills": "n/a",
+                                        "feats": "n/a",
+                                        "hp": "n/a",
+                                        "hd": "n/a",
+                                        "clothing": "n/a",
+                                        "gear": "n/a",
+                                        "platinum": "n/a",
+                                        "gold": "n/a",
+                                        "silver": "n/a",
+                                        "copper": "n/a",
+                                        "iron": "n/a",
+                                        "positive": "n/a",
+                                        "negative": "n/a",
+                                        "goal": "n/a",
+                                        "language": "n/a",
+                                        "traits": "n/a",
+                                        "notes": "notes"
+                                      },
+                                      "pictures": [
+                                        {
+                                          "pic": "picid:15"
+                                        },
+                                        {
+                                          "pic": "picid:16"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
