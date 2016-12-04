@@ -6,6 +6,8 @@ var bodyParser = require('body-parser');
 var app = express();
 var port = process.env.PORT || 3000;
 var infoJSON = path.join(__dirname,'json');
+var view = path.join(__dirname,'views');
+var partials = path.join(view,'partials');
 var session = require(path.join(infoJSON,'session'));
 var campaign = require(path.join(infoJSON,'campaign'));
 var location = require(path.join(infoJSON,'location'));
@@ -32,7 +34,9 @@ SPECIFIC SESSION
 ************************************************************
 */
 app.get('/session/:sess',function(req,res,next){
-    var sess = session[req.params.sess];
+	console.log("here");
+    var sess = session;
+    var sessidi = sess[req.params.sess];
     var sesscont= sess.contents;
     if(sess){
         res.render('campaigns-page',{
@@ -54,7 +58,7 @@ app.get('/session/:sess/:camp',function(req,res){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     if(camp){
-        res.render('campaign-page',{
+        res.render(path.join(partials,'campaign-page'),{
             pageTitle:camp.name,
             camp,
             sess,
@@ -109,7 +113,7 @@ app.get('/session/:sess/:camp/npcs/:np',function(req,res){
     var campnps = campcont.npcs;
     var campnp = campnps[req.params.np];
     if(campnp){
-        res.render('npc-page',{
+        res.render(path.join(partials,'npc-page'),{
             pageTitle:campnp.name,
             campnp,
             npc:npc,
@@ -148,7 +152,7 @@ app.get('/session/:sess/:camp/locations/:loca',function(req,res){
     var camplocas = campcont.locations;
     var camploca = camplocas[req.params.loca];
     if(camploca){
-        res.render('location-page',{
+        res.render(path.join(partials,'location-page'),{
             pageTitle:camploca.name,
             camploca,
             location:location,
@@ -172,7 +176,7 @@ app.get('/session/:sess/:camp/locations/:loca/npcs/:np',function(req,res){
     var campnps = camploca.npcs;
     var campnp = campnps[req.params.np];
     if(campnp){
-        res.render('npc-page',{
+        res.render(path.join(partials,'npc-page'),{
             pageTitle:campnp.name,
             campnp,
             npc:npc,
@@ -203,14 +207,14 @@ app.get('/session/:sess/:camp/towns',function(req,res){
 SPECIFIC TOWN IN SPECIFIC CAMPAIGN
 ************************************************************
 */
-app.get('/session/:sess/:camp/towns/:tow',function(req,res){
+app.get('/session/:sess/:camp/towns/:tow',function(req,res,next){
     var sess = session[req.params.sess];
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
     var camptows = campcont.towns;
     var camptow = camptows[req.params.tow];
     if(camptow){
-        res.render('town-page',{
+        res.render(path.join(partials,'town-page'),{
             pageTitle:camptow.name,
             town:town,
             camptow,
@@ -288,7 +292,7 @@ app.get('/session/:sess/:camp/towns/:tow/locations/:loca',function(req,res){
     var camplocas = camptows.locations;
     var camploca = camptows[req.params.loca];
     if(camploca){
-        res.render('location-page',{
+        res.render(path.join(partials,'location-page'),{
             pageTitle:camploca.name,
             camploca,
             location:location,
@@ -354,7 +358,7 @@ app.get('/session/:sess/:camp/towns/:tow/locations/:loca/npcs/:np',function(req,
     var campnps = camploca.npcs;
     var campnp = campnps[req.params.np];
     if(campnp){
-        res.render('npc-page',{
+        res.render(path.join(partials,'npc-page'),{
             pageTitle:campnp.name,
             campnp,
             npc:npc,
