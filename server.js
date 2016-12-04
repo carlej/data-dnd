@@ -196,7 +196,7 @@ app.get('/session/:sess/:camp/towns',function(req,res){
     var camp = campaign[req.params.camp];
     var campcont = camp.contents;
     var camptow = campcont.towns;
-    res.render('locations-page',{
+    res.render('towns-page',{
         pageTitle:'Towns',
         town:town,
         camptow,
