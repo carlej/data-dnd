@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname,'public')),function(req,res,next){
 );
 
 app.get('/',function(req,res){
-  res.render('index-page',{
+  res.render('sessions-page',{
     pageTitle:'Welcome',
     session:session
   });
