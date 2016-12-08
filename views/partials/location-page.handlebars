@@ -1,29 +1,39 @@
+{{>header}}
+
+<main>
+
 <section class="info">
-   <h2>{{loca.name}}</h2>
+<div class="modal-header">
+         <button type="button" id="location-remove-button">&times;</button>
+      </div>
+   <h2>{{camploca.name}}</h2>
    <div class="info-body">
-   {{#if terrainType}}
-   <p><span class="label">Terrain Type: </span>{{loca.terrainType}}</p>
+   {{#if camploca.terrain}}
+   <p><span class="label">Terrain Type: </span>{{camploca.terrain}}</p>
    {{/if}}
-   {{#if alignment}}
-   <p><span class="label">Alignment: </span>{{loca.alignment}}</p>
+   {{#if camploca.alignment}}
+   <p><span class="label">Alignment: </span>{{camploca.alignment}}</p>
    {{/if}}
-   {{#if inventory}}
-   <p><span class="label">Inventory: </span>{{loca.inventory}}</p>
+   {{#if camploca.inventory}}
+   <p><span class="label">Inventory: </span>{{camploca.inventory}}</p>
    {{/if}}
-   {{#if notes}}
-   <p><span class="label">Notes: </span>{{loca.notes}}</p>
+   {{#if camploca.notes}}
+   <p><span class="label">Notes: </span>{{camploca.notes}}</p>
    {{/if}}
    </div>
 </section>
 <section class="info">
    <h2>NPCs</h2>
    <div class="info-body">
-   <p><span class="select-npc">Click for NPCs</span></p>
+   <p><span id="select-npc">Click for NPCs</span></p>
    </div>
 </section>
 <section class="info">
    <h2>Pictures</h2>
    <div class="info-body">
-   <p><span class="select-picture">Click for Pictures</span></p>
+   <p><span id="select-picture">Click for Pictures</span></p>
    </div>
 </section>
+
+</main>
+{{>footer}}

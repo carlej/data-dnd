@@ -1,26 +1,57 @@
+{{>header}}
+
+<main>
+
 <section class="info">
-   <h2>{{tow.name}}</h2>
+<div class="modal-header">
+         <button type="button" id="town-remove-button">&times;</button>
+      </div>
+   <h2>{{camptow.name}}</h2>
    <div class="info-body">
-   {{#if notes}}
-   <p><span class="label">Notes: </span>{{tow.notes}}</p>
+   {{#if camptow.alignment}}
+   <p><span class="label">Alignment: </span>{{camptow.alignment}}</p>
+   {{/if}}
+   {{#if camptow.danger}}
+   <p><span class="label">Danger: </span>{{camptow.danger}}</p>
+   {{/if}}
+   {{#if camptow.population}}
+   <p><span class="label">Population: </span>{{camptow.population}}</p>
+   {{/if}}
+   {{#if camptow.economy}}
+   <p><span class="label">Economy: </span>{{camptow.economy}}</p>
+   {{/if}}
+   {{#if camptow.law}}
+   <p><span class="label">Law: </span>{{camptow.law}}</p>
+   {{/if}}
+   {{#if camptow.crime}}
+   <p><span class="label">Crime: </span>{{camptow.crime}}</p>
+   {{/if}}
+   {{#if camptow.qualities}}
+   <p><span class="label">Qualities: </span>{{camptow.qualities}}</p>
+   {{/if}}
+   {{#if camptow.notes}}
+   <p><span class="label">Notes: </span>{{camptow.notes}}</p>
    {{/if}}
    </div>
 </section>
 <section class="info">
    <h2>Locations</h2>
    <div class="info-body">
-   <p><span class="select-location">Click here for Locations</span></p>
+   <p><span id="select-location">Click here for Locations</span></p>
    </div>
 </section>
 <section class="info">
    <h2>NPCs</h2>
    <div class="info-body">
-   <p><span class="select-npc">Click for NPCs</span></p>
+   <p><span id="select-npc">Click for NPCs</span></p>
    </div>
 </section>
 <section class="info">
    <h2>Pictures</h2>
    <div class="info-body">
-   <p><span class="select-picture">Click for Pictures</span></p>
+   <p><span id="select-picture">Click for Pictures</span></p>
    </div>
 </section>
+
+</main>
+{{>footer}}

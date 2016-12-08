@@ -1,98 +1,108 @@
+{{>header}}
+
+<main>
+
 <section class="info">
-   <h2>{{np.name}}</h2>
+<div class="modal-header">
+         <button type="button" id="npc-remove-button">&times;</button>
+      </div>
+   <h2>{{campnp.name}}</h2>
    <div class="info-body">
-   {{#if class}}
-   <p><span class="label">Class: </span>{{np.class}}</p>
+   {{#if campnp.class}}
+   <p><span class="label">Class: </span>{{campnp.class}}</p>
    {{/if}}
-   {{#if str}}
-   <p><span class="label">Strength: </span>{{np.str}}</p>
+   {{#if campnp.str}}
+   <p><span class="label">Strength: </span>{{campnp.str}}</p>
    {{/if}}
-   {{#if dex}}
-   <p><span class="label">Dextarity: </span>{{np.dex}}</p>
+   {{#if campnp.dex}}
+   <p><span class="label">Dextarity: </span>{{campnp.dex}}</p>
    {{/if}}
-   {{#if con}}
-   <p><span class="label">Constitution: </span>{{np.con}}</p>
+   {{#if campnp.con}}
+   <p><span class="label">Constitution: </span>{{campnp.con}}</p>
    {{/if}}
-   {{#if int}}
-   <p><span class="label">Intelegence: </span>{{np.int}}</p>
+   {{#if campnp.int}}
+   <p><span class="label">Intelegence: </span>{{campnp.int}}</p>
    {{/if}}
-   {{#if wis}}
-   <p><span class="label">Wisdom: </span>{{np.wis}}</p>
+   {{#if campnp.wis}}
+   <p><span class="label">Wisdom: </span>{{campnp.wis}}</p>
    {{/if}}
-   {{#if cha}}
-   <p><span class="label">Carisma: </span>{{np.cha}}</p>
+   {{#if campnp.cha}}
+   <p><span class="label">Carisma: </span>{{campnp.cha}}</p>
    {{/if}}
-   {{#if description}}
-   <p><span class="label">Description: </span>{{np.description}}</p>
+   {{#if campnp.description}}
+   <p><span class="label">Description: </span>{{campnp.description}}</p>
    {{/if}}
-   {{#if race}}
-   <p><span class="label">Race: </span>{{np.race}}</p>
+   {{#if campnp.race}}
+   <p><span class="label">Race: </span>{{campnp.race}}</p>
    {{/if}}
-   {{#if alignment}}
-   <p><span class="label">Alignment: </span>{{np.alignment}}</p>
+   {{#if campnp.alignment}}
+   <p><span class="label">Alignment: </span>{{campnp.alignment}}</p>
    {{/if}}
-   {{#if ac}}
-   <p><span class="label">Armor Class: </span>{{np.ac}}</p>
+   {{#if campnp.ac}}
+   <p><span class="label">Armor Class: </span>{{campnp.ac}}</p>
    {{/if}}
-   {{#if attacks}}
-   <p><span class="label">Attacks: </span>{{np.attacks}}</p>
+   {{#if campnp.attacks}}
+   <p><span class="label">Attacks: </span>{{campnp.attacks}}</p>
    {{/if}}
-   {{#if skills}}
-   <p><span class="label">Skills: </span>{{np.skills}}</p>
+   {{#if campnp.skills}}
+   <p><span class="label">Skills: </span>{{campnp.skills}}</p>
    {{/if}}
-   {{#if feats}}
-   <p><span class="label">Feats: </span>{{np.feats}}</p>
+   {{#if campnp.feats}}
+   <p><span class="label">Feats: </span>{{campnp.feats}}</p>
    {{/if}}
-   {{#if hp}}
-   <p><span class="label">Hit Points: </span>{{np.hp}}</p>
+   {{#if campnp.hp}}
+   <p><span class="label">Hit Points: </span>{{campnp.hp}}</p>
    {{/if}}
-   {{#if hd}}
-   <p><span class="label">Hit Dice: </span>{{np.hd}}</p>
+   {{#if campnp.hd}}
+   <p><span class="label">Hit Dice: </span>{{campnp.hd}}</p>
    {{/if}}
-   {{#if clothing}}
-   <p><span class="label">Clothing: </span>{{np.clothing}}</p>
+   {{#if campnp.clothing}}
+   <p><span class="label">Clothing: </span>{{campnp.clothing}}</p>
    {{/if}}
-   {{#if gear}}
-   <p><span class="label">Gear: </span>{{np.gear}}</p>
+   {{#if campnp.gear}}
+   <p><span class="label">Gear: </span>{{campnp.gear}}</p>
    {{/if}}
-   {{#if platinum}}
-   <p><span class="label">Platinum: </span>{{np.platinum}}</p>
+   {{#if campnp.platinum}}
+   <p><span class="label">Platinum: </span>{{campnp.platinum}}</p>
    {{/if}}
-   {{#if gold}}
-   <p><span class="label">Gold: </span>{{np.gold}}</p>
+   {{#if campnp.gold}}
+   <p><span class="label">Gold: </span>{{campnp.gold}}</p>
    {{/if}}
-   {{#if silver}}
-   <p><span class="label">Silver: </span>{{np.silver}}</p>
+   {{#if campnp.silver}}
+   <p><span class="label">Silver: </span>{{campnp.silver}}</p>
    {{/if}}
-   {{#if copper}}
-   <p><span class="label">Copper: </span>{{np.copper}}</p>
+   {{#if campnp.copper}}
+   <p><span class="label">Copper: </span>{{campnp.copper}}</p>
    {{/if}}
-   {{#if iron}}
-   <p><span class="label">Iron: </span>{{np.iron}}</p>
+   {{#if campnp.iron}}
+   <p><span class="label">Iron: </span>{{campnp.iron}}</p>
    {{/if}}
-   {{#if positive}}
-   <p><span class="label">Positive: </span>{{np.positive}}</p>
+   {{#if campnp.positive}}
+   <p><span class="label">Positive: </span>{{campnp.positive}}</p>
    {{/if}}
-   {{#if negative}}
-   <p><span class="label">Negative: </span>{{np.negative}}</p>
+   {{#if campnp.negative}}
+   <p><span class="label">Negative: </span>{{campnp.negative}}</p>
    {{/if}}
-   {{#if goal}}
-   <p><span class="label">Goal: </span>{{np.goal}}</p>
+   {{#if campnp.goal}}
+   <p><span class="label">Goal: </span>{{campnp.goal}}</p>
    {{/if}}
-   {{#if language}}
-   <p><span class="label">Languages: </span>{{np.language}}</p>
+   {{#if campnp.language}}
+   <p><span class="label">Languages: </span>{{campnp.language}}</p>
    {{/if}}
-   {{#if traits}}
-   <p><span class="label">Traits: </span>{{np.traits}}</p>
+   {{#if campnp.traits}}
+   <p><span class="label">Traits: </span>{{campnp.traits}}</p>
    {{/if}}
-   {{#if notes}}
-   <p><span class="label">Notes: </span>{{np.notes}}</p>
+   {{#if campnp.notes}}
+   <p><span class="label">Notes: </span>{{campnp.notes}}</p>
    {{/if}}
    </div>
 </section>
 <section class="info">
    <h2>Pictures</h2>
    <div class="info-body">
-   <p><span class="select-picture">Click for Pictures</span></p>
+   <p><span id="select-picture">Click for Pictures</span></p>
    </div>
 </section>
+
+</main>
+{{>footer}}
