@@ -5,9 +5,9 @@ This Project will be an applications to help with organizing a dungens and drago
 The basic organization is that of a family tree.
 First the user will be presented with a page where they can chose to make a new campaign or see the details of one that already exists.
 
-All the nodes once the user is in them will have the option to see information and pictures that are attached to that spicific node. This information will be displayed with pictures on one side and any details on the other.
+All the nodes once the user is in them will have the option to see information or pictures that are attached to that spicific node.
 
-The nodes in decending rank are campaign, town, location, and NPC.
+The nodes in decending rank are campaign, town, location, NPC, and picture.
 
 A node can add any node to it that is at a lower rank.
 So a campaign can add any except for a campaign where as a location can only have NPC nodes added to it.
