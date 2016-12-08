@@ -7,12 +7,21 @@ body{
 }
   
 header{
-  padding:20px;
-  background-color: #0c3d0c;
+  padding:20px 20px 0px 5px;
+  background-color: #2265FF;
+  border: 2px solid black;
+}
+
+header h1 {
+  display: inline-block;
+  font-family: "Script", sans-serif;
+  font-size: 72px;
+  font-weight: 200;
+  margin: 5px 20px;
 }
 
 nav {
-  background-color: #0c3d0c;
+  background-color: #333;
   color: white;
   margin: 0 -20px;  /* negative margin here makes up for header padding */
   font-size: 28px;
@@ -174,6 +183,21 @@ nav {
   overflow: scroll;
 }
 
+#campaign-remove-button,
+#town-remove-button,
+#location-remove-button,
+#npc-remove-button,
+#picture-remove-button{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
 }
@@ -290,6 +314,18 @@ nav {
   font-size: 20px;
 }
 
+#select-session,
+#select-campaign,
+#select-town,
+#select-location,
+#select-npc,
+#select-picture {
+  height: 40px;
+  border: 1px solid #333;
+  background-color: #00FFFF;
+  font-size: 20px;
+}
+
 .info,
 .photo-container {
   margin: 20px;
@@ -306,3 +342,19 @@ nav {
 .photo {
   max-width: 100%;
 }
+
+.photo-caption {
+  background-color: #915225;
+  position: relative;
+  width: 300px;
+  margin: 0px;
+  font-family: "Times Roman",sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  word-wrap: break-word;
+}
+
+.photo-caption p {
+  margin: 0px 0;
+}
+

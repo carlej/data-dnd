@@ -1,179 +1,30 @@
-function handleTowns(event){
-  var pagesess = getSession();
-  var pagecamp = getCampaign();
-  window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns';
+/******************************************************
+Session Page Functions
+******************************************************/
+
+function handleSessionSelection(event) {
+
+  var sessionSelection = event.target.value;
+
+  if (sessionSelection) {
+    window.location.href = '/session/' + sessionSelection;
+  }
+
 }
 
-function handleLocations(event){
-  var pagesess = getSession();
-  var pagecamp = getCampaign();
-  var pagetow = getTown();
-  if(pagetow)
+function getSession(){
+  var pathComp = window.location.pathname.split('/');
+  for(var x=0; x<pathComp.length; x++)
   {
-    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations';
+    if(pathComp[x]=="session")
+    {return pathComp[(x+1)];}
   }
-  else
-  {
-    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations';
-  }
+  return 0;
 }
 
-function handleNpcs(event){
-  var pagesess = getSession();
-  var pagecamp = getCampaign();
-  var pagetow = getTown();
-  var pageloca = getLocation();
-  if(pagetow)
-  {
-    if(pageloca)
-    {
-      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/npcs';
-    }
-    else
-    {
-      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/npcs';
-    }
-  }
-  else
-  {
-    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/npcs';
-  }
-}
-
-function handlePictures(event){
-  var pagesess = getSession();
-  var pagecamp = getCampaign();
-  var pagetow = getTown();
-  var pageloca = getLocation();
-  var pagenpc = getNpc();
-  
-  if(pagecamp)
-  {
-    if(pagetow)
-    {
-      if(pageloca)
-      {
-        if(pagenpc)
-        {
-          window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/npcs/'+pagenpc+'/pictures';
-        }
-        else
-        {
-          window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/pictures';
-        }
-      }
-      else if(pagenpc)
-      {
-        window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/npcs/'+pagenpc+'/pictures';
-      }
-      else
-      {
-        window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/pictures';
-      }
-    }
-    else if(pageloca)
-    {
-      if(pagenpc)
-      {
-        window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations/'+pageloca+'/npcs/'+pagenpc+'/pictures';
-      }
-      else
-      {
-        window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations/'+pageloca+'/pictures';
-      }
-    }
-    else if(pagenpc)
-    {
-      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/npcs/'+pagenpc+'/pictures';
-    }
-    else
-    {
-      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/pictures';
-    }
-  }
-}
-
-function handleSessionSelect(event){
-  var sessionSelect = event.target.value;
-  if(sessionSelect)
-  {
-    window.location.href = '/session/' + sessionSelect;
-  }
-}
-
-function handleCampaignSelect(event){
-  var pagesess = getSession();
-  var campaignSelect = event.target.value;
-  if(campaignSelect)
-  {
-    window.location.href = '/session/'+pagesess+'/'+campaignSelect;
-  }
-}
-
-function handleTownSelect(event){
-  var pagesess = getSession();
-  var pagecamp = getCampaign();
-  var townSelect = event.target.value;
-  if(townSelect)
-  {
-    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+townSelect;
-  }
-}
-
-function handleLocationSelect(event){
-  var pagesess = getSession();
-  var pagecamp = getCampaign();
-  var pagetow = getTown();
-  var locationSelect = event.target.value;
-  if(pagetow)
-  {
-    if(locationSelect)
-    {
-      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+locationSelect;
-    }
-  }
-  else if(locationSelect)
-  {
-    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations/'+locationSelect;
-  }
-}
-
-function handleNpcSelect(event){
-  var pagesess = getSession();
-  var pagecamp = getCampaign();
-  var pagetow = getTown();
-  var pageloca = getLocation();
-  var npcSelect = event.target.value;
-  if(pagetow)
-  {
-    if(pageloca)
-    {
-      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+locationSelect+'/npcs/'+npcSelect;
-    }
-    else
-    {
-      window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+townSelect+'/npcs/'+npcSelect;
-    }
-  }
-  else if(pageloca)
-  {
-    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations/'+locationSelect+'/npcs/'+npcSelect;
-  }
-  else if(npcSelect)
-  {
-    window.location.href = '/session/'+pagesess+'/'+pagecamp+'/npcs/'+npcSelect;
-  }
-}
-
-function removeOnDismiss(event){
-  var clickedElem = event.target;
-  var clickedElemParent = event.target.parentNode;
-  var ElemParent= clickedElemParent.parentNode;
-  ElemParent.removeChild(clickedElemParent);
-}
-
+// Functions to make buttons work.
 function displayAddSession(){
-  var addSessionModal = documnet.getElementById('add-session-modal');
+  var addSessionModal = document.getElementById('add-session-modal');
   addSessionModal.classList.remove('hidden');
   displayAddModal();
 }
@@ -181,66 +32,6 @@ function displayAddSession(){
 function closeAddSession(){
   var addSessionModal = document.getElementById('add-session-modal');
   addSessionModal.classList.add('hidden');
-  closeAddModal();
-}
-
-function displayAddCampaign(){
-  var addCampaignModal = documnet.getElementById('add-campaign-modal');
-  addCampaignModal.classList.remove('hidden');
-  displayAddModal();
-}
-
-function closeAddCampaign(){
-  var addCampaignModal = document.getElementById('add-campaign-modal');
-  addCampaignModal.classList.add('hidden');
-  closeAddModal();
-}
-
-function displayAddTown(){
-  var addTownModal = documnet.getElementById('add-Town-modal');
-  addNpcModal.classList.remove('hidden');
-  displayAddModal();
-}
-
-function closeAddTown(){
-  var addTownModal = document.getElementById('add-town-modal');
-  addTownModal.classList.add('hidden');
-  closeAddModal();
-}
-
-function displayAddLocation(){
-  var addLocationModal = documnet.getElementById('add-location-modal');
-  addLocationModal.classList.remove('hidden');
-  displayAddModal();
-}
-
-function closeAddLocation(){
-  var addLocationModal = document.getElementById('add-location-modal');
-  addLocationModal.classList.add('hidden');
-  closeAddModal();
-}
-
-function displayAddNpc(){
-  var addNpcModal = documnet.getElementById('add-npc-modal');
-  addNpcModal.classList.remove('hidden');
-  displayAddModal();
-}
-
-function closeAddNpc(){
-  var addNpcModal = document.getElementById('add-npc-modal');
-  addNpcModal.classList.add('hidden');
-  closeAddModal();
-}
-
-function displayAddPicture(){
-  var addPictureModal = documnet.getElementById('add-picture-modal');
-  addPictureModal.classList.remove('hidden');
-  displayAddModal();
-}
-
-function closeAddPicture(){
-  var addPictureModal = document.getElementById('add-picture-modal');
-  addPictureModal.classList.add('hidden');
   closeAddModal();
 }
 
@@ -263,24 +54,109 @@ function clearInput(){
   }
 }
 
-function getSession(){
-  var pathComp = window.location.pathname.split('/');
-  for(var x=0; x<pathComp.length; x++)
-  {
-    if(pathComp[x]=="sessions")
-    {return pathComp[(x+1)];}
+function insertNewSession() {
+
+  var infoInputName = document.getElementById('input-name').value;
+
+  if (infoInputName.trim()) {
+    storeNewSession(
+		infoInputName)
+
+	closeAddSession()
+
+    generateSessionHTML();
+    
+  } else {
+    alert('You must specify a value for the "name" field.');
   }
-  return 0;
+}
+
+/*End of functions to make buttons work.
+************************************************************
+End of Sessions page functions
+************************************************************
+Campaign page functions
+*************************************************************/
+
+function handleCampaignSelect(event){
+  var pagesess = getSession();
+  var campaignSelect = event.target.value;
+  if(campaignSelect)
+  {
+    window.location.href = '/session/'+pagesess+'/'+campaignSelect;
+  }
 }
 
 function getCampaign(){
   var pathComp = window.location.pathname.split('/');
   for(var x=0; x<pathComp.length; x++)
   {
-    if(pathComp[x]=="sessions")
+    if(pathComp[x]=="session")
     {return pathComp[(x+2)];}
   }
   return 0;
+}
+
+// Functions to make buttons work.
+function displayAddCampaign(){
+  var addCampaignModal = document.getElementById('add-campaign-modal');
+  addCampaignModal.classList.remove('hidden');
+  displayAddModal();
+}
+
+function closeAddCampaign(){
+  var addCampaignModal = document.getElementById('add-campaign-modal');
+  addCampaignModal.classList.add('hidden');
+  closeAddModal();
+}
+
+function insertNewCampaign() {
+
+  var pagesess = getSession();
+  var infoInputName = document.getElementById('input-name').value;
+  var infoInputNotes = document.getElementById('input-notes').value;
+
+
+  if (infoInputName.trim()) {
+  	storeNewCampaign(pagesess,infoInputName,infoInputNotes);
+
+    closeAddCampaign();
+    
+    generateCampaignHTML(0,pagesess);
+    
+  } else {
+    alert('You must specify a value for the "name" field.');
+  }
+}
+
+function removeCampaign(){
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+	var postUrl = '/session/'+pagesess+'/'+pagecamp+'/remove';
+	if(confirm("Are you sure you want to delete this campaign. All data for it will be lost!")){
+		var postRequest = new XMLHttpRequest();
+		postRequest.open('POST',postUrl);
+		postRequest.setRequestHeader('Content-Type', 'application/json');
+		postRequest.send(JSON.stringify({
+			name:'cahnge'
+  }));
+		generateCampaignHTML(1,pagesess);
+	}else{alert("Nothing has been deleted")}
+}
+
+/*End of functions to make buttons work.
+************************************************************
+End of Campaign page functions
+************************************************************
+Town page functions
+*************************************************************/
+
+function openTowns()
+{
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+
+	window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns';
 }
 
 function getTown(){
@@ -293,6 +169,101 @@ function getTown(){
   return 0;
 }
 
+function handleTownSelect(event){
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+	var townSelect = event.target.value;
+	if(townSelect)
+	{
+		window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+townSelect;
+	}
+}
+
+function displayAddTown(){
+  var addTownModal = document.getElementById('add-town-modal');
+  addTownModal.classList.remove('hidden');
+  displayAddModal();
+}
+
+
+function closeAddTown(){
+  var addTownModal = document.getElementById('add-town-modal');
+  addTownModal.classList.add('hidden');
+  closeAddModal();
+}
+
+function insertNewTown() {
+
+  var pagesess = getSession();
+  var pagecamp =getCampaign();
+  var infoInputName = document.getElementById('input-name').value;
+  var infoInputAlignment = document.getElementById('input-alignment').value;
+  var infoInputGovernment = document.getElementById('input-government').value;
+  var infoInputDanger = document.getElementById('input-danger').value;
+  var infoInputPopulation = document.getElementById('input-population').value;
+  var infoInputEconomy = document.getElementById('input-economy').value;
+  var infoInputLaw = document.getElementById('input-law').value;
+  var infoInputCrime = document.getElementById('input-crime').value;
+  var infoInputQualities = document.getElementById('input-qualities').value;
+  var infoInputNotes = document.getElementById('input-notes').value;
+
+
+  if (infoInputName.trim()) {
+  	storeNewTown(pagesess,pagecamp,
+  		infoInputName,
+  		infoInputAlignment,
+  		infoInputGovernment,
+  		infoInputDanger,
+  		infoInputPopulation,
+  		infoInputEconomy,
+  		infoInputLaw,
+  		infoInputCrime,
+  		infoInputQualities,
+  		infoInputNotes);
+
+    closeAddTown();
+    
+    generateTownHTML(0,pagesess,pagecamp);
+    
+  } else {
+    alert('You must specify a value for the "name" field.');
+  }
+}
+
+function removeTown(){
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+	var pagetow = getTown();
+	var postUrl = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/remove';
+	if(confirm("Are you sure you want to delete this town. All data for it will be lost!")){
+		var postRequest = new XMLHttpRequest();
+		postRequest.open('POST',postUrl);
+		postRequest.setRequestHeader('Content-Type', 'application/json');
+		postRequest.send(JSON.stringify({
+  }));
+		generateTownHTML(1,pagesess,pagecamp);
+	}else{alert("Nothing has been deleted")}
+}
+
+/*End of functions to make buttons work.
+************************************************************
+End of Town page functions
+************************************************************
+Location page functions
+*************************************************************/
+function openLocations()
+{
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+	var pagetow = getTown();
+	if(pagetow){
+	window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations';
+	}
+	else{
+		window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations';
+	}
+}
+
 function getLocation(){
   var pathComp = window.location.pathname.split('/');
   for(var x=0; x<pathComp.length; x++)
@@ -301,6 +272,108 @@ function getLocation(){
     {return pathComp[(x+1)];}
   }
   return 0;
+}
+
+function handleLocationSelect(event){
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+	var pagetow = getTown();
+	var locationSelect = event.target.value;
+	if(locationSelect){
+		if(pagetow){
+			window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+locationSelect;
+		}else{
+			window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations/'+locationSelect;}
+		
+	}
+}
+
+function displayAddLocation(){
+  var addLocationModal = document.getElementById('add-location-modal');
+  addLocationModal.classList.remove('hidden');
+  displayAddModal();
+}
+
+function closeAddLocation(){
+  var addLocationModal = document.getElementById('add-location-modal');
+  addLocationModal.classList.add('hidden');
+  closeAddModal();
+}
+
+function insertNewLocation(){
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+	var pagetow = getTown();
+	var infoInputName = document.getElementById('input-name').value;
+	var infoInputTerrain = document.getElementById('input-terrain').value;
+	var infoInputAlignment = document.getElementById('input-alignment').value;
+	var infoInputInventory = document.getElementById('input-inventory').value;
+	var infoInputNotes = document.getElementById('input-notes').value;
+
+	if(infoInputName.trim()){
+		storeNewLocation(pagesess,pagecamp,pagetow,
+			infoInputName,
+			infoInputTerrain,
+			infoInputAlignment,
+			infoInputInventory,
+			infoInputNotes);
+
+		closeAddLocation();
+
+		generateLocationHTML(0,pagesess,pagecamp,pagetow);
+	}else{
+		alert('You must specify a value for the "name" field.');
+	}
+}
+
+function removeLocation(){
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+	var pagetow = getTown();
+	var pageloca = getLocation();
+	var postUrl;
+	if(pagetow)
+	{
+		postUrl = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/remove';
+	}
+	else{
+		postUrl = '/session/'+pagesess+'/'+pagecamp+'/locations/'+pageloca+'/remove';
+	}
+	if(confirm("Are you sure you want to delete this location. All data for it will be lost!")){
+		var postRequest = new XMLHttpRequest();
+		postRequest.open('POST',postUrl);
+		postRequest.setRequestHeader('Content-Type', 'application/json');
+		postRequest.send(JSON.stringify({
+  }));
+		generateLocationHTML(1,pagesess,pagecamp);
+	}else{alert("Nothing has been deleted")}
+}
+
+/*End of functions to make buttons work.
+************************************************************
+End of Location page functions
+************************************************************
+NPC page functions
+*************************************************************/
+function openNpcs()
+{
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+	var pagetow = getTown();
+	var pageloca = getLocation();
+	if(pagetow){
+		if(pageloca){
+			window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/npcs';
+		}else{
+			window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/npcs';
+		}
+	}
+	else if(pageloca){
+		window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations/'+pageloca+'/npcs';
+	}
+	else{
+		window.location.href = '/session/'+pagesess+'/'+pagecamp+'/npcs';
+	}
 }
 
 function getNpc(){
@@ -313,453 +386,457 @@ function getNpc(){
   return 0;
 }
 
-function insertNewNpc() {
+function handleNpcSelect(event){
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+	var pagetow = getTown();
+	var pageloca = getLocation();
+	var npcSelect = event.target.value;
+	if(pagetow){
+		if(pageloca){
+			window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/npcs/'+npcSelect;
+		}else{
+			window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/npcs/'+npcSelect;
+		}
+	}
+	else if(pageloca){
+		window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations/'+pageloca+'/npcs/'+npcSelect;
+	}
+	else{
+		window.location.href = '/session/'+pagesess+'/'+pagecamp+'/npcs/'+npcSelect;
+	}
+}
+
+function displayAddNpc(){
+  var addNpcModal = document.getElementById('add-npc-modal');
+  addNpcModal.classList.remove('hidden');
+  displayAddModal();
+}
+
+function closeAddNpc(){
+  var addNpcModal = document.getElementById('add-npc-modal');
+  addNpcModal.classList.add('hidden');
+  closeAddModal();
+}
+
+function insertNewNpc(){
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+	var pagetow = getTown();
+	var pageloca = getLocation();
+	var infoInputName = document.getElementById('input-name').value;
+	var infoInputClass = document.getElementById('input-class').value;
+	var infoInputStr = document.getElementById('input-str').value;
+	var infoInputDex = document.getElementById('input-dex').value;
+	var infoInputCon = document.getElementById('input-con').value;
+	var infoInputInt = document.getElementById('input-int').value;
+	var infoInputWis = document.getElementById('input-wis').value;
+	var infoInputCha = document.getElementById('input-cha').value;
+	var infoInputDescription = document.getElementById('input-description').value;
+	var infoInputRace = document.getElementById('input-race').value;
+	var infoInputAlignment = document.getElementById('input-alignment').value;
+	var infoInputAc = document.getElementById('input-ac').value;
+	var infoInputAttacks = document.getElementById('input-attacks').value;
+	var infoInputSkills = document.getElementById('input-skills').value;
+	var infoInputFeats = document.getElementById('input-feats').value;
+	var infoInputHp = document.getElementById('input-hp').value;
+	var infoInputHd = document.getElementById('input-hd').value;
+	var infoInputClothing = document.getElementById('input-clothing').value;
+	var infoInputGear = document.getElementById('input-gear').value;
+	var infoInputPlatinum = document.getElementById('input-platinum').value;
+	var infoInputGold = document.getElementById('input-gold').value;
+	var infoInputSilver = document.getElementById('input-silver').value;
+	var infoInputIron = document.getElementById('input-iron').value;
+	var infoInputPositive = document.getElementById('input-positive').value;
+	var infoInputNegative = document.getElementById('input-negative').value;
+	var infoInputGoal = document.getElementById('input-goal').value;
+	var infoInputLanguage = document.getElementById('input-language').value;
+	var infoInputTraits = document.getElementById('input-traits').value;
+	var infoInputNotes = document.getElementById('input-notes').value;
+
+	if(infoInputName.trim()){
+		storeNewNpc(pagesess,pagecamp,pagetow,pageloca,
+			infoInputName,
+			infoInputClass,
+			infoInputStr,
+			infoInputDex,
+			infoInputCon,
+			infoInputInt,
+			infoInputWis,
+			infoInputCha,
+			infoInputDescription,
+			infoInputRace,
+			infoInputAlignment,
+			infoInputAc,
+			infoInputAttacks,
+			infoInputSkills,
+			infoInputFeats,
+			infoInputHp,
+			infoInputHd,
+			infoInputClothing,
+			infoInputGear,
+			infoInputPlatinum,
+			infoInputGold,
+			infoInputSilver,
+			infoInputIron,
+			infoInputPositive,
+			infoInputNegative,
+			infoInputGoal,
+			infoInputLanguage,
+			infoInputTraits,
+			infoInputNotes);
+
+		closeAddNpc();
+
+		generateNpcHTML(0,pagesess,pagecamp,pagetow,pageloca);
+	}else{
+		alert('You must specify a value for the "name" field.');
+	}
+}
+
+function removeNpc(){
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+	var pagetow = getTown();
+	var pageloca = getLocation();
+	var pagenp = getNpc();
+	var postUrl;
+	if(pagetow)
+	{
+		if(pageloca){
+			postUrl = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/npcs/'+pagenp+'/remove';
+		}
+		else{
+			postUrl = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/npcs/'+pagenp+'/remove';
+		}
+	}
+else if(pageloca){
+		postUrl = '/session/'+pagesess+'/'+pagecamp+'/locations/'+pageloca+'/npcs/'+pagenp+'/remove';
+	}
+	else{
+		postUrl = '/session/'+pagesess+'/'+pagecamp+'/npcs/'+pagenp+'/remove';
+	}
+	if(confirm("Are you sure you want to delete this NPC. All data for it will be lost!")){
+		var postRequest = new XMLHttpRequest();
+		postRequest.open('POST',postUrl);
+		postRequest.setRequestHeader('Content-Type', 'application/json');
+		postRequest.send(JSON.stringify({
+  }));
+		generateNpcHTML(1,pagesess,pagecamp,pagetow,pageloca);
+	}else{alert("Nothing has been deleted")}
+}
+
+/*End of functions to make buttons work.
+************************************************************
+End of NPC page functions
+************************************************************
+Picture page functions
+*************************************************************/
+function openPictures()
+{
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+	var pagetow = getTown();
+	var pageloca = getLocation();
+	var pagenp = getNpc();
+	if(pagetow){
+		if(pageloca){
+			if(pagenp){
+				window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/npcs/'+pagenp+'/pictures';
+			}else{
+				window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/pictures';
+			}
+		}else if(pagenp){
+			window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/npcs/'+pagenp+'/pictures';
+		}else{
+			window.location.href = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/pictures';
+		}
+	}else if(pageloca){
+		if(pagenp){
+			window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations/'+pageloca+'/npcs/'+pagenp+'/pictures';
+		}else{
+			window.location.href = '/session/'+pagesess+'/'+pagecamp+'/locations/'+pageloca+'/pictures';
+		}
+	}else if(pagenp){
+		window.location.href = '/session/'+pagesess+'/'+pagecamp+'/npcs/'+pagenp+'/pictures';
+	}else{
+		window.location.href = '/session/'+pagesess+'/'+pagecamp+'/pictures';
+	}
+}
+
+function displayAddPicture(){
+  var addPictureModal = document.getElementById('add-picture-modal');
+  addPictureModal.classList.remove('hidden');
+  displayAddModal();
+}
+
+function closeAddPicture(){
+  var addPictureModal = document.getElementById('add-picture-modal');
+  addPictureModal.classList.add('hidden');
+  closeAddModal();
+}
+
+function insertNewPicture() {
+
   var pagesess = getSession();
   var pagecamp = getCampaign();
   var pagetow = getTown();
   var pageloca = getLocation();
-
-  var infoInputId = document.getElementById('input-id').value || '';
-  var infoInputIdi = document.getElementById('input-idi').value || '';
-  var infoInputName = document.getElementById('input-name').value || '';
-  var infoInputClass = document.getElementById('input-class').value || '';
-  var infoInputStr = document.getElementById('input-str').value || '';
-  var infoInputDex = document.getElementById('input-dex').value || '';
-  var infoInputCon = document.getElementById('input-con').value || '';
-  var infoInputInt = document.getElementById('input-int').value || '';
-  var infoInputWis = document.getElementById('input-wis').value || '';
-  var infoInputCha = document.getElementById('input-cha').value || '';
-  var infoInputDescription = document.getElementById('input-description').value || '';
-  var infoInputRace = document.getElementById('input-race').value || '';
-  var infoInputAlignment = document.getElementById('input-alignment').value || '';
-  var infoInputAc = document.getElementById('input-ac').value || '';
-  var infoInputAttacks = document.getElementById('input-attacks').value || '';
-  var infoInputSkills = document.getElementById('input-skills').value || '';
-  var infoInputFeats = document.getElementById('input-feats').value || '';
-  var infoInputHp = document.getElementById('input-hp').value || '';
-  var infoInputHd = document.getElementById('input-hd').value || '';
-  var infoInputClothing = document.getElementById('input-clothing').value || '';
-  var infoInputGear = document.getElementById('input-gear').value || '';
-  var infoInputPlatinum = document.getElementById('input-platinum').value || '';
-  var infoInputGold = document.getElementById('input-gold').value || '';
-  var infoInputSilver = document.getElementById('input-silver').value || '';
-  var infoInputCopper = document.getElementById('input-copper').value || '';
-  var infoInputIron = document.getElementById('input-iron').value || '';
-  var infoInputPositive = document.getElementById('input-positive').value || '';
-  var infoInputNegative = document.getElementById('input-negative').value || '';
-  var infoInputGoal = document.getElementById('input-goal').value || '';
-  var infoInputLanguage = document.getElementById('input-language').value || '';
-  var infoInputTraits = document.getElementById('input-traits').value || '';
-  var infoInputNotes = document.getElementById('input-notes').value || '';
-
-  if (infoInputName.trim()) {
-    storeNewNPC(pagesess,pagecamp,pagetow,pageloca,
-      infoInputId,
-      infoInputIdi,
-      infoInputName,
-      infoInputClass,
-      infoInputStr,
-      infoInputDex,
-      infoInputCon,
-      infoInputInt,
-      infoInputWis,
-      infoInputCha,
-      infoInputDescription,
-      infoInputRace,
-      infoInputAlignment,
-      infoInputAc,
-      infoInputAttacks,
-      infoInputSkills,
-      infoInputFeats,
-      infoInputHp,
-      infoInputHd,
-      infoInputClothing,
-      infoInputGear,
-      infoInputPlatinum,
-      infoInputGold,
-      infoInputSilver,
-      infoInputCopper,
-      infoInputIron,
-      infoInputPositive,
-      infoInputNegative,
-      infoInputGoal,
-      infoInputLanguage,
-      infoInputTraits,
-      infoInputNotes)
-    
-    var newNPCHTML = generateNPCHTML(
-      infoInputId.trim(),
-      infoInputIdi.trim(),
-      infoInputName.trim(),
-      infoInputClass.trim(),
-      infoInputStr.trim(),
-      infoInputDex.trim(),
-      infoInputCon.trim(),
-      infoInputInt.trim(),
-      infoInputWis.trim(),
-      infoInputCha.trim(),
-      infoInputDescription.trim(),
-      infoInputRace.trim(),
-      infoInputAlignment.trim(),
-      infoInputAc.trim(),
-      infoInputAttacks.trim(),
-      infoInputSkills.trim(),
-      infoInputFeats.trim(),
-      infoInputHp.trim(),
-      infoInputHd.trim(),
-      infoInputClothing.trim(),
-      infoInputGear.trim(),
-      infoInputPlatinum.trim(),
-      infoInputGold.trim(),
-      infoInputSilver.trim(),
-      infoInputCopper.trim(),
-      infoInputIron.trim(),
-      infoInputPositive.trim(),
-      infoInputNegative.trim(),
-      infoInputGoal.trim(),
-      infoInputLanguage.trim(),
-      infoInputTraits.trim(),
-      infoInputNotes.trim(),
-    );
-    var mainElement = document.querySelector('main');
-    mainElement.insertAdjacentHTML('beforeend', newNPCHTML);
-    closeAddModal();
-  } else {
-    alert('You must specify a value for the "name" field.');
-  }
-}
-
-function insertNewCampaign() {
-  var pagesess = getSession();
-
-  var infoInputId = document.getElementById('input-id').value || '';
-  var infoInputIdi = document.getElementById('input-idi').value || '';
-  var infoInputName = document.getElementById('input-name').value || '';
-  var infoInputNotes = document.getElementById('input-notes').value || '';
-
-  if (infoInputName.trim()) {
-    storeNewCampaign(pagesess,
-      infoInputId,
-      infoInputIdi,
-      infoInputName,
-      infoInputNotes)
-    
-    var newCampaignHTML = generateCampaignHTML(
-      infoInputId.trim(),
-      infoInputIdi.trim(),
-      infoInputName.trim(),
-      infoInputNotes.trim(),
-    );
-    var mainElement = document.querySelector('main');
-    mainElement.insertAdjacentHTML('beforeend', newCampaignHTML);
-    closeAddModal();
-  } else {
-    alert('You must specify a value for the "name" field.');
-  }
-}
-
-function insertNewLocation() {
-  var pagesess = getSession();
-  var pagecamp = getCampaign();
-  var pagetow = getTown();
-
-  var infoInputId = document.getElementById('input-id').value || '';
-  var infoInputIdi = document.getElementById('input-idi').value || '';
-  var infoInputName = document.getElementById('input-name').value || '';
-  var infoInputTerrainType = document.getElementById('input-terraintype').value || '';
-  var infoInputAlignmnet = document.getElementById('input-alignment').value || '';
-  var infoInputNotes = document.getElementById('input-notes').value || '';
-
-  if (infoInputName.trim()) {
-    storeNewLocation(pagesess,pagecamp,pagetow,
-      infoInputId,
-      infoInputIdi,
-      infoInputName,
-      infoInputTerrainType,
-      infoInputAlignmnet,
-      infoInputNotes)
-    
-    var newLocationHTML = generateLocationHTML(
-      infoInputId.trim(),
-      infoInputIdi.trim(),
-      infoInputName.trim(),
-      infoInputTerrainType.trim(),
-      infoInputAlignmnet.trim(),
-      infoInputNotes.trim(),
-    );
-    var mainElement = document.querySelector('main');
-    mainElement.insertAdjacentHTML('beforeend', newLocationHTML);
-    closeAddModal();
-  } else {
-    alert('You must specify a value for the "name" field.');
-  }
-}
-
-function insertNewTown() {
-  var pagesess = getSession();
-  var pagecamp = getCampaign();
-
-  var infoInputId = document.getElementById('input-id').value || '';
-  var infoInputIdi = document.getElementById('input-idi').value || '';
-  var infoInputName = document.getElementById('input-name').value || '';
-  var infoInputAlignment = document.getElementById('input-alignment').value || '';
-  var infoInputDanger = document.getElementById('input-danger').value || '';
-  var infoInputGovernment = document.getElementById('input-government').value || '';
-  var infoInputPopulation = document.getElementById('input-population').value || '';
-  var infoInputEconomy = document.getElementById('input-economy').value || '';
-  var infoInputLaw = document.getElementById('input-law').value || '';
-  var infoInputCrime = document.getElementById('input-crime').value || '';
-  var infoInputQualities = document.getElementById('input-qualties').value || '';
-  var infoInputNotes = document.getElementById('input-notes').value || '';
-
-  if (infoInputName.trim()) {
-    storeNewTown(pagesess,pagecamp,
-      infoInputId,
-      infoInputIdi,
-      infoInputName,
-      infoInputAlignment,
-      infoInputDanger,
-      infoInputGovernment,
-      infoInputPopulation,
-      infoInputEconomy,
-      infoInputLaw,
-      infoInputCrime,
-      infoInputQualities,
-      infoInputNotes)
-    
-    var newTownHTML = generateTownHTML(
-      infoInputId.trim(),
-      infoInputIdi.trim(),
-      infoInputName.trim(),
-      infoInputAlignment.trim(),
-      infoInputDanger.trim(),
-      infoInputGovernment.trim(),
-      infoInputPopulation.trim(),
-      infoInputEconomy.trim(),
-      infoInputLaw.trim(),
-      infoInputCrime.trim(),
-      infoInputQualities.trim(),
-      infoInputNotes.trim(),
-    );
-    var mainElement = document.querySelector('main');
-    mainElement.insertAdjacentHTML('beforeend', newTownHTML);
-    closeAddModal();
-  } else {
-    alert('You must specify a value for the "name" field.');
-  }
-}
-
-function insertNewSession() {
-
-  var infoInputId = document.getElementById('input-id').value || '';
-  var infoInputIdi = document.getElementById('input-idi').value || '';
-  var infoInputName = document.getElementById('input-name').value || '';
-
-  if (infoInputName.trim()) {
-    storeNewSession(
-      infoInputId,
-      infoInputIdi,
-      infoInputName)
-    var newSessionHTML = generateSessionHTML(
-      infoInputId.trim(),
-      infoInputIdi.trim(),
-      infoInputName.trim(),
-    );
-    var mainElement = document.querySelector('main');
-    mainElement.insertAdjacentHTML('beforeend', newSessionHTML);
-    closeAddModal();
-  } else {
-    alert('You must specify a value for the "name" field.');
-  }
-}
-
-function insertNewPicture() {
-  var pagesess = getSession();
-  var pagecamp = getCampaign();
-  var pagetow = getTown();
   var pagenp = getNpc();
+  var infoInputUrl = document.getElementById('input-url').value;
+  var infoInputCaption = document.getElementById('input-caption').value;
 
-  var infoInputId = document.getElementById('input-id').value || '';
-  var infoInputIdi = document.getElementById('input-idi').value || '';
-  var infoInputCaption = document.getElementById('input-caption').value || '';
-  var infoInputUrl = document.getElementById('input-url').value || '';
 
   if (infoInputUrl.trim()) {
-    storeNewNpc(pagesess,pagecamp,pagetow,pagenp,
-      infoInputId,
-      infoInputIdi,
-      infoInputCaption,
-      infoInputUrl)
+  	storeNewPicture(pagesess,pagecamp,pagetow,pageloca,pagenp,infoInputUrl,infoInputCaption);
+
+    closeAddPicture();
     
-    var newPictureHTML = generatePictureHTML(
-      infoInputId.trim(),
-      infoInputIdi.trim(),
-      infoInputCaption.trim(),
-      infoInputUrl.trim(),
-    );
-    var mainElement = document.querySelector('main');
-    mainElement.insertAdjacentHTML('beforeend', newPictureHTML);
-    closeAddModal();
+    generatePictureHTML(0,pagesess,pagecamp,pagetow,pageloca,pagenp);
+    
   } else {
-    alert('You must specify a value for the "URL" field.');
+    alert('You must specify a value for the "url" field.');
   }
 }
 
-window.addEventListener('DomContentLoaded',function(event){
+function removePicture(event){
+	var pagesess = getSession();
+	var pagecamp = getCampaign();
+	var pagetow = getTown();
+	var pageloca = getLocation();
+	var pagenp = getNpc();
+	var pagepic = event.target.value;
+	var postUrl;
+	if(pagetow){
+		if(pageloca){
+			if(pagenp){
+				postUrl = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/npcs/'+pagenp+'/pictures/'+pagepic+'/remove';
+			}else{
+				postUrl = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/locations/'+pageloca+'/pictures/'+pagepic+'/remove';
+			}
+		}else if(pagenp){
+			postUrl = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/npcs/'+pagenp+'/pictures/'+pagepic+'/remove';
+		}else{
+			postUrl = '/session/'+pagesess+'/'+pagecamp+'/towns/'+pagetow+'/pictures/'+pagepic+'/remove';
+		}
+	}else if(pageloca){
+		if(pagenp){
+			postUrl = '/session/'+pagesess+'/'+pagecamp+'/locations/'+pageloca+'/npcs/'+pagenp+'/pictures/'+pagepic+'/remove';
+		}else{
+			postUrl = '/session/'+pagesess+'/'+pagecamp+'/locations/'+pageloca+'/pictures/'+pagepic+'/remove';
+		}
+	}else if(pagenp){
+		postUrl = '/session/'+pagesess+'/'+pagecamp+'/npcs/'+pagenp+'/pictures/'+pagepic+'/remove';
+	}else{
+		postUrl = '/session/'+pagesess+'/'+pagecamp+'/pictures/'+pagepic+'/remove';
+	}
+
+	if(confirm("Are you sure you want to delete this Picture. All data for it will be lost!")){
+		var postRequest = new XMLHttpRequest();
+		postRequest.open('POST',postUrl);
+		postRequest.setRequestHeader('Content-Type', 'application/json');
+		postRequest.send(JSON.stringify({
+  }));
+		generatePictureHTML(1,pagesess,pagecamp,pagetow,pageloca,pagenp);
+	}else{alert("Nothing has been deleted")}
+}
+
+/*End of functions to make buttons work.
+************************************************************
+End of picture page functions
+************************************************************/
+
+window.addEventListener('DOMContentLoaded', function (event) {
+//Session
+  var sessionSelect = document.getElementById('session-select');
+  if (sessionSelect) {
+    sessionSelect.addEventListener('change', handleSessionSelection);
+  }
+  
   var addSession = document.getElementById('add-session-button');
-  if (addSession){
+  if (addSession) {
     addSession.addEventListener('click',displayAddSession);
   }
-  
+
+  var sessionCloseButton = document.querySelector('#add-session-modal .modal-close-button');
+  if (sessionCloseButton) {
+    sessionCloseButton.addEventListener('click', closeAddSession);
+  }
+
+  var sessionCancelButton = document.querySelector('#add-session-modal .modal-cancel-button');
+  if (sessionCancelButton) {
+    sessionCancelButton.addEventListener('click', closeAddSession);
+  }
+
+  var sessionAcceptButton = document.querySelector('#add-session-modal .modal-accept-button');
+  if (sessionAcceptButton) {
+    sessionAcceptButton.addEventListener('click', insertNewSession);
+  }
+ //Campaign
+
+  var campaignSelect = document.getElementById('campaign-select');
+  if(campaignSelect){
+  campaignSelect.addEventListener('change',handleCampaignSelect);
+}
+
   var addCampaign = document.getElementById('add-campaign-button');
-  if (addCampaign){
-    addCampaign.addEventListener('click',displayAddCampaign);
+  if(addCampaign){
+  	addCampaign.addEventListener('click',displayAddCampaign);
+}
+
+  var campaignCloseButton = document.querySelector('#add-campaign-modal .modal-close-button');
+  if (campaignCloseButton) {
+    campaignCloseButton.addEventListener('click', closeAddCampaign);
   }
-  
-  var addTown = document.getElemetById('add-town-button');
-  if (addTown){
-    addTown.addEventListener('click',displayAddTown);
+
+  var campaignCancelButton = document.querySelector('#add-campaign-modal .modal-cancel-button');
+  if (campaignCancelButton) {
+    campaignCancelButton.addEventListener('click', closeAddCampaign);
   }
-  
-  var addLocation = document.getElemetById('add-location-button');
-  if (addLocation){
-    addLocation.addEventListener('click',displayAddLocation);
+
+  var campaignAcceptButton = document.querySelector('#add-campaign-modal .modal-accept-button');
+  if (campaignAcceptButton) {
+    campaignAcceptButton.addEventListener('click', insertNewCampaign);
   }
-  
-  var addNpc = document.getElemetById('add-npc-button');
-  if (addNpc){
-    addNpc.addEventListener('click',displayAddNpc);
+
+  var campaignRemoveButton = document.getElementById('campaign-remove-button');
+  if(campaignRemoveButton){
+  	campaignRemoveButton.addEventListener('click',removeCampaign);
   }
-  
-  var addPicture = document.getElementById('add-picture-button');
-  if (addPicture){
-    addPicture.addEventListener('click',displayAddPicture);
-  }
-  
-  var showSession = document.getElenentById('session-select');
-  if (showSession){
-    showSession.addEventListener('change',handleSessionSelect);
-  }
-  
-  var showCampaign = document.getElenentById('campaign-select');
-  if (showCampaign){
-    showCampaign.addEventListener('change',handleCampaignSelect);
-  }
-  var showTown = document.getElenentById('town-select');
-  if (showTown){
-    showTown.addEventListener('change',handleTownSelect);
-  }
-  
-  var showLocation = document.getElenentById('location-select');
-  if (showLocation){
-    showLocation.addEventListener('change',handleLocationSelect);
-  }
-  
-  var showNpc = document.getElenentById('npc-select');
-  if (showNpc){
-    showNpc.addEventListener('change',handleNpcSelect);
-  }
-  
+  //towns
   var showTowns = document.getElementById('select-town');
-  if (showTowns)
-  {
-    showTowns.addEventListener('click',handleTowns);
+  if(showTowns){
+  	showTowns.addEventListener('click',openTowns)
   }
-  
+
+  var addTown = document.getElementById('add-town-button');
+  if(addTown){
+  	addTown.addEventListener('click',displayAddTown);
+  }
+
+  var townCloseButton = document.querySelector('#add-town-modal .modal-close-button');
+  if (townCloseButton) {
+    townCloseButton.addEventListener('click', closeAddTown);
+  }
+
+  var townCancelButton = document.querySelector('#add-town-modal .modal-cancel-button');
+  if (townCancelButton) {
+    townCancelButton.addEventListener('click', closeAddTown);
+  }
+
+  var townAcceptButton = document.querySelector('#add-town-modal .modal-accept-button');
+  if (townAcceptButton) {
+    townAcceptButton.addEventListener('click', insertNewTown);
+  }
+
+  var townSelect = document.getElementById('town-select');
+  if(townSelect){
+  	townSelect.addEventListener('change',handleTownSelect);
+  }
+
+  var townRemoveButton = document.getElementById('town-remove-button');
+  if(townRemoveButton){
+  	townRemoveButton.addEventListener('click',removeTown);
+  }
+  //locations
   var showLocations = document.getElementById('select-location');
-  if (showLocations)
-  {
-    showLocations.addEventListener('click',handleLocations);
+  if(showLocations){
+  	showLocations.addEventListener('click',openLocations);
   }
-  
+
+  var addLocation = document.getElementById('add-location-button');
+  if(addLocation){
+  	addLocation.addEventListener('click',displayAddLocation);
+  }
+
+  var locationCloseButton = document.querySelector('#add-location-modal .modal-close-button');
+  if (locationCloseButton) {
+    locationCloseButton.addEventListener('click', closeAddLocation);
+  }
+
+  var locationCancelButton = document.querySelector('#add-location-modal .modal-cancel-button');
+  if(locationCancelButton){
+	locationCancelButton.addEventListener('click',closeAddLocation);
+  }
+
+  var locationAcceptButton = document.querySelector('#add-location-modal .modal-accept-button');
+  if(locationAcceptButton){
+	locationAcceptButton.addEventListener('click',insertNewLocation);
+  }
+
+  var locationSelect = document.getElementById('location-select');
+  if(locationSelect){
+	locationSelect.addEventListener('change',handleLocationSelect);
+  }
+
+  var locationRemoveButton = document.getElementById('location-remove-button');
+  if(locationRemoveButton){
+  	locationRemoveButton.addEventListener('click',removeLocation);
+  }
+//NPCs
   var showNpcs = document.getElementById('select-npc');
-  if (showNpcs)
-  {
-    showNpcs.addEventListener('click',handleNpcs);
+  if(showNpcs){
+	showNpcs.addEventListener('click',openNpcs);
   }
-  
-  var showPictures = document.getElementById('select-picture');
-  if (showPictures)
-  {
-    showPictures.addEventListener('click',handlePictures);
+
+  var addNpc = document.getElementById('add-npc-button');
+  if(addNpc){
+	addNpc.addEventListener('click',displayAddNpc);
   }
-  
-  var modalAcceptSession = document.querySelector('#add-session-modal .modal-accept-button');
-  if(modalAcceptSession){
-    modalAcceptSession.addEventListener('click',insertNewSession);
+
+  var npcCloseButton = document.querySelector('#add-npc-modal .modal-close-button');
+  if(npcCloseButton){
+	npcCloseButton.addEventListener('click',closeAddNpc);
   }
-  
-  var modalAcceptCampaign = document.querySelector('#add-campaign-modal .modal-accept-button');
-  if(modalAcceptCampaign){
-    modalAcceptCampaign.addEventListener('click',insertNewCampaign);
+
+  var npcCancelButton = document.querySelector('#add-npc-modal .modal-cancel-button');
+  if(npcCancelButton){
+	npcCancelButton.addEventListener('click',closeAddNpc);
   }
-  
-  var modalAcceptTown = document.querySelector('#add-town-modal .modal-accept-button');
-  if(modalAcceptTown){
-    modalAcceptTown.addEventListener('click',insertNewTown);
+
+  var npcAcceptButton = document.querySelector('#add-npc-modal .modal-accept-button');
+  if(npcAcceptButton){
+	npcAcceptButton.addEventListener('click',insertNewNpc);
   }
-  
-  var modalAcceptLocation = document.querySelector('#add-location-modal .modal-accept-button');
-  if(modalAcceptLocation){
-    modalAcceptLocation.addEventListener('click',insertNewLocation);
+
+  var npcSelect = document.getElementById('npc-select');
+  if(npcSelect){
+  	npcSelect.addEventListener('change',handleNpcSelect);
   }
-  
-  var modalCancelSession = document.querySelector('#add-session-modal .modal-cancle-button');
-  if(modalCancelSession){
-    modalCancelSession.addEventListener('click',closeAddSession);
+
+  var npcRemoveButton = document.getElementById('npc-remove-button');
+  if(npcRemoveButton){
+  	npcRemoveButton.addEventListener('click',removeNpc);
   }
-  
-  var modalCancelCampaign = document.querySelector('#add-campaign-modal .modal-cancle-button');
-  if(modalCancelCampaign){
-    modalCancelCampaign.addEventListener('click',closeAddCampaign);
+  //picture
+  var showPicture = document.getElementById('select-picture');
+  if(showPicture){
+    showPicture.addEventListener('click',openPictures);
   }
-  
-  var modalCancelTown = document.querySelector('#add-town-modal .modal-cancle-button');
-  if(modalCancelTown){
-    modalCancelTown.addEventListener('click',closeAddTown);
+
+  var addPicture = document.getElementById('add-picture-button');
+  if(addPicture){
+	addPicture.addEventListener('click',displayAddPicture);
   }
-  
-  var modalCancelLocation = document.querySelector('#add-location-modal .modal-cancle-button');
-  if(modalCancelLocation){
-    modalCancelLocation.addEventListener('click',closeAddLocation);
+
+  var pictureCloseButton = document.querySelector('#add-picture-modal .modal-close-button');
+  if (pictureCloseButton) {
+    pictureCloseButton.addEventListener('click', closeAddPicture);
   }
-  
-  var modalCancelNpc = document.querySelector('#add-npc-modal .modal-cancle-button');
-  if(modalCancelNpc){
-    modalCancelNpc.addEventListener('click',closeAddNpc);
+
+  var pictureCancelButton = document.querySelector('#add-picture-modal .modal-cancel-button');
+  if (pictureCancelButton) {
+    pictureCancelButton.addEventListener('click', closeAddPicture);
   }
-  
-  var modalCancelPicture = document.querySelector('#add-picture-modal .modal-cancle-button');
-  if(modalCancelPicture){
-    modalCancelPicture.addEventListener('click',closeAddPicture);
+
+  var pictureAcceptButton = document.querySelector('#add-picture-modal .modal-accept-button');
+  if (pictureAcceptButton) {
+    pictureAcceptButton.addEventListener('click', insertNewPicture);
   }
-  
-  var modalCloseSession = document.querySelector('#add-session-modal .modal-close-button');
-  if(modalCloseSession){
-    modalCloseSession.addEventListener('click',closeAddSession);
+
+  var pictureRemoveButton = document.getElementById('picture-remove-button');
+  if(pictureRemoveButton){
+  	pictureRemoveButton.addEventListener('click',removePicture);
   }
-  var modalCloseCampaign = document.querySelector('#add-campaign-modal .modal-close-button');
-  if(modalCloseCampaign){
-    modalCloseCampaign.addEventListener('click',closeAddCampaign);
-  }
-  
-  var modalCloseTown = document.querySelector('#add-town-modal .modal-close-button');
-  if(modalCloseTown){
-    modalCloseTown.addEventListener('click',closeAddTown);
-  }
-  
-  var modalCloseLocation = document.querySelector('#add-location-modal .modal-close-button');
-  if(modalCloseLocation){
-    modalCloseLocation.addEventListener('click',closeAddLocation);
-  }
-  
-  var modalCloseNpc = document.querySelector('#add-npc-modal .modal-close-button');
-  if(modalCloseNpc){
-    modalCloseNpc.addEventListener('click',closeAddNpc);
-  }
-  
-  var modalClosePicture = document.querySelector('#add-picture-modal .modal-close-button');
-  if(modalClosePicture){
-    modalClosePicture.addEventListener('click',closeAddPicture);
-  }
+
 });
