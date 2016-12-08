@@ -7,11 +7,14 @@
 			<select id="session-select">
 			<option value="" disabled selected>Select a session</option>
 			{{#each session}}
-			<option value={{idi}}>{{name}}</option>
+				{{#if name}}
+					<option value={{this.idi}}>{{this.name}}</option>
+				{{/if}}
 			{{/each}}
 			</select>
 		</div>
 </div>
 </main>
 {{>footer}}
+
 {{>add-session}}

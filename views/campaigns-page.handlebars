@@ -1,13 +1,16 @@
 {{>header}}
 <main>
 <div class="info">
+	<h4>Current Session:{{sessid.name}}</h4>
 	<h2>Story Select</h2>
 	<h3>Please choose or create a campaign:</h3>
 		<div class="select-container">
 			<select id="campaign-select">
 			<option value="" disabled selected>Select a Campaign</option>
-			{{#each sesscont}}
-				<option value={{idi}}>{{name}}</option>
+			{{#each sessid.contents}}
+				{{#if this.name}}
+				<option value={{@index}}>{{name}}</option>
+				{{/if}}
 			{{/each}}
 			</select>
 		</div>

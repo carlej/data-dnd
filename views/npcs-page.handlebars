@@ -7,7 +7,9 @@
 			<select id="npc-select">
 			<option value="" disabled selected>Select a character</option>
 			{{#each campnps}}
-				<option value = {{idi}}>{{name}}</option>
+				{{#if name}}
+					<option value = {{@index}}>{{name}}</option>
+				{{/if}}
 			{{/each}}
 			</select>
 		</div>

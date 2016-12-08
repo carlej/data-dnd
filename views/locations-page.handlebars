@@ -7,7 +7,9 @@
 			<select id="location-select">
 			<option value="" disabled selected>Select a Location</option>
 			{{#each camplocas}}
-				<option value = {{idi}}>{{name}}</option>
+				{{#if name}}
+					<option value = {{@index}}>{{name}}</option>
+				{{/if}}
 			{{/each}}
 			</select>
 		</div>
