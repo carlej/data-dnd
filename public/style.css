@@ -163,6 +163,8 @@ nav {
 #add-location-button:hover,
 #add-npc-button:hover,
 #add-picture-button:hover {
+  width: 128px;
+  height: 96px;
   box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.33);
 }
 
@@ -329,7 +331,7 @@ nav {
 #location-select:hover,
 #npc-select:hover,
 #picture-select:hover {
-  background-image: url("http://i1331.photobucket.com/albums/w589/Nathan-Wolf/Banner_zpsefx2u1nw.jpg");
+  background-color: #FFFF00;
 }
 
 #select-session:hover,
