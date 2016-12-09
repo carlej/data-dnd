@@ -307,12 +307,22 @@ nav {
 #location-select,
 #npc-select,
 #picture-select {
+  display: inline-block;
   min-width: 300px;
   height: 40px;
   border: 1px solid #333;
   background-color: #fff;
   font-size: 20px;
 }
+#select-session:hover,
+#select-campaign:hover,
+#select-town:hover,
+#select-location:hover,
+#select-npc:hover,
+#select-picture:hover {
+  cursor: pointer;
+}
+  
 
 #select-session,
 #select-campaign,
@@ -320,6 +330,7 @@ nav {
 #select-location,
 #select-npc,
 #select-picture {
+  display: inline-block;
   height: 40px;
   border: 1px solid #333;
   background-color: #00FFFF;
