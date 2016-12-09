@@ -2,7 +2,7 @@ body{
   font-family:"Times Roman",sans-serif;
   font-size:24px;
   font-weight:100;
-  background: "http://www.ddadventures.com/wp-content/uploads/2014/11/Logo-for-DD-Adventures3.png";
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e5/Dice_(typical_role_playing_game_dice).jpg");
   margin:0;
 }
   
@@ -10,6 +10,11 @@ header{
   padding:20px 20px 0px 5px;
   background-color: #2265FF;
   border: 2px solid black;
+}
+
+main {
+  display: flex;
+flex-wrap: wrap;
 }
 
 header h1 {
@@ -368,4 +373,3 @@ nav {
 .photo-caption p {
   margin: 0px 0;
 }
-
