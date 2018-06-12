@@ -1,6 +1,6 @@
 header {
 	padding:75px 20px 0px 5px;
-	background-image: url("http://i1331.photobucket.com/albums/w589/Nathan-Wolf/Banner_zpskcnksjhg.png");
+	background-image: url("http://i377.photobucket.com/albums/oo214/generalcarle/rsz_edited_zpsrrcdnyqe.png");
 	background-repeat: no-repeat;
 	background-position: right top;
 	background-color: white;
@@ -10,9 +10,9 @@ header {
 header h1 {
   display: inline-block;
   font-family: "Script", sans-serif;
-  font-size: 72px;
+  font-size: 62px;
   font-weight: 200;
-  margin: 5px 20px;
+  margin: 5px 15px;
 }
 
 header > img {
